@@ -1,6 +1,6 @@
 {
-  "name": "craft3",
-  "description": "My Awesome Project",
+  "name": "baukasten-grid",
+  "description": "Just another Grid System",
   "version": "0.0.1",
   "authors": [
     {
@@ -10,402 +10,58 @@
     }
   ],
   "repository": "",
-  "projectName": "craft3",
-  "projectDescription": "My Awesome Project",
-  "urls": {
-    "local": "http://craft3.test/",
-    "critical": "http://craft3.test/",
-    "favicons": "http://craft3.test/"
-  },
-  "projectType": "craftCMS3",
+  "projectName": "baukasten-grid",
+  "projectDescription": "Just another Grid System",
   "projectVersion": "0.0.1",
   "scripts": {
-    "start": "cross-env NODE_ENV=production gulp init && npm run webpack && cd ___dist && composer install",
-    "dev": "cross-env NODE_ENV=production gulp build && cross-env NODE_ENV=development gulp",
-    "dev:single": "cross-env NODE_ENV=development gulp",
-    "dev:dashboard": "cross-env NODE_ENV=development webpack-dashboard -p 3002 && cross-env NODE_ENV=development gulp",
-    "build": "cross-env NODE_ENV=production gulp build && npm run webpack",
-    "module": "node scripts/module.js",
-    "lang": "node scripts/lang.js",
-    "critical": "node scripts/critical.js",
-    "clean:dist": "cross-env NODE_ENV=development gulp clean:dist",
-    "clean:templates": "cross-env NODE_ENV=development gulp clean:templates",
-    "clean:images": "cross-env NODE_ENV=development gulp clean:images",
-    "clean:js": "cross-env NODE_ENV=development gulp clean:js",
-    "clean:css": "cross-env NODE_ENV=development gulp clean:css",
-    "copy:fonts": "cross-env NODE_ENV=development gulp copy:fonts",
-    "copy:images": "cross-env NODE_ENV=development gulp copy:images",
-    "copy:svg": "cross-env NODE_ENV=development gulp copy:svg",
-    "copy:svg-single": "cross-env NODE_ENV=development gulp copy:svg-single",
-    "create:svg-sprite": "cross-env NODE_ENV=development gulp create:svg-sprite",
-    "copy:systemFiles": "cross-env NODE_ENV=development gulp copy:systemFiles",
-    "compile:templates": "cross-env NODE_ENV=development gulp compile:templates",
-    "create:favicons": "cross-env NODE_ENV=development gulp favicons",
-    "create:inlineJS": "cross-env NODE_ENV=development gulp create:inlineJS",
-    "webpack": "cross-env NODE_ENV=production webpack --hide-modules --config=webpack/webpack.config.babel.js",
-    "webpack:analyze": "webpack-bundle-analyzer webpack/stats.json ___dist/web/assets/",
-    "pull:db": "./___dist/craft-scripts/pull_db.sh",
-    "pull:assets": "./___dist/craft-scripts/pull_assets.sh",
-    "pull:backups": "./___dist/craft-scripts/pull_backups.sh",
-    "pull:all": "npm run pull:db && npm run pull:assets && npm run pull:backups",
-    "backup:db": "./___dist/craft-scripts/backup_db.sh",
-    "backup:assets": "./___dist/craft-scripts/backup_assets.sh",
-    "backup:all": "npm run backup:db && npm run backup:assets",
-    "clear:caches": "./___dist/craft-scripts/clear_caches.sh"
+    "watch": "gulp",
+    "build": "gulp build"
   },
   "src": {
     "base": "___src/",
+    "markup": "___src/templates/",
     "assets": "___src/assets/",
-    "js": "___src/assets/js/",
-    "vue": "___src/assets/vue/",
-    "css": "___src/assets/css/",
-    "fonts": "___src/assets/fonts/",
-    "images": {
-      "base": "___src/assets/images/",
-      "bitmap": {
-        "base": "___src/assets/images/bitmap/",
-        "favicons": "___src/assets/images/bitmap/favicons/"
-      },
-      "svg": {
-        "base": "___src/assets/images/svg/",
-        "single": "___src/assets/images/svg/single/",
-        "sprite": "___src/assets/images/svg/sprite/"
-      }
-    },
-    "templates": "___src/templates/",
-    "modules": {
-      "base": "___src/templates/_modules/",
-      "jsFile": "_main.js",
-      "cssFile": "_style.scss",
-      "templateFile": "_template.html",
-      "configFile": "config.json"
-    },
-    "languages": {
-      "source": "___dist/vendor/craftcms/cms/src/config/locales/",
-      "langFilePath": "___dist/craft/translations/",
-      "base": "___dist/web/",
-      "htaccess": ".htaccess",
-      "humans": "humans.txt",
-      "index": "index.php",
-      "robots": "robots.txt"
-    },
-    "system": "___src/_system/",
-    "dataDir": "___src/_data/",
-    "dataFile": "___src/_data/global.json"
+    "css": "___src/assets/css/"
   },
   "dist": {
-    "base": "___dist/web/",
-    "markup": "___dist/templates/",
-    "browserSyncDir": "___dist/web/",
-    "assets": "___dist/web/assets/",
-    "js": "___dist/web/assets/js/",
-    "vue": "___dist/web/assets/vue/",
-    "css": "___dist/web/assets/css/",
-    "fonts": "___dist/web/assets/fonts/",
-    "images": {
-      "base": "___dist/web/assets/images/",
-      "bitmap": {
-        "base": "___dist/web/assets/images/bitmap/",
-        "favicons": "___dist/web/assets/images/bitmap/favicons/",
-        "faviconPath": "assets/images/bitmap/favicons/"
-      },
-      "svg": {
-        "base": "___dist/web/assets/images/svg/",
-        "single": "___dist/web/assets/images/svg/single/",
-        "sprite": "___dist/web/assets/images/svg/sprite/"
-      }
-    }
-  },
-  "files": {
-    "systemFiles": [
-      "___src/_system/.htaccess",
-      "___src/_system/humans.txt",
-      "___src/_system/robots.txt"
-    ]
-  },
-  "inlineJS": [
-    "./node_modules/fg-loadcss/src/loadCSS.js",
-    "./node_modules/fg-loadcss/src/cssrelpreload.js"
-  ],
-  "dependencies": {
-    "animejs": "^2.0.0",
-    "axios": "^0.17.0",
-    "babel-polyfill": "^6.26.0",
-    "bowser": "^1.8.1",
-    "cookieconsent": "^3.0.4",
-    "family.scss": "^1.0.4",
-    "ferdi": "^0.0.10",
-    "flickity": "^2.0.10",
-    "fontfaceobserver": "^2.0.9",
-    "gsap": "^1.20.3",
-    "in-view": "^0.6.1",
-    "include-media": "^1.4.4",
-    "js-cookie": "^2.2.0",
-    "lazysizes": "^4.0.1",
-    "lodash": "^4.16.6",
-    "macy": "^2.2.0",
-    "modularscale-sass": "^3.0.3",
-    "normalize.css": "^7.0.0",
-    "objectFitPolyfill": "^2.0.5",
-    "photoswipe": "^4.1.1",
-    "scrollmonitor": "^1.2.4",
-    "smooth-scroll": "^12.1.0",
-    "svg-injector-2": "^2.1.3",
-    "svgxuse": "^1.2.6",
-    "velocity-animate": "^1.3.1",
-    "vue": "^2.5.3",
-    "vue-axios": "^2.0.2",
-    "vue-router": "^3.0.0",
-    "vuex": "^3.0.0",
-    "vuex-router-sync": "^5.0.0",
-    "waypoints": "^4.0.0"
-  },
-  "devDependencies": {
-    "aliasify": "^2.0.0",
-    "ansi-html": "^0.0.7",
-    "autoprefixer": "^7.1.6",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.2",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.18.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2015-native-modules": "^6.9.4",
-    "babel-register": "^6.26.0",
-    "babel-runtime": "^6.26.0",
-    "babelify": "^8.0.0",
-    "browser-sync": "^2.11.8",
-    "browserify": "^14.5.0",
-    "browserify-shim": "^3.8.12",
-    "chalk": "^2.3.0",
-    "clean-webpack-plugin": "^0.1.16",
-    "critical": "^1.0.0",
-    "cross-env": "^5.1.1",
-    "css-loader": "^0.28.5",
-    "cssnano": "^3.5.2",
-    "del": "^3.0.0",
-    "eslint": "^4.11.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-vue": "^2.0.2",
-    "eslint-formatter-pretty": "^1.1.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-import-resolver-webpack": "^0.8.3",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-html": "^3.2.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.0.1",
-    "eslint-plugin-vue": "^2.1.0",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "fancy-log": "^1.3.0",
-    "fg-loadcss": "^1.3.1",
-    "file-loader": "^1.1.5",
-    "friendly-errors-webpack-plugin": "^1.6.1",
-    "gulp": "^3.9.1",
-    "gulp-changed": "^3.1.1",
-    "gulp-cheerio": "^0.6.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-data": "^1.2.1",
-    "gulp-debug": "^3.0.0",
-    "gulp-favicons": "^2.2.7",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^7.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.0.0",
-    "gulp-size": "^2.0.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-stylelint": "^5.0.0",
-    "gulp-svg-sprite": "^1.2.19",
-    "gulp-twig": "^1.1.1",
-    "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.7",
-    "gulp-watch": "^4.3.5",
-    "html-webpack-plugin": "^2.30.1",
-    "http-proxy-middleware": "^0.17.4",
-    "imagemin-gifsicle": "^5.1.0",
-    "imagemin-jpeg-recompress": "^5.0.0",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-optipng": "^5.2.1",
-    "imagemin-pngquant": "^5.0.0",
-    "imagemin-svgo": "^6.0.0",
-    "inject-loader": "^3.0.1",
-    "inquirer": "^3.1.1",
-    "json-loader": "^0.5.7",
-    "mem-fs": "^1.1.3",
-    "mem-fs-editor": "^3.0.2",
-    "optimize-css-assets-webpack-plugin": "^3.1.1",
-    "path": "^0.12.7",
-    "postcss-assets": "^5.0.0",
-    "postcss-flexbugs-fixes": "^3.0.0",
-    "postcss-loader": "^2.0.8",
-    "postcss-normalize": "^4.0.0",
-    "postcss-responsive-type": "^1.0.0",
-    "postcss-selector-matches": "^3.0.1",
-    "postcss-short-size": "^3.0.0",
-    "postcss-svg": "^2.3.0",
-    "require-dir": "^0.3.2",
-    "run-sequence": "^2.2.0",
-    "sass-loader": "^6.0.6",
-    "sass-resources-loader": "^1.3.0",
-    "style-loader": "^0.19.0",
-    "stylelint": "^8.2.0",
-    "stylelint-config-sass-guidelines": "^3.1.0",
-    "stylelint-order": "^0.7.0",
-    "stylelint-scss": "^2.1.0",
-    "stylelint-selector-bem-pattern": "^2.0.0",
-    "stylelint-webpack-plugin": "^0.9.0",
-    "url-loader": "^0.6.2",
-    "utils-merge": "^1.0.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "vue-loader": "^13.5.0",
-    "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.5.3",
-    "watchify": "^3.7.0",
-    "webpack": "^3.8.1",
-    "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-config-utils": "^2.3.0",
-    "webpack-dashboard": "^1.0.1",
-    "webpack-dev-middleware": "^1.12.0",
-    "webpack-hot-middleware": "^2.20.0",
-    "write-file-webpack-plugin": "^4.1.0",
-    "yargs": "^10.0.3"
+    "base": "___dist/",
+    "markup": "___dist/",
+    "assets": "___dist/assets/",
+    "css": "___dist/assets/css/"
   },
   "engines": {
     "node": ">=8.0.0"
   },
-  "favicons": {
-    "appName": "craft3",
-    "appDescription": "My Awesome Project",
-    "version": "0.0.1",
-    "url": "http://craft3.test/",
-    "developerName": "David Hellmann",
-    "developerURL": "https://davidhellmann.com",
-    "srcImage": "_favicon.png",
-    "background": "#fff",
-    "themeColor": "#fff",
-    "display": "standalone",
-    "orientation": "portrait",
-    "logging": false,
-    "online": false,
-    "preferOnline": false,
-    "icons": {
-      "android": {
-        "offset": 4,
-        "background": "#fff"
-      },
-      "appleIcon": {
-        "offset": 4,
-        "background": "#fff"
-      },
-      "appleStartup": true,
-      "coast": {
-        "offset": 25
-      },
-      "favicons": true,
-      "firefox": true,
-      "opengraph": true,
-      "twitter": true,
-      "windows": true,
-      "yandex": true
-    }
-  },
-  "minify": {
-    "images": {
-      "optimizationLevel": 3,
-      "jpegCompress": {
-        "loops": 6,
-        "min": 80,
-        "max": 90
-      },
-      "pngquant": {
-        "quality": "90",
-        "speed": 4
-      },
-      "svgoPlugins": [
-        {
-          "cleanupIDs": false
-        },
-        {
-          "removeComments": true
-        },
-        {
-          "removeViewBox": false
-        },
-        {
-          "removeDesc": true
-        },
-        {
-          "removeTitle": true
-        },
-        {
-          "removeUselessDefs": false
-        },
-        {
-          "removeDoctype": true
-        },
-        {
-          "removeEmptyText": true
-        },
-        {
-          "removeUnknownsAndDefaults": true
-        },
-        {
-          "removeEmptyContainers": true
-        },
-        {
-          "collapseGroups": true
-        },
-        {
-          "sortAttrs": true
-        },
-        {
-          "removeUselessStrokeAndFill": true
-        },
-        {
-          "convertStyleToAttrs": true
-        }
-      ],
-      "progressive": true,
-      "interlaced": true
-    }
-  },
-  "criticalCSS": [
-    {
-      "url": "",
-      "template": "index"
-    },
-    {
-      "url": "NEWS/ENTRY-SLUG",
-      "template": "news/_entry"
-    },
-    {
-      "url": "NEWS",
-      "template": "news/index"
-    },
-    {
-      "url": "404",
-      "template": "404"
-    }
-  ],
   "css": {
     "sourcemap": true
   },
-  "browserslist": [
-    "> 2%",
-    "last 2 versions",
-    "IE 11"
-  ],
-  "browsersync": {
-    "openbrowser": false,
-    "proxy": "http://craft3.test/"
+  "browserslist": ["> 2%", "last 2 versions", "IE 11"],
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "chalk": "^2.3.0",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.2.0",
+    "run-sequence": "^2.2.1",
+    "yargs": "^11.0.0",
+    "del": "^2.2.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-data": "^1.2.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-imagemin": "^3.0.0",
+    "gulp-modernizr": "0.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprite": "^1.2.19",
+    "gulp-twig": "^0.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5"
   }
 }

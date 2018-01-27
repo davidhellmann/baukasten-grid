@@ -2,6 +2,9 @@ import gulp from 'gulp';
 import yargs from 'yargs';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
+import strip from 'gulp-strip-css-comments';
+import csscomb from 'gulp-csscomb';
+import cssbeauty from 'gulp-cssbeautify';
 import errorHandler from '../lib/errorHandler';
 import pkg from '../../package.json';
 
@@ -13,33 +16,26 @@ const compileCss = () => {
 
     return gulp
         .src(`${pkg.src.css}**/*.scss`)
-        .pipe(argv.source ? $.debug({ verbose: true }) : $.util.noop())
+        .pipe(argv.source ? $.debug({verbose: true}) : $.util.noop())
         .pipe(env === 'development' ? $.sourcemaps.init() : $.util.noop())
-        .pipe(
-            $.sass({
-                precision: 10,
-                includePaths: [`${pkg.src.css}**/*.scss`],
-            }).on('error', errorHandler),
-        )
-        .pipe(
-            env === 'development'
-                ? $.sourcemaps.write('./maps/')
-                : $.util.noop(),
-        )
+        .pipe($.sass({
+            outputStyle: 'compressed',
+            precision: 10,
+            includePaths: [`${pkg.src.css}**/*.scss`],
+        }).on('error', errorHandler))
+        .pipe(env === 'development' ? $.sourcemaps.write('./maps/') : $.util.noop())
+        .pipe(strip())
+        .pipe(cssbeauty())
+        .pipe(csscomb())
         .pipe(gulp.dest(pkg.dist.css))
-        .pipe(
-            $.size({
-                title: '>>> CSS File Size: ',
-            }),
-        )
-        .pipe($.rename({ suffix: '.min' }))
+        .pipe($.size({title: '>>> CSS File Size: '}))
+        .pipe($.rename({suffix: '.min'}))
         .pipe(gulp.dest(pkg.dist.css))
-        .pipe(
-            browserSync.stream({
-                match: '**/*.css',
-            }),
-        );
+        .pipe(browserSync.stream({
+            match: '**/*.css'
+        })
+    );
 };
 
-gulp.task('sass', ['minify:sass'], compileCss);
+gulp.task('sass', compileCss);
 module.exports = compileCss;

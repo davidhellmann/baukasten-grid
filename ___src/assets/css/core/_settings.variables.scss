@@ -36,3 +36,6 @@ $bk-gutterMin: $bk-gutter * map-deep-get($bk-gs, units, gutterMinFactor);
 $bk-gutterMax: $bk-gutter * map-deep-get($bk-gs, units, gutterMaxFactor);
 $bk-gutterMinVertical: $bk-gutter * map-deep-get($bk-gs, units, gutterMinVerticalFactor);
 $bk-gutterMaxVertical: $bk-gutter * map-deep-get($bk-gs, units, gutterMaxVerticalFactor);
+
+// Class Errors
+$bk-error-shadow: inset 0 0 0 2px red;

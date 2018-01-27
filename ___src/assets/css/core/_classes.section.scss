@@ -25,8 +25,4 @@
   @include make-section();
   @include make-section-padding();
   @include center();
-
-  @if $bk-testing == true {
-    @extend %styling;
-  }
 }

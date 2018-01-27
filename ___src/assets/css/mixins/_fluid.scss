@@ -1,0 +1,29 @@
+// Fluid
+// ====================
+
+@import '../functions/_strip-units';
+
+@mixin fluid($min-value, $max-value, $properties: null, $min-vw: map-deep-get($bkgs, breakpoints, min, from), $max-vw: map-deep-get($bkgs, breakpoints, max, from)) {
+  @if ($properties != null) {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
+
+    @media screen and (min-width: $min-vw) {
+      @each $property in $properties {
+        #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / (#{strip-unit($max-vw - $min-vw)}));
+      }
+    }
+
+    @media screen and (min-width: $max-vw) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
+}
+
+// Shorthand Version
+@mixin f($args...) {
+  @include fluid($args...);
+}

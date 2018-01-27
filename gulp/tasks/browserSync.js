@@ -6,10 +6,6 @@ import pkg from '../../package.json';
 const browserSyncTask = () => {
     // Browser Sync Init
     browserSync.init({
-        proxy: {
-            target: pkg.browsersync.proxy,
-            ws: true,
-        },
         ghostMode: {
             clicks: true,
             forms: true,
@@ -18,7 +14,7 @@ const browserSyncTask = () => {
         },
         logLevel: 'info', // info, debug, warn, silent
         watchTask: true,
-        open: pkg.browsersync.openbrowser, // false if you don't want to automatically open the browser
+        open: false, // false if you don't want to automatically open the browser
         stream: true,
         notify: {
             styles: [
@@ -43,12 +39,11 @@ const browserSyncTask = () => {
                 match: [
                     `${pkg.dist.markup}**/*.{html,php,twig,rss}`,
                     `${pkg.dist.css}**/*.{css}`,
-                    `${
-                        pkg.dist.images.base
-                    }**/*.{jpg,jpeg,webp,gif,png,svg,ico}`,
                 ],
                 fn(event, file) {
-                    console.log(chalk`-> Event: {cyan ${event}}: {magenta ${file}}`,);
+                    console.log(
+                        chalk`-> Event: {cyan ${event}}: {magenta ${file}}`,
+                    );
                     if (event === 'change' && file.includes('.css')) {
                         browserSync.reload('*.css');
                     }

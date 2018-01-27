@@ -1,0 +1,77 @@
+// Get Breakpoints from Map
+@import '../../../../node_modules/include-media/dist/include-media';
+@import '../functions/_map-deep-get';
+@import '../mixins/_grid';
+@import '../settings/_grid';
+
+$_breakpoints: map-deep-get($bkgs, breakpoints);
+
+[class*='#{map-get($bkgs, prefix)}-row'] {
+  @if map-deep-get($bkgs, legacy) == true {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+  }
+
+  display: grid;
+  @include make-row(1);
+}
+
+[class*='#{map-get($bkgs, prefix)}-row']:not(.no-padding) {
+  > [class*='#{map-get($bkgs, prefix)}-col'] {
+    @if map-deep-get($bkgs, legacy) == true {
+      @supports not (display: grid) {
+        @include make-col-padding();
+      }
+    }
+
+    @include make-col-gap();
+  }
+}
+
+[class*='#{map-get($bkgs, prefix)}-col'] {
+  grid-column-start: auto;
+}
+
+
+// Creating Classes
+@each $key, $value in $_breakpoints {
+  $from: map-get($value, from);
+  $cols: map-get($value, cols);
+  $prefix: map-get($bkgs, prefix);
+
+  @if $key == 'min' {
+    @include media('>=#{$from}') {
+      // Row Classes
+      @for $i from 1 through $cols {
+        .#{$prefix}-row-#{$i} {
+          grid-template-columns: repeat(#{$i}, 1fr);
+        }
+      }
+
+      // Col Classes
+      @for $i from 1 through $cols {
+        .#{$prefix}-col-#{$i} {
+          @include make-col($i);
+        }
+      }
+    }
+
+  } @else if $key != 'min' {
+    @include media('>=#{$from}') {
+      // Row Classes
+      @for $i from 1 through $cols {
+        .#{$prefix}-row-#{$key}-#{$i} {
+          @include make-row($i);
+        }
+      }
+
+      // Col Classes
+      @for $i from 1 through $cols {
+        .#{$prefix}-col-#{$key}-#{$i} {
+          @include make-col($i);
+        }
+      }
+    }
+  }
+}

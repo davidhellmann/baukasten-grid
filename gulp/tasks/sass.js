@@ -3,7 +3,7 @@ import yargs from 'yargs';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import errorHandler from '../lib/errorHandler';
-import pkg from '../../packacke.json';
+import pkg from '../../package.json';
 
 const argv = yargs.argv;
 const $ = gulpLoadPlugins();
@@ -15,7 +15,6 @@ const compileCss = () => {
         .src(`${pkg.src.css}**/*.scss`)
         .pipe(argv.source ? $.debug({ verbose: true }) : $.util.noop())
         .pipe(env === 'development' ? $.sourcemaps.init() : $.util.noop())
-        .pipe($.rename({ suffix: '.min' }))
         .pipe(
             $.sass({
                 precision: 10,
@@ -33,6 +32,8 @@ const compileCss = () => {
                 title: '>>> CSS File Size: ',
             }),
         )
+        .pipe($.rename({ suffix: '.min' }))
+        .pipe(gulp.dest(pkg.dist.css))
         .pipe(
             browserSync.stream({
                 match: '**/*.css',

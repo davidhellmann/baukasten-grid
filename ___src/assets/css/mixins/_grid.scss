@@ -1,0 +1,42 @@
+// Make Row Mixins
+@import '_fluid';
+
+@mixin make-row($cols) {
+  grid-template-columns: repeat($cols, 1fr);
+}
+
+// Make Col Mixins
+@mixin make-col($cols: 1) {
+  grid-column-end: span ceil($cols);
+}
+
+// Make Col Padding Mixin
+@mixin make-col-padding($factor: 1) {
+  $factor: $factor * 2;
+  $gutterMin: $factor * (map-deep-get($bkgs, units, gutter) * map-deep-get($bkgs, units, gutterMinFactor));
+  $gutterMax: $factor * (map-deep-get($bkgs, units, gutter) * map-deep-get($bkgs, units, gutterMaxFactor));
+
+  @include f($gutterMin, $gutterMax, padding-left padding-right);
+}
+
+// Make Col Gap
+@mixin make-col-gap($factor: 1) {
+  $factor: $factor * 2;
+  $gutterMin: $factor * (map-deep-get($bkgs, units, gutter) * map-deep-get($bkgs, units, gutterMinFactor));
+  $gutterMax: $factor * (map-deep-get($bkgs, units, gutter) * map-deep-get($bkgs, units, gutterMaxFactor));
+
+  @include f($gutterMin, $gutterMax, grid-column-gap);
+}
+
+// Col Pos Mixin
+@mixin col-pos($cols: auto, $max-cols: null) {
+  @if $cols != auto {
+    $cols: ceil($cols);
+  }
+
+  @if map-deep-get($bkgs, legacy) == true {
+    margin-left: calc(100% / $max-cols * $cols);
+  }
+
+  grid-column-start: $cols;
+}

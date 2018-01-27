@@ -1,10 +1,10 @@
 require('babel-core/register')({
-    presets: [['es2015']]
-})
+    presets: [['es2015']],
+});
 
-const requireDir = require('require-dir')
+const requireDir = require('require-dir');
 
 // Define Global Vars
-global.checkChanged = true
+global.checkChanged = true;
 
-requireDir('./gulp/tasks', { recurse: true })
+requireDir('./gulp/tasks', { recurse: true });

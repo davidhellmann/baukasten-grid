@@ -24,10 +24,10 @@
     }
   },
   "src": {
-    "base": "___src/",
-    "markup": "___src/templates/",
-    "assets": "___src/assets/",
-    "css": "___src/assets/css/"
+    "base": "src/",
+    "markup": "src/templates/",
+    "assets": "src/assets/",
+    "css": "src/assets/css/"
   },
   "dist": {
     "base": "docs/",

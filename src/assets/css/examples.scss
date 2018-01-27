@@ -2,8 +2,13 @@
 @import 'examples/settings.reset';
 @import 'core/settings.variables';
 @import 'core/settings.testing';
+@import 'tools/mixin.make-section-padding';
 
 @if $bk-testing == true {
+  body {
+    @include make-section-padding(2);
+  }
+
   [class*='#{$bk-prefix}-section'] {
     @extend %styling-section;
   }
@@ -11,8 +16,7 @@
   [class*='#{$bk-prefix}-row-'] {
     @extend %styling-row;
 
-    [class*='#{$bk-prefix}-row-'],
-    > [class*='#{$bk-prefix}-col-'] {
+    [class*='#{$bk-prefix}-row-'] {
       margin-top: 0;
     }
   }

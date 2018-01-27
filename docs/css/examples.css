@@ -276,8 +276,36 @@ html {
   border-radius: 3px;
 }
 
-[class*='o-row-'] [class*='o-row-'],
-[class*='o-row-'] > [class*='o-col-'] {
+body {
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+
+@media screen and (min-width: 320px) {
+  body {
+    padding-top: calc(16px + 16 * (100vw - 320px) / (1120));
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    padding-top: 32px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  body {
+    padding-bottom: calc(32px + 32 * (100vw - 320px) / (1120));
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    padding-bottom: 64px;
+  }
+}
+
+[class*='o-row-'] [class*='o-row-'] {
   margin-top: 0;
 }
 

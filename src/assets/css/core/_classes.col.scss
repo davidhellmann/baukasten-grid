@@ -38,7 +38,7 @@
   @if $key == 'min' {
     @include media('>=#{$from}') {
       // Col Classes
-      @for $i from 1 through $cols {
+      @for $i from 1 through $bk-colsMax {
         .#{$prefix}-col-#{$i} {
           @if $bk-legacy == true {
             @include make-col($i, $cols);

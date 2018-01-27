@@ -90,20 +90,3 @@ $RECYCLE.BIN/
 *.swp
 ._*
 *~
-
-
-
-
-
-
-# Craft CMS
-___dist/config/license.key
-___dist/storage
-___dist/templates
-___dist/vendor
-___dist/web/assets
-___dist/web/cpresources
-___dist/web/uploads
-___dist/.env.php
-___backups/
-

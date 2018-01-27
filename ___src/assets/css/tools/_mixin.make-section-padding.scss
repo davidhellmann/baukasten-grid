@@ -1,0 +1,29 @@
+/*
+ |--------------------------------------------------------------------------
+ |  Make Section Padding Mixin
+ |--------------------------------------------------------------------------
+ */
+
+// Imports
+@import '../core/settings.variables';
+@import 'mixin.fluid';
+
+// Mixin
+@mixin make-section-padding($factor: 1) {
+  @if $factor <= 1 {
+    $factor: $factor * 2;
+    $gutterMin: $factor * $bk-gutterMinVertical;
+    $gutterMax: $factor * $bk-gutterMaxVertical;
+
+    padding-top: 0;
+    @include f($gutterMin, $gutterMax, padding-bottom);
+
+  } @else {
+    $factor: $factor * 2;
+    $gutterMin: $bk-gutterMinVertical;
+    $gutterMax: $bk-gutterMaxVertical;
+
+    @include f($gutterMin * ($factor - 2), $gutterMax * ($factor - 2), padding-top);
+    @include f($gutterMin * ($factor), $gutterMax * ($factor), padding-bottom);
+  }
+}

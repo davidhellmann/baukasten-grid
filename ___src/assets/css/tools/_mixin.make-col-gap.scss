@@ -1,0 +1,18 @@
+/*
+ |--------------------------------------------------------------------------
+ |  Make Col Gap Mixin
+ |--------------------------------------------------------------------------
+ */
+
+// Imports
+@import '../core/settings.variables';
+@import 'mixin.fluid';
+
+// Mixin
+@mixin make-col-gap($factor: 1) {
+  $factor: $factor * 2;
+  $gutterMin: $factor * $bk-gutterMin;
+  $gutterMax: $factor * $bk-gutterMax;
+
+  @include f($gutterMin, $gutterMax, grid-column-gap);
+}

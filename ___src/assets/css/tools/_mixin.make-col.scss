@@ -1,0 +1,20 @@
+/*
+ |--------------------------------------------------------------------------
+ |  Make Col Mixin
+ |--------------------------------------------------------------------------
+ */
+
+// Imports
+@import '../core/settings.variables';
+
+// Mixin
+@mixin make-col($cols: 1, $context: 1) {
+  @if $bk-legacy == true {
+    flex: 1 1 percentage($cols / $context);
+    width: percentage($cols / $context);
+  }
+
+  @if $bk-cssgrid == true {
+    grid-column-end: span ceil($cols);
+  }
+}

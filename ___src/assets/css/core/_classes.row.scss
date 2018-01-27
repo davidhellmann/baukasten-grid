@@ -1,28 +1,18 @@
-// Get Breakpoints from Map
+/*
+ |--------------------------------------------------------------------------
+ |  Row Classes
+ |--------------------------------------------------------------------------
+ */
+
+// Imports
 @import '../../../../node_modules/include-media/dist/include-media';
-@import '../functions/_map-deep-get';
-@import '../mixins/_grid';
-@import '../mixins/_center';
-@import '../settings/_grid';
+@import '../tools/mixin.make-row';
+@import '../tools/mixin.make-col-padding';
+@import '../tools/mixin.make-col-gap';
+@import 'settings.variables';
+@import 'settings.testing';
 
-[class*='#{$bk-prefix}-section'] {
-  @if $bk-legacy == true {
-    display: flex;
-  }
-
-  @if $bk-cssgrid == true {
-    display: grid;
-  }
-
-  @include make-section();
-  @include make-section-padding();
-  @include center();
-
-  @if $bk-testing == true {
-    @extend %styling;
-  }
-}
-
+// Default Class Settings
 [class*='#{$bk-prefix}-row'] {
   @if $bk-legacy == true {
     @include make-row();
@@ -61,27 +51,7 @@
   }
 }
 
-[class*='#{$bk-prefix}-col'] {
-  @if $bk-legacy == true {
-    flex: 1 1 0;
-    width: auto;
-    position: relative;
-    min-height: 1px;
-  }
-
-  @if $bk-cssgrid == true {
-  grid-column-start: auto;
-    @include make-col-padding(0);
-  }
-
-  @if $bk-testing == true {
-    @extend %styling;
-    @include f(16px, 32px, padding-top padding-bottom);
-  }
-}
-
-
-// Creating Classes
+// Creating Row Classes
 @each $key, $value in $bk-breakpoints {
   $from: map-get($value, from);
   $cols: map-get($value, cols);
@@ -97,34 +67,13 @@
           }
         }
       }
-
-      // Col Classes
-      @for $i from 1 through $cols {
-        .#{$prefix}-col-#{$i} {
-          @if $bk-legacy == true {
-            @include make-col($i, $cols);
-          }
-
-          @if $bk-cssgrid == true {
-            @include make-col($i);
-          }
-        }
-      }
     }
-
   } @else if $key != 'min' {
     @include media('>=#{$from}') {
       // Row Classes
       @for $i from 1 through $cols {
         .#{$prefix}-row-#{$key}-#{$i} {
           @include make-row($i);
-        }
-      }
-
-      // Col Classes
-      @for $i from 1 through $cols {
-        .#{$prefix}-col-#{$key}-#{$i} {
-          @include make-col($i);
         }
       }
     }

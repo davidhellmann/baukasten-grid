@@ -1,0 +1,38 @@
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+
+// Imports
+@import '../tools/function.map-deep-get';
+@import '../core/settings.grid';
+
+// Create Shorthand Class
+$bk-gs: $bk-grid-settings;
+
+// Get Prefix
+$bk-prefix: map-get($bk-gs, prefix);
+
+// Get Grid Settings
+$bk-legacy: map-deep-get($bk-gs, legacy);
+$bk-cssgrid: map-deep-get($bk-gs, cssgrid);
+$bk-testing: map-deep-get($bk-gs, testing);
+
+// Get Breakpoints
+$bk-breakpoints: map-deep-get($bk-gs, breakpoints);
+
+// Get Min and Max Cols
+$bk-colsMin: map-deep-get($bk-gs, breakpoints, min, cols);
+$bk-colsMax: map-deep-get($bk-gs, breakpoints, max, cols);
+
+// Get Min and Max Width
+$bk-minWidth: map-deep-get($bk-gs, breakpoints, min, from);
+$bk-maxWidth: map-deep-get($bk-gs, breakpoints, max, from);
+
+// Get Gutters
+$bk-gutter: map-deep-get($bk-gs, units, gutter);
+$bk-gutterMin: $bk-gutter * map-deep-get($bk-gs, units, gutterMinFactor);
+$bk-gutterMax: $bk-gutter * map-deep-get($bk-gs, units, gutterMaxFactor);
+$bk-gutterMinVertical: $bk-gutter * map-deep-get($bk-gs, units, gutterMinVerticalFactor);
+$bk-gutterMaxVertical: $bk-gutter * map-deep-get($bk-gs, units, gutterMaxVerticalFactor);

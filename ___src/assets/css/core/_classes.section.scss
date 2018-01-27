@@ -1,0 +1,32 @@
+/*
+ |--------------------------------------------------------------------------
+ |  Section Classes
+ |--------------------------------------------------------------------------
+ */
+
+// Imports
+@import '../../../../node_modules/include-media/dist/include-media';
+@import '../tools/mixin.make-section';
+@import '../tools/mixin.make-section-padding';
+@import '../tools/mixin.center';
+@import 'settings.variables';
+@import 'settings.testing';
+
+// Default Class Settings
+[class*='#{$bk-prefix}-section'] {
+  @if $bk-legacy == true {
+    display: flex;
+  }
+
+  @if $bk-cssgrid == true {
+    display: grid;
+  }
+
+  @include make-section();
+  @include make-section-padding();
+  @include center();
+
+  @if $bk-testing == true {
+    @extend %styling;
+  }
+}

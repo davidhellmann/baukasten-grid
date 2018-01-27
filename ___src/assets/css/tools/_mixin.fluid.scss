@@ -1,8 +1,14 @@
-// Fluid
-// ====================
+/*
+ |--------------------------------------------------------------------------
+ |  Fluid Mixin
+ |--------------------------------------------------------------------------
+ */
 
-@import '../functions/_strip-units';
+// Imports
+@import '../core/settings.variables';
+@import 'function.strip-unit';
 
+// Mixin
 @mixin fluid($min-value, $max-value, $properties: null, $min-vw: $bk-minWidth, $max-vw: $bk-maxWidth) {
   @if ($properties != null) {
     @each $property in $properties {

@@ -1,0 +1,64 @@
+/*
+ |--------------------------------------------------------------------------
+ |  Col Classes
+ |--------------------------------------------------------------------------
+ */
+
+// Imports
+@import '../../../../node_modules/include-media/dist/include-media';
+@import '../tools/mixin.make-col';
+@import 'settings.variables';
+@import 'settings.testing';
+
+// Default Class Settings
+[class*='#{$bk-prefix}-col'] {
+  @if $bk-legacy == true {
+    flex: 1 1 0;
+    width: auto;
+    position: relative;
+    min-height: 1px;
+  }
+
+  @if $bk-cssgrid == true {
+    grid-column-start: auto;
+    @include make-col-padding(0);
+  }
+
+  @if $bk-testing == true {
+    @extend %styling;
+    @include f(16px, 32px, padding-top padding-bottom);
+  }
+}
+
+// Creating Col Classes
+@each $key, $value in $bk-breakpoints {
+  $from: map-get($value, from);
+  $cols: map-get($value, cols);
+  $prefix: $bk-prefix;
+
+  @if $key == 'min' {
+    @include media('>=#{$from}') {
+      // Col Classes
+      @for $i from 1 through $cols {
+        .#{$prefix}-col-#{$i} {
+          @if $bk-legacy == true {
+            @include make-col($i, $cols);
+          }
+
+          @if $bk-cssgrid == true {
+            @include make-col($i);
+          }
+        }
+      }
+    }
+  } @else if $key != 'min' {
+    @include media('>=#{$from}') {
+      // Col Classes
+      @for $i from 1 through $cols {
+        .#{$prefix}-col-#{$key}-#{$i} {
+          @include make-col($i);
+        }
+      }
+    }
+  }
+}

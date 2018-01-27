@@ -1,402 +1,178 @@
-/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
-/**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+/*
+ |--------------------------------------------------------------------------
+ |  App.scss
+ |--------------------------------------------------------------------------
  */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  line-height: 1.15;
-  /* 2 */
-  -ms-text-size-adjust: 100%;
-  /* 3 */
-  -webkit-text-size-adjust: 100%;
-  /* 3 */ }
-
-/**
- * Remove the margin in all browsers (opinionated).
+/*
+ |--------------------------------------------------------------------------
+ |  Section Classes
+ |--------------------------------------------------------------------------
  */
-body {
-  margin: 0; }
-
-/* HTML5 display definitions
-   ========================================================================== */
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- * 2. Add the correct display in IE.
+/*
+ |--------------------------------------------------------------------------
+ |  Make Section Mixin
+ |--------------------------------------------------------------------------
  */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  /* 1 */
-  display: block; }
-
-/**
- * Add the correct display in IE 9-.
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
  */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block; }
-
-/**
- * Add the correct display in iOS 4-7.
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
  */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
  */
-progress {
-  vertical-align: baseline; }
-
-/**
- * Add the correct display in IE 10-.
- * 1. Add the correct display in IE.
+/*
+ |--------------------------------------------------------------------------
+ |  Fluid Mixin
+ |--------------------------------------------------------------------------
  */
-template,
-[hidden] {
-  display: none; }
-
-/* Links
-   ========================================================================== */
-/**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
  */
-a {
-  background-color: transparent;
-  /* 1 */
-  -webkit-text-decoration-skip: objects;
-  /* 2 */ }
-
-/**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
  */
-a:active,
-a:hover {
-  outline-width: 0; }
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * 1. Remove the bottom border in Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
  */
-abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */ }
-
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+/*
+ |--------------------------------------------------------------------------
+ |  Strip Unit Function
+ |--------------------------------------------------------------------------
  */
-b,
-strong {
-  font-weight: inherit; }
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
+/*
+ |--------------------------------------------------------------------------
+ |  Make Section Padding Mixin
+ |--------------------------------------------------------------------------
  */
-b,
-strong {
-  font-weight: bolder; }
-
-/**
- * Add the correct font style in Android 4.3-.
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
  */
-dfn {
-  font-style: italic; }
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
  */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-/**
- * Add the correct background and color in IE 9-.
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
  */
-mark {
-  background-color: #ff0;
-  color: #000; }
-
-/**
- * Add the correct font size in all browsers.
+/*
+ |--------------------------------------------------------------------------
+ |  Fluid Mixin
+ |--------------------------------------------------------------------------
  */
-small {
-  font-size: 80%; }
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
  */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sub {
-  bottom: -0.25em; }
-
-sup {
-  top: -0.5em; }
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10-.
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
  */
-img {
-  border-style: none; }
-
-/**
- * Hide the overflow in IE.
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
  */
-svg:not(:root) {
-  overflow: hidden; }
-
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
+/*
+ |--------------------------------------------------------------------------
+ |  Strip Unit Function
+ |--------------------------------------------------------------------------
  */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
-
-/**
- * Add the correct margin in IE 8.
+/*
+ |--------------------------------------------------------------------------
+ |  Center Mixin
+ |--------------------------------------------------------------------------
  */
-figure {
-  margin: 1em 40px; }
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
  */
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */ }
-
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change font properties to `inherit` in all browsers (opinionated).
- * 2. Remove the margin in Firefox and Safari.
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
  */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font: inherit;
-  /* 1 */
-  margin: 0;
-  /* 2 */ }
-
-/**
- * Restore the font weight unset by the previous rule.
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
  */
-optgroup {
-  font-weight: bold; }
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
+/*
+ |--------------------------------------------------------------------------
+ |  Testing Classes
+ |--------------------------------------------------------------------------
  */
-button,
-input {
-  /* 1 */
-  overflow: visible; }
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
+/*
+ |--------------------------------------------------------------------------
+ |  Vertical Spacing Mixin
+ |--------------------------------------------------------------------------
  */
-button,
-select {
-  /* 1 */
-  text-transform: none; }
-
-/**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
  */
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */ }
-
-/**
- * Remove the inner border and padding in Firefox.
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
  */
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0; }
-
-/**
- * Restore the focus styles unset by the previous rule.
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
  */
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
-
-/**
- * Change the border, margin, and padding in all browsers (opinionated).
+/*
+ |--------------------------------------------------------------------------
+ |  Fluid Mixin
+ |--------------------------------------------------------------------------
  */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
  */
-legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */ }
-
-/**
- * Remove the default vertical scrollbar in IE.
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
  */
-textarea {
-  overflow: auto; }
-
-/**
- * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
  */
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
+/*
+ |--------------------------------------------------------------------------
+ |  Strip Unit Function
+ |--------------------------------------------------------------------------
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */ }
-
-/**
- * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
- */
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-/**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
- */
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54; }
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */ }
-
-/*--------------------------------------------------
-    #BOX SIZING
-  --------------------------------------------------*/
-html {
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
 [class*='o-section'], [class*='o-row'], [class*='o-col'] {
   margin-top: 16px;
   background-color: rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 0 0 1px black;
-  border-radius: 3px; }
-  @media screen and (min-width: 320px) {
-    [class*='o-section'], [class*='o-row'], [class*='o-col'] {
-      margin-top: calc(16px + 16 * (100vw - 320px) / (1120)); } }
-  @media screen and (min-width: 1440px) {
-    [class*='o-section'], [class*='o-row'], [class*='o-col'] {
-      margin-top: 32px; } }
-
-/*--------------------------------------------------
-    #CENTER
-  --------------------------------------------------*/
-[class*='o-section'], [class*='o-row'], [class*='o-col'] {
-  margin-top: 16px;
-  background-color: rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 0 0 1px black;
-  border-radius: 3px; }
+  border-radius: 5px; }
   @media screen and (min-width: 320px) {
     [class*='o-section'], [class*='o-row'], [class*='o-col'] {
       margin-top: calc(16px + 16 * (100vw - 320px) / (1120)); } }
@@ -428,6 +204,223 @@ html {
     [class*='o-section'] {
       padding-bottom: 32px; } }
 
+/*
+ |--------------------------------------------------------------------------
+ |  Row Classes
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Make Row Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Fluid Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Strip Unit Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Make Col Padding Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Fluid Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Strip Unit Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Make Col Gap Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Fluid Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Strip Unit Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Testing Classes
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Vertical Spacing Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Fluid Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Strip Unit Function
+ |--------------------------------------------------------------------------
+ */
+[class*='o-section'], [class*='o-row'], [class*='o-col'] {
+  margin-top: 16px;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 0 1px black;
+  border-radius: 5px; }
+  @media screen and (min-width: 320px) {
+    [class*='o-section'], [class*='o-row'], [class*='o-col'] {
+      margin-top: calc(16px + 16 * (100vw - 320px) / (1120)); } }
+  @media screen and (min-width: 1440px) {
+    [class*='o-section'], [class*='o-row'], [class*='o-col'] {
+      margin-top: 32px; } }
+
 [class*='o-row'] {
   display: grid; }
   @supports (display: grid) {
@@ -455,29 +448,6 @@ html {
     [class*='o-row']:not(.no-padding) {
       grid-column-gap: 32px; } }
 
-[class*='o-col'] {
-  grid-column-start: auto;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 16px;
-  padding-bottom: 16px; }
-  @media screen and (min-width: 320px) {
-    [class*='o-col'] {
-      padding-left: calc(0px + 0 * (100vw - 320px) / (1120));
-      padding-right: calc(0px + 0 * (100vw - 320px) / (1120)); } }
-  @media screen and (min-width: 1440px) {
-    [class*='o-col'] {
-      padding-left: 0px;
-      padding-right: 0px; } }
-  @media screen and (min-width: 320px) {
-    [class*='o-col'] {
-      padding-top: calc(16px + 16 * (100vw - 320px) / (1120));
-      padding-bottom: calc(16px + 16 * (100vw - 320px) / (1120)); } }
-  @media screen and (min-width: 1440px) {
-    [class*='o-col'] {
-      padding-top: 32px;
-      padding-bottom: 32px; } }
-
 @media (min-width: 320px) {
   .o-row-1 {
     grid-template-columns: repeat(1, 1fr); }
@@ -486,15 +456,7 @@ html {
   .o-row-3 {
     grid-template-columns: repeat(3, 1fr); }
   .o-row-4 {
-    grid-template-columns: repeat(4, 1fr); }
-  .o-col-1 {
-    grid-column-end: span 1; }
-  .o-col-2 {
-    grid-column-end: span 2; }
-  .o-col-3 {
-    grid-column-end: span 3; }
-  .o-col-4 {
-    grid-column-end: span 4; } }
+    grid-template-columns: repeat(4, 1fr); } }
 
 @media (min-width: 400px) {
   .o-row-xs-1 {
@@ -512,23 +474,7 @@ html {
   .o-row-xs-7 {
     grid-template-columns: repeat(7, 1fr); }
   .o-row-xs-8 {
-    grid-template-columns: repeat(8, 1fr); }
-  .o-col-xs-1 {
-    grid-column-end: span 1; }
-  .o-col-xs-2 {
-    grid-column-end: span 2; }
-  .o-col-xs-3 {
-    grid-column-end: span 3; }
-  .o-col-xs-4 {
-    grid-column-end: span 4; }
-  .o-col-xs-5 {
-    grid-column-end: span 5; }
-  .o-col-xs-6 {
-    grid-column-end: span 6; }
-  .o-col-xs-7 {
-    grid-column-end: span 7; }
-  .o-col-xs-8 {
-    grid-column-end: span 8; } }
+    grid-template-columns: repeat(8, 1fr); } }
 
 @media (min-width: 600px) {
   .o-row-s-1 {
@@ -554,31 +500,7 @@ html {
   .o-row-s-11 {
     grid-template-columns: repeat(11, 1fr); }
   .o-row-s-12 {
-    grid-template-columns: repeat(12, 1fr); }
-  .o-col-s-1 {
-    grid-column-end: span 1; }
-  .o-col-s-2 {
-    grid-column-end: span 2; }
-  .o-col-s-3 {
-    grid-column-end: span 3; }
-  .o-col-s-4 {
-    grid-column-end: span 4; }
-  .o-col-s-5 {
-    grid-column-end: span 5; }
-  .o-col-s-6 {
-    grid-column-end: span 6; }
-  .o-col-s-7 {
-    grid-column-end: span 7; }
-  .o-col-s-8 {
-    grid-column-end: span 8; }
-  .o-col-s-9 {
-    grid-column-end: span 9; }
-  .o-col-s-10 {
-    grid-column-end: span 10; }
-  .o-col-s-11 {
-    grid-column-end: span 11; }
-  .o-col-s-12 {
-    grid-column-end: span 12; } }
+    grid-template-columns: repeat(12, 1fr); } }
 
 @media (min-width: 800px) {
   .o-row-m-1 {
@@ -612,39 +534,7 @@ html {
   .o-row-m-15 {
     grid-template-columns: repeat(15, 1fr); }
   .o-row-m-16 {
-    grid-template-columns: repeat(16, 1fr); }
-  .o-col-m-1 {
-    grid-column-end: span 1; }
-  .o-col-m-2 {
-    grid-column-end: span 2; }
-  .o-col-m-3 {
-    grid-column-end: span 3; }
-  .o-col-m-4 {
-    grid-column-end: span 4; }
-  .o-col-m-5 {
-    grid-column-end: span 5; }
-  .o-col-m-6 {
-    grid-column-end: span 6; }
-  .o-col-m-7 {
-    grid-column-end: span 7; }
-  .o-col-m-8 {
-    grid-column-end: span 8; }
-  .o-col-m-9 {
-    grid-column-end: span 9; }
-  .o-col-m-10 {
-    grid-column-end: span 10; }
-  .o-col-m-11 {
-    grid-column-end: span 11; }
-  .o-col-m-12 {
-    grid-column-end: span 12; }
-  .o-col-m-13 {
-    grid-column-end: span 13; }
-  .o-col-m-14 {
-    grid-column-end: span 14; }
-  .o-col-m-15 {
-    grid-column-end: span 15; }
-  .o-col-m-16 {
-    grid-column-end: span 16; } }
+    grid-template-columns: repeat(16, 1fr); } }
 
 @media (min-width: 1000px) {
   .o-row-l-1 {
@@ -710,71 +600,7 @@ html {
   .o-row-l-31 {
     grid-template-columns: repeat(31, 1fr); }
   .o-row-l-32 {
-    grid-template-columns: repeat(32, 1fr); }
-  .o-col-l-1 {
-    grid-column-end: span 1; }
-  .o-col-l-2 {
-    grid-column-end: span 2; }
-  .o-col-l-3 {
-    grid-column-end: span 3; }
-  .o-col-l-4 {
-    grid-column-end: span 4; }
-  .o-col-l-5 {
-    grid-column-end: span 5; }
-  .o-col-l-6 {
-    grid-column-end: span 6; }
-  .o-col-l-7 {
-    grid-column-end: span 7; }
-  .o-col-l-8 {
-    grid-column-end: span 8; }
-  .o-col-l-9 {
-    grid-column-end: span 9; }
-  .o-col-l-10 {
-    grid-column-end: span 10; }
-  .o-col-l-11 {
-    grid-column-end: span 11; }
-  .o-col-l-12 {
-    grid-column-end: span 12; }
-  .o-col-l-13 {
-    grid-column-end: span 13; }
-  .o-col-l-14 {
-    grid-column-end: span 14; }
-  .o-col-l-15 {
-    grid-column-end: span 15; }
-  .o-col-l-16 {
-    grid-column-end: span 16; }
-  .o-col-l-17 {
-    grid-column-end: span 17; }
-  .o-col-l-18 {
-    grid-column-end: span 18; }
-  .o-col-l-19 {
-    grid-column-end: span 19; }
-  .o-col-l-20 {
-    grid-column-end: span 20; }
-  .o-col-l-21 {
-    grid-column-end: span 21; }
-  .o-col-l-22 {
-    grid-column-end: span 22; }
-  .o-col-l-23 {
-    grid-column-end: span 23; }
-  .o-col-l-24 {
-    grid-column-end: span 24; }
-  .o-col-l-25 {
-    grid-column-end: span 25; }
-  .o-col-l-26 {
-    grid-column-end: span 26; }
-  .o-col-l-27 {
-    grid-column-end: span 27; }
-  .o-col-l-28 {
-    grid-column-end: span 28; }
-  .o-col-l-29 {
-    grid-column-end: span 29; }
-  .o-col-l-30 {
-    grid-column-end: span 30; }
-  .o-col-l-31 {
-    grid-column-end: span 31; }
-  .o-col-l-32 {
-    grid-column-end: span 32; } }
+    grid-template-columns: repeat(32, 1fr); } }
 
 @media (min-width: 1440px) {
   .o-row-max-1 {
@@ -904,7 +730,288 @@ html {
   .o-row-max-63 {
     grid-template-columns: repeat(63, 1fr); }
   .o-row-max-64 {
-    grid-template-columns: repeat(64, 1fr); }
+    grid-template-columns: repeat(64, 1fr); } }
+
+/*
+ |--------------------------------------------------------------------------
+ |  Col Classes
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Make Col Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Testing Classes
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Vertical Spacing Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Fluid Mixin
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Variables
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Map Deep Get Function
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Default Grid Settings
+ |--------------------------------------------------------------------------
+ */
+/*
+ |--------------------------------------------------------------------------
+ |  Strip Unit Function
+ |--------------------------------------------------------------------------
+ */
+[class*='o-section'], [class*='o-row'], [class*='o-col'] {
+  margin-top: 16px;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 0 1px black;
+  border-radius: 5px; }
+  @media screen and (min-width: 320px) {
+    [class*='o-section'], [class*='o-row'], [class*='o-col'] {
+      margin-top: calc(16px + 16 * (100vw - 320px) / (1120)); } }
+  @media screen and (min-width: 1440px) {
+    [class*='o-section'], [class*='o-row'], [class*='o-col'] {
+      margin-top: 32px; } }
+
+[class*='o-col'] {
+  grid-column-start: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 16px;
+  padding-bottom: 16px; }
+  @media screen and (min-width: 320px) {
+    [class*='o-col'] {
+      padding-left: calc(0px + 0 * (100vw - 320px) / (1120));
+      padding-right: calc(0px + 0 * (100vw - 320px) / (1120)); } }
+  @media screen and (min-width: 1440px) {
+    [class*='o-col'] {
+      padding-left: 0px;
+      padding-right: 0px; } }
+  @media screen and (min-width: 320px) {
+    [class*='o-col'] {
+      padding-top: calc(16px + 16 * (100vw - 320px) / (1120));
+      padding-bottom: calc(16px + 16 * (100vw - 320px) / (1120)); } }
+  @media screen and (min-width: 1440px) {
+    [class*='o-col'] {
+      padding-top: 32px;
+      padding-bottom: 32px; } }
+
+@media (min-width: 320px) {
+  .o-col-1 {
+    grid-column-end: span 1; }
+  .o-col-2 {
+    grid-column-end: span 2; }
+  .o-col-3 {
+    grid-column-end: span 3; }
+  .o-col-4 {
+    grid-column-end: span 4; } }
+
+@media (min-width: 400px) {
+  .o-col-xs-1 {
+    grid-column-end: span 1; }
+  .o-col-xs-2 {
+    grid-column-end: span 2; }
+  .o-col-xs-3 {
+    grid-column-end: span 3; }
+  .o-col-xs-4 {
+    grid-column-end: span 4; }
+  .o-col-xs-5 {
+    grid-column-end: span 5; }
+  .o-col-xs-6 {
+    grid-column-end: span 6; }
+  .o-col-xs-7 {
+    grid-column-end: span 7; }
+  .o-col-xs-8 {
+    grid-column-end: span 8; } }
+
+@media (min-width: 600px) {
+  .o-col-s-1 {
+    grid-column-end: span 1; }
+  .o-col-s-2 {
+    grid-column-end: span 2; }
+  .o-col-s-3 {
+    grid-column-end: span 3; }
+  .o-col-s-4 {
+    grid-column-end: span 4; }
+  .o-col-s-5 {
+    grid-column-end: span 5; }
+  .o-col-s-6 {
+    grid-column-end: span 6; }
+  .o-col-s-7 {
+    grid-column-end: span 7; }
+  .o-col-s-8 {
+    grid-column-end: span 8; }
+  .o-col-s-9 {
+    grid-column-end: span 9; }
+  .o-col-s-10 {
+    grid-column-end: span 10; }
+  .o-col-s-11 {
+    grid-column-end: span 11; }
+  .o-col-s-12 {
+    grid-column-end: span 12; } }
+
+@media (min-width: 800px) {
+  .o-col-m-1 {
+    grid-column-end: span 1; }
+  .o-col-m-2 {
+    grid-column-end: span 2; }
+  .o-col-m-3 {
+    grid-column-end: span 3; }
+  .o-col-m-4 {
+    grid-column-end: span 4; }
+  .o-col-m-5 {
+    grid-column-end: span 5; }
+  .o-col-m-6 {
+    grid-column-end: span 6; }
+  .o-col-m-7 {
+    grid-column-end: span 7; }
+  .o-col-m-8 {
+    grid-column-end: span 8; }
+  .o-col-m-9 {
+    grid-column-end: span 9; }
+  .o-col-m-10 {
+    grid-column-end: span 10; }
+  .o-col-m-11 {
+    grid-column-end: span 11; }
+  .o-col-m-12 {
+    grid-column-end: span 12; }
+  .o-col-m-13 {
+    grid-column-end: span 13; }
+  .o-col-m-14 {
+    grid-column-end: span 14; }
+  .o-col-m-15 {
+    grid-column-end: span 15; }
+  .o-col-m-16 {
+    grid-column-end: span 16; } }
+
+@media (min-width: 1000px) {
+  .o-col-l-1 {
+    grid-column-end: span 1; }
+  .o-col-l-2 {
+    grid-column-end: span 2; }
+  .o-col-l-3 {
+    grid-column-end: span 3; }
+  .o-col-l-4 {
+    grid-column-end: span 4; }
+  .o-col-l-5 {
+    grid-column-end: span 5; }
+  .o-col-l-6 {
+    grid-column-end: span 6; }
+  .o-col-l-7 {
+    grid-column-end: span 7; }
+  .o-col-l-8 {
+    grid-column-end: span 8; }
+  .o-col-l-9 {
+    grid-column-end: span 9; }
+  .o-col-l-10 {
+    grid-column-end: span 10; }
+  .o-col-l-11 {
+    grid-column-end: span 11; }
+  .o-col-l-12 {
+    grid-column-end: span 12; }
+  .o-col-l-13 {
+    grid-column-end: span 13; }
+  .o-col-l-14 {
+    grid-column-end: span 14; }
+  .o-col-l-15 {
+    grid-column-end: span 15; }
+  .o-col-l-16 {
+    grid-column-end: span 16; }
+  .o-col-l-17 {
+    grid-column-end: span 17; }
+  .o-col-l-18 {
+    grid-column-end: span 18; }
+  .o-col-l-19 {
+    grid-column-end: span 19; }
+  .o-col-l-20 {
+    grid-column-end: span 20; }
+  .o-col-l-21 {
+    grid-column-end: span 21; }
+  .o-col-l-22 {
+    grid-column-end: span 22; }
+  .o-col-l-23 {
+    grid-column-end: span 23; }
+  .o-col-l-24 {
+    grid-column-end: span 24; }
+  .o-col-l-25 {
+    grid-column-end: span 25; }
+  .o-col-l-26 {
+    grid-column-end: span 26; }
+  .o-col-l-27 {
+    grid-column-end: span 27; }
+  .o-col-l-28 {
+    grid-column-end: span 28; }
+  .o-col-l-29 {
+    grid-column-end: span 29; }
+  .o-col-l-30 {
+    grid-column-end: span 30; }
+  .o-col-l-31 {
+    grid-column-end: span 31; }
+  .o-col-l-32 {
+    grid-column-end: span 32; } }
+
+@media (min-width: 1440px) {
   .o-col-max-1 {
     grid-column-end: span 1; }
   .o-col-max-2 {

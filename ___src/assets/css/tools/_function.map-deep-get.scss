@@ -1,8 +1,12 @@
 /*
  |--------------------------------------------------------------------------
- |  App.scss
+ |  Map Deep Get Function
  |--------------------------------------------------------------------------
  */
 
-// Imports
-@import 'core';
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

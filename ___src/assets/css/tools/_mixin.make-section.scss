@@ -1,0 +1,21 @@
+/*
+ |--------------------------------------------------------------------------
+ |  Make Section Mixin
+ |--------------------------------------------------------------------------
+ */
+
+// Imports
+@import '../core/settings.variables';
+@import 'mixin.fluid';
+
+// Mixin
+@mixin make-section($behaviour: 'fixed', $padding: true, $factor: 1) {
+  max-width: if($behaviour == 'fixed', $bk-maxWidth, none);
+  $factor: $factor * 2;
+  $gutterMin: $factor * $bk-gutterMin;
+  $gutterMax: $factor * $bk-gutterMax;
+
+  @if $padding == true {
+    @include f($gutterMin, $gutterMax, padding-left padding-right);
+  }
+}

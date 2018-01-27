@@ -5,8 +5,8 @@ const buildTask = (cb) => {
     runSequence(
         ['clean:templates', 'clean:css'],
         ['compile:templates', 'sass'],
-        ['minify:images'],
-        cb,
+        ['minify:sass'],
+        cb
     );
 };
 

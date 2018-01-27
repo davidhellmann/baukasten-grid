@@ -9,7 +9,7 @@ gulp.task('clean:dist', (cb) => {
     ], {
         force: true
     }, cb)
-})
+});
 
 // Clean Templates
 gulp.task('clean:templates', (cb) => {
@@ -18,25 +18,7 @@ gulp.task('clean:templates', (cb) => {
     ], {
         force: true
     }, cb)
-})
-
-// Clean Images
-gulp.task('clean:images', (cb) => {
-    return del([
-        `${pkg.dist.images.base}**/*.{jpeg,jpg,gif,png,webp,svg,ico}`
-    ], {
-        force: true
-    }, cb)
-})
-
-// Clean JS
-gulp.task('clean:js', (cb) => {
-    return del([
-        `${pkg.dist.js}**/*`
-    ], {
-        force: true
-    }, cb)
-})
+});
 
 // Clean CSS
 gulp.task('clean:css', (cb) => {
@@ -45,4 +27,4 @@ gulp.task('clean:css', (cb) => {
     ], {
         force: true
     }, cb)
-})
+});

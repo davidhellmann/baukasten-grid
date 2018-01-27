@@ -41,5 +41,5 @@ const compileCss = () => {
         );
 };
 
-gulp.task('sass', compileCss);
+gulp.task('sass', ['minify:sass'], compileCss);
 module.exports = compileCss;

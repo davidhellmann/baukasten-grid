@@ -14,14 +14,6 @@
 
 // Default Class Settings
 [class*='#{$bk-prefix}-section'] {
-  @if $bk-legacy == true {
-    display: flex;
-  }
-
-  @if $bk-cssgrid == true {
-    display: grid;
-  }
-
   @include make-section();
   @include make-section-padding();
   @include center();

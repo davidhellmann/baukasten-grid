@@ -5,8 +5,8 @@
  */
 
 $bk-grid-settings: (
-  legacy: false,
-  cssgrid: true,
+  legacy: true,
+  cssgrid: false,
   testing: true,
   prefix: 'o',
   units: (

@@ -14,7 +14,7 @@
 
 // Default Class Settings
 [class*='#{$bk-prefix}-row-'] {
-  @if $bk-legacy == true {
+  @if $bk-legacy == true or $bk-cssgrid == false {
     @include make-row();
     display: flex;
     flex-flow: row wrap;
@@ -23,11 +23,6 @@
 
   @if $bk-cssgrid == true {
     display: grid;
-
-    @supports (display: grid) {
-      margin-left: 0;
-      margin-right: 0;
-    }
   }
 }
 // Error Handling

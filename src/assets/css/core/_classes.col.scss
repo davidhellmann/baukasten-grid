@@ -13,8 +13,6 @@
 // Default Class Settings
 [class*='#{$bk-prefix}-col-'] {
   @if $bk-legacy == true {
-    flex: 1 1 0;
-    width: auto;
     position: relative;
     min-height: 1px;
   }
@@ -40,13 +38,7 @@
       // Col Classes
       @for $i from 1 through $bk-colsMax {
         .#{$prefix}-col-#{$i} {
-          @if $bk-legacy == true {
-            @include make-col($i, $cols);
-          }
-
-          @if $bk-cssgrid == true {
-            @include make-col($i);
-          }
+          @include make-col($i, $cols);
         }
       }
     }
@@ -55,7 +47,7 @@
       // Col Classes
       @for $i from 1 through $cols {
         .#{$prefix}-col-#{$key}-#{$i} {
-          @include make-col($i);
+          @include make-col($i, $cols);
         }
       }
     }

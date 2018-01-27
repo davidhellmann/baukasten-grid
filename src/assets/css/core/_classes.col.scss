@@ -11,10 +11,13 @@
 @import 'settings.testing';
 
 // Default Class Settings
-[class*='#{$bk-prefix}-col-'] {
+[class*='#{$bk-prefix}-col'] {
   @if $bk-legacy == true {
     position: relative;
     min-height: 1px;
+    flex: 1 1 0;
+    width: auto;
+    display: inline;
   }
 
   @if $bk-cssgrid == true {
@@ -23,9 +26,9 @@
 }
 
 // Error Handling
-[class='#{$bk-prefix}-col'] {
+/*[class='#{$bk-prefix}-col'] {
   box-shadow: $bk-error-shadow;
-}
+}*/
 
 // Creating Col Classes
 @each $key, $value in $bk-breakpoints {
@@ -36,7 +39,7 @@
   @if $key == 'min' {
     @include media('>=#{$from}') {
       // Col Classes
-      @for $i from 1 through $bk-colsMax {
+      @for $i from 1 through $cols {
         .#{$prefix}-col-#{$i} {
           @include make-col($i, $cols);
         }

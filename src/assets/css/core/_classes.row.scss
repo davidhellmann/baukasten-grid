@@ -13,7 +13,7 @@
 @import 'settings.testing';
 
 // Default Class Settings
-[class*='#{$bk-prefix}-row-'] {
+[class*='#{$bk-prefix}-row'] {
   @if $bk-legacy == true or $bk-cssgrid == false {
     @include make-row();
     display: flex;
@@ -30,8 +30,8 @@
   box-shadow: $bk-error-shadow;
 }
 
-[class*='#{$bk-prefix}-row-']:not(.no-padding) {
-  > [class*='#{$bk-prefix}-col-'] {
+[class*='#{$bk-prefix}-row']:not(.no-padding) {
+  > [class*='#{$bk-prefix}-col'] {
     @include make-col-padding();
   }
 }
@@ -42,23 +42,9 @@
   $cols: map-get($value, cols);
   $prefix: $bk-prefix;
 
-  @if $key == 'min' {
-    @include media('>=#{$from}') {
-      // Row Classes
-      @for $i from 1 through $bk-colsMax {
-        .#{$prefix}-row-#{$i} {
-          @include make-row($i);
-        }
-      }
-    }
-  } @else if $key != 'min' {
-    @include media('>=#{$from}') {
-      // Row Classes
-      @for $i from 1 through $cols {
-        .#{$prefix}-row-#{$key}-#{$i} {
-          @include make-row($i);
-        }
-      }
+  @include media('>=#{$from}') {
+    .#{$prefix}-row {
+      @include make-row($cols);
     }
   }
 }

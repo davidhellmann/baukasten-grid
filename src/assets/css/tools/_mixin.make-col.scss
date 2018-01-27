@@ -10,8 +10,11 @@
 // Mixin
 @mixin make-col($cols: 1, $context: 1) {
   @if $bk-legacy == true {
-    flex: 1 1 (100% / $cols);
-    width: (100% / $cols);
+    content: '#{$cols}-#{$context}';
+    $width: $cols / $context * 100%;
+
+    flex: 0 1 $width;
+    width: $width;
   }
 
   @if $bk-cssgrid == true {

@@ -5,15 +5,13 @@ import pkg from '../../package.json';
 const $ = gulpLoadPlugins();
 
 const templates = () => {
-    const inject_folder = '_partials/webpack';
     return gulp
-        .src([
-            `!${pkg.src.templates}${inject_folder}/**`,
-            `${pkg.src.templates}**/*.*`,
-        ])
-        .pipe(global.checkChanged === true ?
-                $.changed(pkg.dist.markup) :
-                $.util.noop(),)
+        .src([`${pkg.src.markup}**/*.*`])
+        .pipe(
+            global.checkChanged === true
+                ? $.changed(pkg.dist.markup)
+                : $.util.noop(),
+        )
         .pipe(gulp.dest(pkg.dist.markup));
 };
 

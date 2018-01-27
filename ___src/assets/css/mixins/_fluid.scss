@@ -3,7 +3,7 @@
 
 @import '../functions/_strip-units';
 
-@mixin fluid($min-value, $max-value, $properties: null, $min-vw: map-deep-get($bkgs, breakpoints, min, from), $max-vw: map-deep-get($bkgs, breakpoints, max, from)) {
+@mixin fluid($min-value, $max-value, $properties: null, $min-vw: $bk-minWidth, $max-vw: $bk-maxWidth) {
   @if ($properties != null) {
     @each $property in $properties {
       #{$property}: $min-value;

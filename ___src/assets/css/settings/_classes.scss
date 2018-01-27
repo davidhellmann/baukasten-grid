@@ -2,43 +2,90 @@
 @import '../../../../node_modules/include-media/dist/include-media';
 @import '../functions/_map-deep-get';
 @import '../mixins/_grid';
+@import '../mixins/_center';
 @import '../settings/_grid';
 
-$_breakpoints: map-deep-get($bkgs, breakpoints);
-
-[class*='#{map-get($bkgs, prefix)}-row'] {
-  @if map-deep-get($bkgs, legacy) == true {
+[class*='#{$bk-prefix}-section'] {
+  @if $bk-legacy == true {
     display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
   }
 
-  display: grid;
-  @include make-row(1);
+  @if $bk-cssgrid == true {
+    display: grid;
+  }
+
+  @include make-section();
+  @include make-section-padding();
+  @include center();
+
+  @if $bk-testing == true {
+    @extend %styling;
+  }
 }
 
-[class*='#{map-get($bkgs, prefix)}-row']:not(.no-padding) {
-  > [class*='#{map-get($bkgs, prefix)}-col'] {
-    @if map-deep-get($bkgs, legacy) == true {
-      @supports not (display: grid) {
-        @include make-col-padding();
-      }
+[class*='#{$bk-prefix}-row'] {
+  @if $bk-legacy == true {
+    @include make-row();
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 0;
+  }
+
+  @if $bk-cssgrid == true {
+    display: grid;
+
+    @supports (display: grid) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  @if $bk-testing == true {
+    @extend %styling;
+  }
+}
+
+[class*='#{$bk-prefix}-row']:not(.no-padding) {
+  > [class*='#{$bk-prefix}-col'] {
+    @if $bk-legacy == true {
+      @include make-col-padding();
     }
 
+    @if $bk-cssgrid == true {
+      @include make-col-padding(0);
+    }
+  }
+
+  @if $bk-cssgrid == true {
     @include make-col-gap();
   }
 }
 
-[class*='#{map-get($bkgs, prefix)}-col'] {
+[class*='#{$bk-prefix}-col'] {
+  @if $bk-legacy == true {
+    flex: 1 1 0;
+    width: auto;
+    position: relative;
+    min-height: 1px;
+  }
+
+  @if $bk-cssgrid == true {
   grid-column-start: auto;
+    @include make-col-padding(0);
+  }
+
+  @if $bk-testing == true {
+    @extend %styling;
+    @include f(16px, 32px, padding-top padding-bottom);
+  }
 }
 
 
 // Creating Classes
-@each $key, $value in $_breakpoints {
+@each $key, $value in $bk-breakpoints {
   $from: map-get($value, from);
   $cols: map-get($value, cols);
-  $prefix: map-get($bkgs, prefix);
+  $prefix: $bk-prefix;
 
   @if $key == 'min' {
     @include media('>=#{$from}') {

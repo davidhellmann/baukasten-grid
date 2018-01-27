@@ -51,7 +51,7 @@
     @include f($gutterMin, $gutterMax, margin-left margin-right);
   }
 
-  @if &bk-cssgrid == true {
+  @if $bk-cssgrid == true {
     grid-template-columns: repeat($cols, 1fr);
   }
 }
@@ -59,11 +59,11 @@
 // Make Col Mixins
 @mixin make-col($cols: 1, $context: 1) {
   @if $bk-legacy == true {
-    flex: 1 1 calc(100% / $context * $cols);
-    width: calc(100% / $context * $cols);
+    flex: 1 1 percentage($cols / $context);
+    width: percentage($cols / $context);
   }
 
-  @if &bk-cssgrid == true {
+  @if $bk-cssgrid == true {
     grid-column-end: span ceil($cols);
   }
 }
@@ -87,16 +87,16 @@
 }
 
 // Col Pos Mixin
-@mixin col-pos($cols: auto, $max-cols: null) {
+@mixin col-pos($cols: auto, $contenxt: null) {
   @if $cols != auto {
     $cols: ceil($cols);
   }
 
   @if $bk-legacy == true {
-    margin-left: calc(100% / $max-cols * $cols);
+    margin-left: percentage($cols / $context);
   }
 
-  @if &bk-cssgrid == true {
+  @if $bk-cssgrid == true {
     grid-column-start: $cols;
   }
 }

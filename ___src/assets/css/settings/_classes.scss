@@ -92,14 +92,22 @@
       // Row Classes
       @for $i from 1 through $cols {
         .#{$prefix}-row-#{$i} {
-          grid-template-columns: repeat(#{$i}, 1fr);
+          @if $bk-cssgrid == true {
+            grid-template-columns: repeat(#{$i}, 1fr);
+          }
         }
       }
 
       // Col Classes
       @for $i from 1 through $cols {
         .#{$prefix}-col-#{$i} {
-          @include make-col($i);
+          @if $bk-legacy == true {
+            @include make-col($i, $cols);
+          }
+
+          @if $bk-cssgrid == true {
+            @include make-col($i);
+          }
         }
       }
     }

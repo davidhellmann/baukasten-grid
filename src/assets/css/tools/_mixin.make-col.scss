@@ -11,9 +11,13 @@
 @mixin make-col($cols: 1, $context: 1) {
   @if $bk-flexboxgrid == true or $bk-cssgrid == false or $bk-cssgrid-fallback == true {
     $width: $cols / $context * 100%;
-
     flex: 0 1 $width;
     width: $width;
+
+    .use-flexbox > & {
+      flex: 0 1 $width;
+      width: $width;
+    }
   }
 
   @if $bk-cssgrid == true {

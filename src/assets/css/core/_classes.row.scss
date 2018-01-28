@@ -35,6 +35,56 @@
   }
 }
 
+[class*='#{$bk-prefix}-row'].use-flexbox {
+  @include make-row();
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 0;
+
+  > [class='#{$bk-prefix}-col'] {
+    position: relative;
+    min-height: 1px;
+    flex: 1 1 0;
+    width: auto;
+  }
+}
+
+[class*='#{$bk-prefix}-row'].items-x-start {
+  justify-content: flex-start;
+}
+
+[class*='#{$bk-prefix}-row'].items-x-center {
+  justify-content: center;
+}
+
+[class*='#{$bk-prefix}-row'].items-x-end {
+  justify-content: flex-end;
+}
+
+[class*='#{$bk-prefix}-row'].items-x-around {
+  justify-content: space-around;
+}
+
+[class*='#{$bk-prefix}-row'].items-x-between {
+  justify-content: space-between;
+}
+
+[class*='#{$bk-prefix}-row'].items-y-start {
+  align-items: flex-start;
+}
+
+[class*='#{$bk-prefix}-row'].items-y-center {
+  align-items: center;
+}
+
+[class*='#{$bk-prefix}-row'].items-y-end {
+  align-items: flex-end;
+}
+
+[class*='#{$bk-prefix}-row'].items-y-stretch {
+  align-items: stretch;
+}
+
 // Creating Row Classes
 @each $key, $value in $bk-breakpoints {
   $from: map-get($value, from);

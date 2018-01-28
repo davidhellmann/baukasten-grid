@@ -9,13 +9,7 @@
 @import 'mixin.fluid';
 
 // Mixin
-@mixin make-row($cols: 1, $factor: 1, $context: 1) {
-  $factor: $factor * -2;
-  $gutterMin: $factor * $bk-gutterMin;
-  $gutterMax: $factor * $bk-gutterMax;
-
-  @include f($gutterMin, $gutterMax, margin-left margin-right);
-
+@mixin make-row($cols: 1) {
   @if $bk-cssgrid == true {
     grid-template-columns: repeat($cols, 1fr);
   }

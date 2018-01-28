@@ -1,0 +1,22 @@
+$bk-grid-settings-custom: (
+  legacy: false,
+  cssgrid: true,
+  testing: true,
+  prefix: 'gridOnly',
+  units: (
+    gutter: 8px,
+    gutterMinFactor: 1,
+    gutterMaxFactor: 2,
+    gutterMinVerticalFactor: 1,
+    gutterMaxVerticalFactor: 2
+  ),
+  breakpoints: (
+    min: (from: 320px, to: 399px, cols: 6),
+    max: (from: 1440px, to: 0, cols: 48)
+  )
+);
+
+@import 'base/settings.reset';
+@import 'core';
+
+

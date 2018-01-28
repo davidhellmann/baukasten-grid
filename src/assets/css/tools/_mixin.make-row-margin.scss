@@ -1,0 +1,18 @@
+/*
+ |--------------------------------------------------------------------------
+ |  Make Row Margin Mixin
+ |--------------------------------------------------------------------------
+ */
+
+// Imports
+@import '../core/settings.variables';
+@import 'mixin.fluid';
+
+// Mixin
+@mixin make-row-margin($cols: 1, $factor: 1, $context: 1) {
+  $factor: $factor * -2;
+  $gutterMin: $factor * $bk-gutterMin;
+  $gutterMax: $factor * $bk-gutterMax;
+
+  @include f($gutterMin, $gutterMax, margin-left margin-right);
+}

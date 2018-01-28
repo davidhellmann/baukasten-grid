@@ -8,27 +8,34 @@
 @import '../../../../node_modules/include-media/dist/include-media';
 @import '../tools/mixin.make-col';
 @import 'settings.variables';
-@import 'settings.testing';
 
 // Default Class Settings
 [class*='#{$bk-prefix}-col'] {
+  @include make-col-padding();
+
   @if $bk-legacy == true {
     position: relative;
     min-height: 1px;
     flex: 1 1 0;
     width: auto;
-    display: inline;
   }
 
   @if $bk-cssgrid == true {
-    grid-column-start: auto;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 }
 
-// Error Handling
-/*[class='#{$bk-prefix}-col'] {
-  box-shadow: $bk-error-shadow;
-}*/
+[class*='#{$bk-prefix}-col'].no-padding {
+  @include make-col-padding(0);
+}
+
+[class*='#{$bk-prefix}-col-'] {
+  @if $bk-cssgrid == true {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+}
 
 // Creating Col Classes
 @each $key, $value in $bk-breakpoints {

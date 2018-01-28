@@ -10,7 +10,6 @@
 @import '../tools/mixin.make-section-padding';
 @import '../tools/mixin.center';
 @import 'settings.variables';
-@import 'settings.testing';
 
 // Default Class Settings
 [class*='#{$bk-prefix}-section'] {

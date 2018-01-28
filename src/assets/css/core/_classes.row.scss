@@ -10,7 +10,6 @@
 @import '../tools/mixin.make-col-padding';
 @import '../tools/mixin.make-col-gap';
 @import 'settings.variables';
-@import 'settings.testing';
 
 // Default Class Settings
 [class*='#{$bk-prefix}-row'] {
@@ -30,9 +29,9 @@
   box-shadow: $bk-error-shadow;
 }
 
-[class*='#{$bk-prefix}-row']:not(.no-padding) {
+[class*='#{$bk-prefix}-row'].no-padding {
   > [class*='#{$bk-prefix}-col'] {
-    @include make-col-padding();
+    @include make-col-padding(0);
   }
 }
 

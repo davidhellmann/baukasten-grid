@@ -4,9 +4,13 @@
  |--------------------------------------------------------------------------
  */
 
+@import '../tools/function.recursive-map-merge';
+@import '../tools/function.map-deep-get';
+
+$bk-grid-settings-custom: () !default;
 $bk-grid-settings: (
-  legacy: true,
-  cssgrid: false,
+  legacy: false,
+  cssgrid: true,
   testing: true,
   prefix: 'o',
   units: (
@@ -24,4 +28,23 @@ $bk-grid-settings: (
     l:   (from: 1000px, to: 1439px, cols: 48),
     max: (from: 1440px, to: 0, cols: 48)
   )
-) !default;
+);
+
+// Merge Custom Map into Default Map
+$bk-grid-settings: map-merge($bk-grid-settings, $bk-grid-settings-custom);
+
+// Check if Breakpoints exits
+@if map-has_key($bk-grid-settings-custom, breakpoints) {
+
+  $bk-breakpoints-map: map-deep-get($bk-grid-settings-custom, breakpoints);
+  $bk-breakpoints-custom: (breakpoints: map-deep-get($bk-grid-settings-custom, breakpoints));
+
+  @if map_has_key($bk-breakpoints-map, min) and map_has_key($bk-breakpoints-map, max) {
+    $bk-grid-settings: map_remove($bk-grid-settings, breakpoints);
+    $bk-grid-settings: recursive-map-merge($bk-grid-settings, $bk-breakpoints-custom);
+  } @else {
+    @error 'You have to set a "min" and "max" Breakpoint within your custom settings!';
+  }
+}
+
+@debug $bk-grid-settings;

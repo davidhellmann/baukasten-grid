@@ -10,7 +10,28 @@
 @import 'settings.variables';
 
 // Default Class Settings
-[class*='#{$bk-prefix}-col'] {
+[class*='#{$bk-prefix}-col-'],
+%col {
+  @include make-col-padding();
+
+  @if $bk-flexboxgrid == true or $bk-cssgrid == false or $bk-cssgrid-fallback == true {
+    position: relative;
+    min-height: 1px;
+    flex: 1 1 0;
+    width: auto;
+  }
+
+  @if $bk-cssgrid == true {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+}
+
+[class*='#{$bk-prefix}-col'].no-padding {
+  @include make-col-padding(0);
+}
+
+[class='#{$bk-prefix}-col'] {
   @include make-col-padding();
 
   @if $bk-flexboxgrid == true or $bk-cssgrid == false or $bk-cssgrid-fallback == true {
@@ -23,17 +44,6 @@
   @if $bk-cssgrid == true {
     grid-column-start: 1;
     grid-column-end: -1;
-  }
-}
-
-[class*='#{$bk-prefix}-col'].no-padding {
-  @include make-col-padding(0);
-}
-
-[class*='#{$bk-prefix}-col-'] {
-  @if $bk-cssgrid == true {
-    grid-column-start: auto;
-    grid-column-end: auto;
   }
 }
 

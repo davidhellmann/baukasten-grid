@@ -610,7 +610,7 @@ body {
   align-items: stretch;
 }
 
-[class*='o-col'] {
+[class*='o-col-'] {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
@@ -620,14 +620,14 @@ body {
 }
 
 @media screen and (min-width: 320px) {
-  [class*='o-col'] {
+  [class*='o-col-'] {
     padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
     padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
-  [class*='o-col'] {
+  [class*='o-col-'] {
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -649,6 +649,29 @@ body {
   [class*='o-col'].no-padding {
     padding-left: 0px;
     padding-right: 0px;
+  }
+}
+
+[class='o-col'] {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  min-height: 1px;
+  flex: 1 1 0;
+  width: auto;
+}
+
+@media screen and (min-width: 320px) {
+  [class='o-col'] {
+    padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
+    padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  [class='o-col'] {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 

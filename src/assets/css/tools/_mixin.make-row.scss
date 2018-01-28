@@ -7,10 +7,24 @@
 // Imports
 @import '../core/settings.variables';
 @import 'mixin.fluid';
+@import 'mixin.make-row-margin';
 
 // Mixin
-@mixin make-row($cols: 1) {
+@mixin make-row($cols: 1, $sassMode: true) {
+  @include make-row-margin();
+  @if $sassMode == true {
+    @if $bk-cssgrid == false {
+      flex-flow: row wrap;
+      flex: 1 1 0;
+    }
+  }
+
+  @if $bk-cssgrid == false {
+    display: flex;
+  }
+
   @if $bk-cssgrid == true {
+    display: grid;
     grid-template-columns: repeat($cols, 1fr);
   }
 }

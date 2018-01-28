@@ -7,6 +7,13 @@
 @import '../../../../node_modules/include-media/dist/include-media';
 @import '../tools/mixin.make-section-padding';
 @import '../tools/mixin.vertical-spacing';
+@import '../tools/mixin.make-col';
+@import '../tools/mixin.make-row';
+@import '../tools/mixin.make-row-margin';
+@import '../tools/mixin.make-section';
+@import '../tools/mixin.make-section-padding';
+@import '../tools/mixin.center';
+@import '../core/classes.col';
 
 h2 {
   word-break: break-all;
@@ -61,3 +68,31 @@ h2 {
     }
   }
 }
+
+
+.foo-section {
+  @include make-section();
+  @include center();
+  @extend %styling-section;
+}
+
+.foo-row {
+  @include make-row(12);
+  @include make-row-margin();
+  @extend %styling-row;
+}
+
+.foo-col {
+  @extend %styling-col;
+  @include make-col(3, 12);
+  @include make-col-padding();
+
+  @include media('>=1000px') {
+    @include make-col(6, 12);
+  }
+
+  &--full {
+    @include make-col(12, 12);
+  }
+}
+

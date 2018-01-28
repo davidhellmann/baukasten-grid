@@ -8,13 +8,13 @@
 @import '../../../../node_modules/include-media/dist/include-media';
 @import '../tools/mixin.make-row';
 @import '../tools/mixin.make-col-padding';
-@import '../tools/mixin.make-col-gap';
 @import 'settings.variables';
 
 // Default Class Settings
-[class*='#{$bk-prefix}-row'] {
-  @if $bk-flexboxgrid == true or $bk-cssgrid == false or $bk-cssgrid-fallback {
-    @include make-row();
+[class^='#{$bk-prefix}-row'] {
+  @include make-row($sassMode: false);
+
+  @if $bk-cssgrid == false {
     display: flex;
     flex-flow: row wrap;
     flex: 1 1 0;
@@ -29,14 +29,14 @@
   box-shadow: $bk-error-shadow;
 }
 
-[class*='#{$bk-prefix}-row'].no-padding {
-  > [class*='#{$bk-prefix}-col'] {
+[class^='#{$bk-prefix}-row'].no-padding {
+  > [class^='#{$bk-prefix}-col'] {
     @include make-col-padding(0);
   }
 }
 
-[class*='#{$bk-prefix}-row'].use-flexbox {
-  @include make-row();
+[class^='#{$bk-prefix}-row'].use-flexbox {
+  @include make-row($sassMode: false);
   display: flex;
   flex-flow: row wrap;
   flex: 1 1 0;
@@ -102,8 +102,8 @@
 
   @include media('>=#{$from}') {
     .#{$prefix}-row,
-    %#{$prefix}-row {
-      @include make-row($cols);
+    %row {
+      @include make-row($cols, $sassMode: false);
     }
   }
 }

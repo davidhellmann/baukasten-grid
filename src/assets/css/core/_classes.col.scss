@@ -7,14 +7,14 @@
 // Imports
 @import '../../../../node_modules/include-media/dist/include-media';
 @import '../tools/mixin.make-col';
+@import '../tools/mixin.make-col-padding';
 @import 'settings.variables';
 
 // Default Class Settings
-[class*='#{$bk-prefix}-col-'],
-%col {
+[class^='#{$bk-prefix}-col-']{
   @include make-col-padding();
 
-  @if $bk-flexboxgrid == true or $bk-cssgrid == false or $bk-cssgrid-fallback == true {
+  @if $bk-cssgrid == false {
     position: relative;
     min-height: 1px;
     flex: 1 1 0;
@@ -27,14 +27,14 @@
   }
 }
 
-[class*='#{$bk-prefix}-col'].no-padding {
+[class1^='#{$bk-prefix}-col'].no-padding {
   @include make-col-padding(0);
 }
 
 [class='#{$bk-prefix}-col'] {
   @include make-col-padding();
 
-  @if $bk-flexboxgrid == true or $bk-cssgrid == false or $bk-cssgrid-fallback == true {
+  @if $bk-cssgrid == false {
     position: relative;
     min-height: 1px;
     flex: 1 1 0;
@@ -57,9 +57,8 @@
     @include media('>=#{$from}') {
       // Col Classes
       @for $i from 1 through $cols {
-        .#{$prefix}-col-#{$i},
-        %#{$prefix}-col-#{$i}{
-          @include make-col($i, $cols);
+        .#{$prefix}-col-#{$i} {
+          @include make-col($i, $cols, false);
         }
       }
     }
@@ -67,9 +66,8 @@
     @include media('>=#{$from}') {
       // Col Classes
       @for $i from 1 through $cols {
-        .#{$prefix}-col-#{$key}-#{$i},
-        %#{$prefix}-col-#{$key}-#{$i}{
-          @include make-col($i, $cols);
+        .#{$prefix}-col-#{$key}-#{$i} {
+          @include make-col($i, $cols, false);
         }
       }
     }

@@ -15,7 +15,7 @@
   // Check if SassMode active
   @if $sassMode == false  {
     // Set Flexbox Settings when CSS Grid is no active
-    @if $bk-cssgrid == false {
+    @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
       flex: 0 1 $width;
       width: $width;
 

@@ -13,7 +13,7 @@
 @mixin make-row($cols: 1, $sassMode: true) {
   @include make-row-margin();
   @if $sassMode == true {
-    @if $bk-cssgrid == false {
+    @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
       flex-flow: row wrap;
       flex: 1 1 0;
     }

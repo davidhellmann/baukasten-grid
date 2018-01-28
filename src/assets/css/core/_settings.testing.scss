@@ -59,11 +59,11 @@ $bk-border-radius: 3px !default;
   }
 
   &::before {
-    @include f($bk-gutterMin * 2, $bk-gutterMax * 2, left);
+    @include f($bk-gutterMin, $bk-gutterMax, left);
   }
 
   &::after {
-    @include f($bk-gutterMin * 2, $bk-gutterMax * 2, right);
+    @include f($bk-gutterMin, $bk-gutterMax, right);
   }
 }
 

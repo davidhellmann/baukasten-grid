@@ -10,7 +10,6 @@
 
 // Mixin
 @mixin make-col-padding($factor: 1) {
-  $factor: $factor * 2;
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
 

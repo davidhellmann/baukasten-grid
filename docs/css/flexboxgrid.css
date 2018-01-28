@@ -237,8 +237,8 @@ html {
 }
 
 [class^='o-col-'] {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
   position: relative;
   min-height: 1px;
   flex: 1 1 0;
@@ -247,15 +247,15 @@ html {
 
 @media screen and (min-width: 320px) {
   [class^='o-col-'] {
-    padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
-    padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
+    padding-left: calc(8px + 8 * (100vw - 320px) / (1120));
+    padding-right: calc(8px + 8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class^='o-col-'] {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -279,8 +279,8 @@ html {
 }
 
 [class='o-col'] {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
   position: relative;
   min-height: 1px;
   flex: 1 1 0;
@@ -289,15 +289,15 @@ html {
 
 @media screen and (min-width: 320px) {
   [class='o-col'] {
-    padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
-    padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
+    padding-left: calc(8px + 8 * (100vw - 320px) / (1120));
+    padding-right: calc(8px + 8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class='o-col'] {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -1989,40 +1989,40 @@ h2 {
 }
 
 .foo-row {
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-left: -8px;
+  margin-right: -8px;
   flex-flow: row wrap;
   flex: 1 1 0;
   display: flex;
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 @media screen and (min-width: 320px) {
   .foo-row {
-    margin-left: calc(-16px + -16 * (100vw - 320px) / (1120));
-    margin-right: calc(-16px + -16 * (100vw - 320px) / (1120));
+    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
+    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   .foo-row {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
 @media screen and (min-width: 320px) {
   .foo-row {
-    margin-left: calc(-16px + -16 * (100vw - 320px) / (1120));
-    margin-right: calc(-16px + -16 * (100vw - 320px) / (1120));
+    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
+    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   .foo-row {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
@@ -2031,21 +2031,21 @@ h2 {
   min-height: 1px;
   flex: 0 1 25%;
   width: 25%;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 @media screen and (min-width: 320px) {
   .foo-col {
-    padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
-    padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
+    padding-left: calc(8px + 8 * (100vw - 320px) / (1120));
+    padding-right: calc(8px + 8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   .foo-col {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -2188,39 +2188,39 @@ h2 {
 
 .foo-col::before,
 [class^='o-col']::before {
-  left: 16px;
+  left: 8px;
 }
 
 @media screen and (min-width: 320px) {
   .foo-col::before,
   [class^='o-col']::before {
-    left: calc(16px + 16 * (100vw - 320px) / (1120));
+    left: calc(8px + 8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   .foo-col::before,
   [class^='o-col']::before {
-    left: 32px;
+    left: 16px;
   }
 }
 
 .foo-col::after,
 [class^='o-col']::after {
-  right: 16px;
+  right: 8px;
 }
 
 @media screen and (min-width: 320px) {
   .foo-col::after,
   [class^='o-col']::after {
-    right: calc(16px + 16 * (100vw - 320px) / (1120));
+    right: calc(8px + 8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   .foo-col::after,
   [class^='o-col']::after {
-    right: 32px;
+    right: 16px;
   }
 }
 
@@ -2294,8 +2294,8 @@ body {
 }
 
 [class^='o-row'] {
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-left: -8px;
+  margin-right: -8px;
   display: flex;
   display: flex;
   flex-flow: row wrap;
@@ -2304,15 +2304,15 @@ body {
 
 @media screen and (min-width: 320px) {
   [class^='o-row'] {
-    margin-left: calc(-16px + -16 * (100vw - 320px) / (1120));
-    margin-right: calc(-16px + -16 * (100vw - 320px) / (1120));
+    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
+    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class^='o-row'] {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
@@ -2340,8 +2340,8 @@ body {
 }
 
 [class^='o-row'].use-flexbox {
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-left: -8px;
+  margin-right: -8px;
   display: flex;
   display: flex;
   flex-flow: row wrap;
@@ -2350,15 +2350,15 @@ body {
 
 @media screen and (min-width: 320px) {
   [class^='o-row'].use-flexbox {
-    margin-left: calc(-16px + -16 * (100vw - 320px) / (1120));
-    margin-right: calc(-16px + -16 * (100vw - 320px) / (1120));
+    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
+    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class^='o-row'].use-flexbox {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
@@ -2407,139 +2407,139 @@ body {
 
 @media (min-width: 320px) {
   .o-row {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -8px;
+    margin-right: -8px;
     display: flex;
   }
 }
 
 @media screen and (min-width: 320px) and (min-width: 320px) {
   .o-row {
-    margin-left: calc(-16px + -16 * (100vw - 320px) / (1120));
-    margin-right: calc(-16px + -16 * (100vw - 320px) / (1120));
+    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
+    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 320px) and (min-width: 1440px) {
   .o-row {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
 @media (min-width: 400px) {
   .o-row {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -8px;
+    margin-right: -8px;
     display: flex;
   }
 }
 
 @media screen and (min-width: 400px) and (min-width: 320px) {
   .o-row {
-    margin-left: calc(-16px + -16 * (100vw - 320px) / (1120));
-    margin-right: calc(-16px + -16 * (100vw - 320px) / (1120));
+    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
+    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 400px) and (min-width: 1440px) {
   .o-row {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
 @media (min-width: 600px) {
   .o-row {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -8px;
+    margin-right: -8px;
     display: flex;
   }
 }
 
 @media screen and (min-width: 600px) and (min-width: 320px) {
   .o-row {
-    margin-left: calc(-16px + -16 * (100vw - 320px) / (1120));
-    margin-right: calc(-16px + -16 * (100vw - 320px) / (1120));
+    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
+    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 600px) and (min-width: 1440px) {
   .o-row {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
 @media (min-width: 800px) {
   .o-row {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -8px;
+    margin-right: -8px;
     display: flex;
   }
 }
 
 @media screen and (min-width: 800px) and (min-width: 320px) {
   .o-row {
-    margin-left: calc(-16px + -16 * (100vw - 320px) / (1120));
-    margin-right: calc(-16px + -16 * (100vw - 320px) / (1120));
+    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
+    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 800px) and (min-width: 1440px) {
   .o-row {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
 @media (min-width: 1000px) {
   .o-row {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -8px;
+    margin-right: -8px;
     display: flex;
   }
 }
 
 @media screen and (min-width: 1000px) and (min-width: 320px) {
   .o-row {
-    margin-left: calc(-16px + -16 * (100vw - 320px) / (1120));
-    margin-right: calc(-16px + -16 * (100vw - 320px) / (1120));
+    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
+    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1000px) and (min-width: 1440px) {
   .o-row {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
 @media (min-width: 1440px) {
   .o-row {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -8px;
+    margin-right: -8px;
     display: flex;
   }
 }
 
 @media screen and (min-width: 1440px) and (min-width: 320px) {
   .o-row {
-    margin-left: calc(-16px + -16 * (100vw - 320px) / (1120));
-    margin-right: calc(-16px + -16 * (100vw - 320px) / (1120));
+    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
+    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) and (min-width: 1440px) {
   .o-row {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 }
 
 [class^='o-col-'] {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
   position: relative;
   min-height: 1px;
   flex: 1 1 0;
@@ -2548,15 +2548,15 @@ body {
 
 @media screen and (min-width: 320px) {
   [class^='o-col-'] {
-    padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
-    padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
+    padding-left: calc(8px + 8 * (100vw - 320px) / (1120));
+    padding-right: calc(8px + 8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class^='o-col-'] {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -2580,8 +2580,8 @@ body {
 }
 
 [class='o-col'] {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
   position: relative;
   min-height: 1px;
   flex: 1 1 0;
@@ -2590,15 +2590,15 @@ body {
 
 @media screen and (min-width: 320px) {
   [class='o-col'] {
-    padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
-    padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
+    padding-left: calc(8px + 8 * (100vw - 320px) / (1120));
+    padding-right: calc(8px + 8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class='o-col'] {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 

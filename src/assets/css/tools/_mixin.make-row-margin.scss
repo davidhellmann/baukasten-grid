@@ -9,8 +9,8 @@
 @import 'mixin.fluid';
 
 // Mixin
-@mixin make-row-margin($factor: 1, $context: 1) {
-  $factor: $factor * -2;
+@mixin make-row-margin($factor: 1) {
+  $factor: $factor * -1;
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
 

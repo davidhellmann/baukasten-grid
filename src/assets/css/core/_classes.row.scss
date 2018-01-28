@@ -49,39 +49,48 @@
   }
 }
 
-[class*='#{$bk-prefix}-row'].items-x-start {
+.items-x-start,
+%items-x-start {
   justify-content: flex-start;
 }
 
-[class*='#{$bk-prefix}-row'].items-x-center {
+.items-x-center,
+%items-x-center {
   justify-content: center;
 }
 
-[class*='#{$bk-prefix}-row'].items-x-end {
+.items-x-end,
+%items-x-end {
   justify-content: flex-end;
 }
 
-[class*='#{$bk-prefix}-row'].items-x-around {
+.items-x-around ,
+%items-x-around {
   justify-content: space-around;
 }
 
-[class*='#{$bk-prefix}-row'].items-x-between {
+.items-x-between,
+%items-x-between {
   justify-content: space-between;
 }
 
-[class*='#{$bk-prefix}-row'].items-y-start {
+.items-y-start,
+%items-y-start {
   align-items: flex-start;
 }
 
-[class*='#{$bk-prefix}-row'].items-y-center {
+.items-y-center,
+%items-y-center {
   align-items: center;
 }
 
-[class*='#{$bk-prefix}-row'].items-y-end {
+.items-y-end,
+%items-y-end {
   align-items: flex-end;
 }
 
-[class*='#{$bk-prefix}-row'].items-y-stretch {
+.items-y-stretch,
+%items-y-stretch {
   align-items: stretch;
 }
 
@@ -92,7 +101,8 @@
   $prefix: $bk-prefix;
 
   @include media('>=#{$from}') {
-    .#{$prefix}-row {
+    .#{$prefix}-row,
+    %#{$prefix}-row {
       @include make-row($cols);
     }
   }

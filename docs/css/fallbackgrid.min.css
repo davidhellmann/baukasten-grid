@@ -271,18 +271,18 @@ h2 {
 }
 
 .custom-section h1 {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 @media screen and (min-width: 320px) {
   .custom-section h1 {
-    margin-top: calc(32px + 32 * (100vw - 320px) / (1120));
+    margin-top: calc(16px + 16 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   .custom-section h1 {
-    margin-top: 64px;
+    margin-top: 32px;
   }
 }
 
@@ -332,14 +332,14 @@ h2 {
 [class*='o-section'],
 [class*='o-row'],
 [class*='o-col'] {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 @media screen and (min-width: 320px) {
   [class*='o-section'],
   [class*='o-row'],
   [class*='o-col'] {
-    margin-top: calc(32px + 32 * (100vw - 320px) / (1120));
+    margin-top: calc(16px + 16 * (100vw - 320px) / (1120));
   }
 }
 
@@ -347,7 +347,7 @@ h2 {
   [class*='o-section'],
   [class*='o-row'],
   [class*='o-col'] {
-    margin-top: 64px;
+    margin-top: 32px;
   }
 }
 
@@ -403,22 +403,22 @@ body {
 }
 
 [class*='o-col'] {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   position: relative;
 }
 
 @media screen and (min-width: 320px) {
   [class*='o-col'] {
-    padding-top: calc(32px + 32 * (100vw - 320px) / (1120));
-    padding-bottom: calc(32px + 32 * (100vw - 320px) / (1120));
+    padding-top: calc(16px + 16 * (100vw - 320px) / (1120));
+    padding-bottom: calc(16px + 16 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class*='o-col'] {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -430,62 +430,62 @@ body {
   bottom: 0;
   width: 1px;
   background-color: rgba(255,0,0,0.1);
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 @media screen and (min-width: 320px) {
   [class*='o-col']::before,
   [class*='o-col']::after {
-    padding-top: calc(32px + 32 * (100vw - 320px) / (1120));
-    padding-bottom: calc(32px + 32 * (100vw - 320px) / (1120));
+    padding-top: calc(16px + 16 * (100vw - 320px) / (1120));
+    padding-bottom: calc(16px + 16 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class*='o-col']::before,
   [class*='o-col']::after {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
 [class*='o-col']::before {
-  left: 32px;
+  left: 16px;
 }
 
 @media screen and (min-width: 320px) {
   [class*='o-col']::before {
-    left: calc(32px + 32 * (100vw - 320px) / (1120));
+    left: calc(16px + 16 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class*='o-col']::before {
-    left: 64px;
+    left: 32px;
   }
 }
 
 [class*='o-col']::after {
-  right: 32px;
+  right: 16px;
 }
 
 @media screen and (min-width: 320px) {
   [class*='o-col']::after {
-    right: calc(32px + 32 * (100vw - 320px) / (1120));
+    right: calc(16px + 16 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class*='o-col']::after {
-    right: 64px;
+    right: 32px;
   }
 }
 
 [class*='o-section'] {
   max-width: 1440px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   padding-top: 0;
   padding-bottom: 16px;
   margin-left: auto;
@@ -494,15 +494,15 @@ body {
 
 @media screen and (min-width: 320px) {
   [class*='o-section'] {
-    padding-left: calc(32px + 32 * (100vw - 320px) / (1120));
-    padding-right: calc(32px + 32 * (100vw - 320px) / (1120));
+    padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
+    padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class*='o-section'] {
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
@@ -582,23 +582,23 @@ body {
 }
 
 [class*='o-col'] {
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   grid-column-start: 1;
   grid-column-end: -1;
 }
 
 @media screen and (min-width: 320px) {
   [class*='o-col'] {
-    padding-left: calc(32px + 32 * (100vw - 320px) / (1120));
-    padding-right: calc(32px + 32 * (100vw - 320px) / (1120));
+    padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
+    padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
   [class*='o-col'] {
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 

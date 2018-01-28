@@ -13,7 +13,7 @@
 
 // Default Class Settings
 [class*='#{$bk-prefix}-row'] {
-  @if $bk-legacy == true or $bk-cssgrid == false {
+  @if $bk-flexboxgrid == true or $bk-cssgrid == false or $bk-cssgrid-fallback {
     @include make-row();
     display: flex;
     flex-flow: row wrap;

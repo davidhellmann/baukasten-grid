@@ -65,7 +65,7 @@ $bk-border-radius: 3px !default;
 
   [class*='#{$bk-prefix}-col'] {
     @extend %styling-col;
-    @include f(16px, 32px, padding-top padding-bottom);
+    @include f($bk-gutterMin * 2, $bk-gutterMax * 2, padding-top padding-bottom);
     position: relative;
 
     &::before,
@@ -76,15 +76,15 @@ $bk-border-radius: 3px !default;
       bottom: 0;
       width: 1px;
       background-color: rgba(red, 0.1);
-      @include f(16px, 32px, padding-top padding-bottom);
+      @include f($bk-gutterMin * 2, $bk-gutterMax * 2, padding-top padding-bottom);
     }
 
     &::before {
-      @include f(16px, 32px, left);
+      @include f($bk-gutterMin * 2, $bk-gutterMax * 2, left);
     }
 
     &::after {
-      @include f(16px, 32px, right);
+      @include f($bk-gutterMin * 2, $bk-gutterMax * 2, right);
     }
   }
 }

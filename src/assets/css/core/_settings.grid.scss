@@ -9,8 +9,9 @@
 
 $bk-grid-settings-custom: () !default;
 $bk-grid-settings: (
-  legacy: false,
   cssgrid: true,
+  cssgrid-fallback: true,
+  flexboxgrid: false,
   testing: true,
   prefix: 'o',
   units: (
@@ -46,5 +47,3 @@ $bk-grid-settings: map-merge($bk-grid-settings, $bk-grid-settings-custom);
     @error 'You have to set a "min" and "max" Breakpoint within your custom settings!';
   }
 }
-
-@debug $bk-grid-settings;

@@ -13,7 +13,7 @@
 [class*='#{$bk-prefix}-col'] {
   @include make-col-padding();
 
-  @if $bk-legacy == true {
+  @if $bk-flexboxgrid == true or $bk-cssgrid == false or $bk-cssgrid-fallback == true {
     position: relative;
     min-height: 1px;
     flex: 1 1 0;

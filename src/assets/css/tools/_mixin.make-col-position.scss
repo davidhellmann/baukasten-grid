@@ -8,13 +8,9 @@
 @import '../core/settings.variables';
 
 // Mixin
-@mixin col-pos($cols: auto, $contenxt: null) {
+@mixin col-pos($cols: auto, $context: 1) {
   @if $cols != auto {
     $cols: ceil($cols);
-  }
-
-  @if $bk-legacy == true {
-    margin-left: percentage($cols / $context);
   }
 
   @if $bk-cssgrid == true {

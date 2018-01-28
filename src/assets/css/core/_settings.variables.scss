@@ -15,8 +15,9 @@ $bk-gs: $bk-grid-settings;
 $bk-prefix: map-get($bk-gs, prefix);
 
 // Get Grid Settings
-$bk-legacy: map-deep-get($bk-gs, legacy);
+$bk-flexboxgrid: map-deep-get($bk-gs, flexboxgrid);
 $bk-cssgrid: map-deep-get($bk-gs, cssgrid);
+$bk-cssgrid-fallback: map-deep-get($bk-gs, cssgrid-fall);
 $bk-testing: map-deep-get($bk-gs, testing);
 
 // Get Breakpoints

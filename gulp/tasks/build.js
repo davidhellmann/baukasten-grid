@@ -3,7 +3,7 @@ import runSequence from 'run-sequence';
 
 const buildTask = (cb) => {
     runSequence(
-        ['clean:templates', 'clean:css'],
+        ['clean:dist'],
         ['compile:templates', 'sass'],
         ['minify:sass'],
         cb

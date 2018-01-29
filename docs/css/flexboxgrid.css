@@ -301,7 +301,7 @@ html {
   }
 }
 
-@media (min-width: 320px) {
+@media screen and (min-width: 320px) {
   .o-col-1 {
     flex: 0 1 16.6666666667%;
     width: 16.6666666667%;
@@ -363,7 +363,7 @@ html {
   }
 }
 
-@media (min-width: 400px) {
+@media screen and (min-width: 400px) {
   .o-col-xs-1 {
     flex: 0 1 16.6666666667%;
     width: 16.6666666667%;
@@ -425,7 +425,7 @@ html {
   }
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .o-col-s-1 {
     flex: 0 1 4.1666666667%;
     width: 4.1666666667%;
@@ -667,7 +667,7 @@ html {
   }
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .o-col-m-1 {
     flex: 0 1 4.1666666667%;
     width: 4.1666666667%;
@@ -909,7 +909,7 @@ html {
   }
 }
 
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
   .o-col-l-1 {
     flex: 0 1 2.0833333333%;
     width: 2.0833333333%;
@@ -1391,7 +1391,7 @@ html {
   }
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .o-col-max-1 {
     flex: 0 1 2.0833333333%;
     width: 2.0833333333%;
@@ -1949,7 +1949,7 @@ h2 {
   transition: all 0.25s ease-out;
 }
 
-@media (min-width: 620px) {
+@media screen and (min-width: 620px) {
   .custom-section a {
     margin: 2px 5px;
     width: 180px;
@@ -1958,7 +1958,7 @@ h2 {
 
 .custom-section a:hover {
   transform: translateY(-1px);
-  box-shadow: inset 0 0 0 1px #fff,0 3px 10px rgba(0,0,0,0.05);
+  box-shadow: inset 0 0 0 1px white,0 3px 10px rgba(0,0,0,0.05);
 }
 
 .custom-section a.is-active {
@@ -2049,7 +2049,7 @@ h2 {
   }
 }
 
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
   .foo-col {
     position: relative;
     min-height: 1px;
@@ -2405,7 +2405,7 @@ body {
   align-items: stretch;
 }
 
-@media (min-width: 320px) {
+@media screen and (min-width: 320px) {
   .o-row {
     margin-left: -8px;
     margin-right: -8px;
@@ -2427,7 +2427,7 @@ body {
   }
 }
 
-@media (min-width: 400px) {
+@media screen and (min-width: 400px) {
   .o-row {
     margin-left: -8px;
     margin-right: -8px;
@@ -2449,7 +2449,7 @@ body {
   }
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .o-row {
     margin-left: -8px;
     margin-right: -8px;
@@ -2471,7 +2471,7 @@ body {
   }
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .o-row {
     margin-left: -8px;
     margin-right: -8px;
@@ -2493,7 +2493,7 @@ body {
   }
 }
 
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
   .o-row {
     margin-left: -8px;
     margin-right: -8px;
@@ -2515,7 +2515,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .o-row {
     margin-left: -8px;
     margin-right: -8px;
@@ -2602,7 +2602,7 @@ body {
   }
 }
 
-@media (min-width: 320px) {
+@media screen and (min-width: 320px) {
   .o-col-1 {
     flex: 0 1 16.6666666667%;
     width: 16.6666666667%;
@@ -2664,7 +2664,7 @@ body {
   }
 }
 
-@media (min-width: 400px) {
+@media screen and (min-width: 400px) {
   .o-col-xs-1 {
     flex: 0 1 16.6666666667%;
     width: 16.6666666667%;
@@ -2726,7 +2726,7 @@ body {
   }
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .o-col-s-1 {
     flex: 0 1 4.1666666667%;
     width: 4.1666666667%;
@@ -2968,7 +2968,7 @@ body {
   }
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .o-col-m-1 {
     flex: 0 1 4.1666666667%;
     width: 4.1666666667%;
@@ -3210,7 +3210,7 @@ body {
   }
 }
 
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
   .o-col-l-1 {
     flex: 0 1 2.0833333333%;
     width: 2.0833333333%;
@@ -3692,7 +3692,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .o-col-max-1 {
     flex: 0 1 2.0833333333%;
     width: 2.0833333333%;

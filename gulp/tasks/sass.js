@@ -1,40 +1,34 @@
 import gulp from 'gulp';
-import yargs from 'yargs';
-import gulpLoadPlugins from 'gulp-load-plugins';
-import browserSync from 'browser-sync';
+import sourcemaps from 'gulp-sourcemaps';
+import sass from 'gulp-sass';
 import strip from 'gulp-strip-css-comments';
-import csscomb from 'gulp-csscomb';
 import cssbeauty from 'gulp-cssbeautify';
+import csscomb from 'gulp-csscomb';
+import browserSync from 'browser-sync';
+import rename from 'gulp-rename';
 import errorHandler from '../lib/errorHandler';
 import pkg from '../../package.json';
 
-const argv = yargs.argv;
-const $ = gulpLoadPlugins();
-
 const compileCss = () => {
-    const env = argv.env || 'development';
-
     return gulp
         .src(`${pkg.src.css}**/*.scss`)
-        .pipe(argv.source ? $.debug({verbose: true}) : $.util.noop())
-        .pipe(env === 'development' ? $.sourcemaps.init() : $.util.noop())
-        .pipe($.sass({
+        .pipe(sourcemaps.init())
+        .pipe(sass({
             outputStyle: 'compressed',
             precision: 10,
             includePaths: [`${pkg.src.css}**/*.scss`],
         }).on('error', errorHandler))
-        .pipe(env === 'development' ? $.sourcemaps.write('./maps/') : $.util.noop())
+        .pipe(sourcemaps.write('./maps/'))
         .pipe(strip())
         .pipe(cssbeauty())
         .pipe(csscomb())
         .pipe(gulp.dest(pkg.dist.css))
-        .pipe($.size({title: '>>> CSS File Size: '}))
-        .pipe($.rename({suffix: '.min'}))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(pkg.dist.css))
         .pipe(browserSync.stream({
             match: '**/*.css'
         })
-    );
+        );
 };
 
 gulp.task('sass', compileCss);

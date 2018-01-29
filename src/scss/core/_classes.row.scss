@@ -5,7 +5,6 @@
  */
 
 // Imports
-@import '../../../../node_modules/include-media/dist/include-media';
 @import '../tools/mixin.make-row';
 @import '../tools/mixin.make-col-padding';
 @import 'settings.variables';
@@ -100,7 +99,7 @@
   $cols: map-get($value, cols);
   $prefix: $bk-prefix;
 
-  @include media('>=#{$from}') {
+  @media screen and (min-width: #{$from}) {
     .#{$prefix}-row,
     %row {
       @include make-row($cols, $sassMode: false);

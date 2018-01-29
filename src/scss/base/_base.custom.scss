@@ -4,7 +4,6 @@
  |--------------------------------------------------------------------------
  */
 
-@import '../../../../node_modules/include-media/dist/include-media';
 @import '../tools/mixin.make-section-padding';
 @import '../tools/mixin.vertical-spacing';
 @import '../tools/mixin.make-col';
@@ -52,7 +51,7 @@ h2 {
     color: #666;
     transition: all 0.25s ease-out;
 
-    @include media('>=620px') {
+    @media screen and (min-width: 620px) {
       margin: 2px 5px;
       width: 180px;
     }
@@ -87,7 +86,7 @@ h2 {
   @include make-col(3, 12);
   @include make-col-padding();
 
-  @include media('>=1000px') {
+  @media screen and (min-width: 1000px) {
     @include make-col(6, 12);
   }
 

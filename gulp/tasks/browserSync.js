@@ -1,5 +1,4 @@
 import browserSync from 'browser-sync';
-import chalk from 'chalk';
 import gulp from 'gulp';
 import pkg from '../../package.json';
 
@@ -42,7 +41,7 @@ const browserSyncTask = () => {
                 ],
                 fn(event, file) {
                     console.log(
-                        chalk`-> Event: {cyan ${event}}: {magenta ${file}}`,
+                        `-> Event: ${event}: ${file}`,
                     );
                     if (event === 'change' && file.includes('.css')) {
                         browserSync.reload('*.css');

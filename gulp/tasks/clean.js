@@ -7,24 +7,6 @@ gulp.task('clean:dist', (cb) => {
     return del([
         `${pkg.dist.markup}**/*`
     ], {
-        force: true
-    }, cb)
-});
-
-// Clean Templates
-gulp.task('clean:templates', (cb) => {
-    return del([
-        `${pkg.dist.markup}**/*`
-    ], {
-        force: true
-    }, cb)
-});
-
-// Clean CSS
-gulp.task('clean:css', (cb) => {
-    return del([
-        `${pkg.dist.css}**/*`
-    ], {
-        force: true
-    }, cb)
+            force: true
+        }, cb)
 });

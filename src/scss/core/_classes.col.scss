@@ -5,7 +5,6 @@
  */
 
 // Imports
-@import '../../../../node_modules/include-media/dist/include-media';
 @import '../tools/mixin.make-col';
 @import '../tools/mixin.make-col-padding';
 @import 'settings.variables';
@@ -54,7 +53,7 @@
   $prefix: $bk-prefix;
 
   @if $key == 'min' {
-    @include media('>=#{$from}') {
+    @media screen and (min-width: #{$from}) {
       // Col Classes
       @for $i from 1 through $cols {
         .#{$prefix}-col-#{$i} {
@@ -63,7 +62,7 @@
       }
     }
   } @else if $key != 'min' {
-    @include media('>=#{$from}') {
+    @media screen and (min-width: #{$from}) {
       // Col Classes
       @for $i from 1 through $cols {
         .#{$prefix}-col-#{$key}-#{$i} {

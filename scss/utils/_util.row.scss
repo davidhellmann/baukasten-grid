@@ -18,10 +18,6 @@
     display: grid;
   }
 }
-// Error Handling
-[class='#{$bk-prefix}-row'] {
-  box-shadow: $bk-error-shadow;
-}
 
 [class^='#{$bk-prefix}-row'].no-padding {
   > [class^='#{$bk-prefix}-col'] {

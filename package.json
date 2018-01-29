@@ -9,7 +9,10 @@
       "homepage": "https://davidhellmann.com"
     }
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidhellmann/baukasten-grid.git"
+  },
   "projectName": "baukasten-grid",
   "projectDescription": "Just another Grid System",
   "projectVersion": "0.0.1",

@@ -4,11 +4,6 @@
  |--------------------------------------------------------------------------
  */
 
-// Imports
-@import '../tools/mixin.make-col';
-@import '../tools/mixin.make-col-padding';
-@import 'settings.variables';
-
 // Default Class Settings
 [class^='#{$bk-prefix}-col-']{
   @include make-col-padding();

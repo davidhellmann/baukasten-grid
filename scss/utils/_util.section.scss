@@ -1,10 +1,12 @@
 /*
  |--------------------------------------------------------------------------
- |  Center Mixin
+ |  Section Classes
  |--------------------------------------------------------------------------
  */
 
-@mixin center {
-  margin-left: auto;
-  margin-right: auto;
+// Default Class Settings
+[class^='#{$bk-prefix}-section'] {
+  @include make-section();
+  @include make-section-padding();
+  @include center();
 }

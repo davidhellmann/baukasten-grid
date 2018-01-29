@@ -24,9 +24,9 @@
     }
   },
   "src": {
-    "base": "src/",
-    "markup": "src/templates/",
-    "css": "src/scss/"
+    "base": "./",
+    "markup": "./templates/",
+    "css": "./scss/"
   },
   "dist": {
     "base": "docs/",

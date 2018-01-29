@@ -1,12 +1,12 @@
 /*
  |--------------------------------------------------------------------------
- |  App.scss
+ |  cssgrid.scss
  |--------------------------------------------------------------------------
  */
 
 $bk-grid-settings-custom: (
   cssgrid: true,
-  cssgrid-fallback: true,
+  cssgrid-fallback: false,
   flexboxgrid: false,
   testing: true,
   prefix: 'o',
@@ -28,6 +28,7 @@ $bk-grid-settings-custom: (
 );
 
 // Imports
-@import 'base/base.reset';
-@import 'base/base.custom';
-@import 'core';
+@import 'functions';
+@import 'grid';
+@import 'variables';
+@import 'mixins';

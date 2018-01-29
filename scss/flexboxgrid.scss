@@ -28,6 +28,7 @@ $bk-grid-settings-custom: (
 );
 
 // Imports
-@import 'base/base.reset';
-@import 'base/base.custom';
-@import 'core';
+@import 'functions';
+@import 'grid';
+@import 'variables';
+@import 'mixins';

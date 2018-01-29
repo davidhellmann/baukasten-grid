@@ -4,9 +4,6 @@
  |--------------------------------------------------------------------------
  */
 
-@import '../tools/function.recursive-map-merge';
-@import '../tools/function.map-deep-get';
-
 $bk-grid-settings-custom: () !default;
 $bk-grid-settings: (
   cssgrid: true,

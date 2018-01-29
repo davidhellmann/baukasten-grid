@@ -29,10 +29,10 @@ $bk-maxWidth: map-deep-get($bk-gs, breakpoints, max, from);
 
 // Get Gutters
 $bk-gutter: map-deep-get($bk-gs, units, gutter);
-$bk-gutterMin: $bk-gutter * map-deep-get($bk-gs, units, gutterMinFactor);
-$bk-gutterMax: $bk-gutter * map-deep-get($bk-gs, units, gutterMaxFactor);
-$bk-gutterMinVertical: $bk-gutter * map-deep-get($bk-gs, units, gutterMinVerticalFactor);
-$bk-gutterMaxVertical: $bk-gutter * map-deep-get($bk-gs, units, gutterMaxVerticalFactor);
+$bk-gutterMin: $bk-gutter * map-deep-get($bk-gs, units, gutter-min-factor);
+$bk-gutterMax: $bk-gutter * map-deep-get($bk-gs, units, gutter-max-factor);
+$bk-gutterMinVertical: $bk-gutter * map-deep-get($bk-gs, units, gutter-min-vertical-factor);
+$bk-gutterMaxVertical: $bk-gutter * map-deep-get($bk-gs, units, gutter-max-vertical-factor);
 
 // Class Errors
 $bk-error-shadow: inset 0 0 0 2px red;

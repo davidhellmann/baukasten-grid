@@ -88,9 +88,7 @@ $bk-grid-settings-custom: (
   // Cols are how many cols can have a row on that specific breakpoint.
   breakpoints: (
     min: (from: 320px, to: 399px, cols: 6),
-    xs:  (from: 400px, to: 599px, cols: 6),
     s:   (from: 600px, to: 799px, cols: 12),
-    m:   (from: 800px, to: 999px, cols: 12),
     l:   (from: 1000px, to: 1439px, cols: 24),
     max: (from: 1440px, to: 0, cols: 24)
   )

@@ -58,6 +58,9 @@ $bk-grid-settings-custom: (
   testing: false,
 
   // Class Creation
+  // Not every projects need all this offset / push / pull classes. You decide!
+  // @Boolean
+  // default: false
   create-offset-classes: false,
   create-push-classes: false,
   create-pull-classes: false,

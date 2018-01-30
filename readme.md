@@ -7,7 +7,7 @@ Oh wait, another Grid System? Yes!
 ## How to use that fancy Grid…
 
 ### Install Baukasten Grid
-```
+```bash
 // Nostalgic
 npm i baukaten-grid
 
@@ -19,7 +19,7 @@ yarn add baukasten-grid
 Maybe your Main CSS File called: `app.scss`.
 Open this File and add something like this to it
 
-```
+```scss
 // Nostalgic
 @import '../../../node_modules/baukasten-grid/scss/baukasten-grid';
 
@@ -31,7 +31,7 @@ Open this File and add something like this to it
 Your project is so special? No Problem!
 You can overwrite the default Settings Map with your own settings.
 Now, it your `app.scss` must look like this:
-```
+```scss
 // First: you have to add the Map
 $bk-grid-settings-custom: (
   // You want to use CSS Grid?

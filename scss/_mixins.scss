@@ -101,6 +101,11 @@
         // max-width: none;
       }
       grid-column-end: span ceil($cols);
+
+      .use-flexbox > & {
+        flex: 0 1 $width;
+        max-width: $width;
+      }
     }
 
   } @else {
@@ -115,12 +120,12 @@
     @if $bk-cssgrid == true {
       grid-column-start: auto;
       grid-column-end: span ceil($cols);
-    }
-  }
 
-  .use-flexbox > & {
-    flex: 0 1 $width;
-    max-width: $width;
+      .use-flexbox > & {
+        flex: 0 1 $width;
+        max-width: $width;
+      }
+    }
   }
 }
 

@@ -57,14 +57,6 @@ $bk-grid-settings-custom: (
   // default: false
   testing: false,
 
-  // Class Creation
-  // Not every projects need all this offset / push / pull classes. You decide!
-  // @Boolean
-  // default: false
-  create-offset-classes: false,
-  create-push-classes: false,
-  create-pull-classes: false,
-
   // Naming Conventions? No Problem. You can choose you prefix!
   // @String
   // default: 'o-'
@@ -83,14 +75,24 @@ $bk-grid-settings-custom: (
     gutter-max-vertical-factor: 2
   ),
 
+  // Class Creation
+  // Not every projects need all this offset / push / pull classes. You decide!
+  // @Boolean
+  // default: false
+  offset-classes: false,
+  push-classes: false,
+  pull-classes: false,
+
   // Breakpoints must have at least a "min" and a "max". The other Breakpoints as u like
   // We use all the time "min-width".
   // Cols are how many cols can have a row on that specific breakpoint.
   breakpoints: (
-    min: (from: 320px, to: 399px, cols: 6),
-    s:   (from: 600px, to: 799px, cols: 12),
-    l:   (from: 1000px, to: 1439px, cols: 24),
-    max: (from: 1440px, to: 0, cols: 24)
+    min: (from: 320px, to: 399px, cols: 6, create-classes: true),
+    xs:  (from: 400px, to: 599px, cols: 6, create-classes: false),
+    s:   (from: 600px, to: 799px, cols: 12, create-classes: true),
+    m:   (from: 800px, to: 999px, cols: 12, create-classes: false),
+    l:   (from: 1000px, to: 1439px, cols: 24, create-classes: true),
+    max: (from: 1440px, to: 0, cols: 24, create-classes: false)
   )
 );
 ```

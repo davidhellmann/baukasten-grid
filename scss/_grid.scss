@@ -4,7 +4,7 @@
  |--------------------------------------------------------------------------
  */
 
-$bk-grid-settings-custom: () !default;
+$bk-grid-settings-custom: null !default;
 $bk-grid-settings: (
   cssgrid: true,
   cssgrid-fallback: true,
@@ -29,18 +29,46 @@ $bk-grid-settings: (
 );
 
 // Merge Custom Map into Default Map
-$bk-grid-settings: map-merge($bk-grid-settings, $bk-grid-settings-custom);
+@if $bk-grid-settings-custom != null {
+  $bk-grid-settings: map-merge($bk-grid-settings, $bk-grid-settings-custom);
+}
 
 // Check if Breakpoints exits
-@if map-has_key($bk-grid-settings-custom, breakpoints) {
+@if map-has_key($bk-grid-settings, breakpoints) {
 
-  $bk-breakpoints-map: map-deep-get($bk-grid-settings-custom, breakpoints);
-  $bk-breakpoints-custom: (breakpoints: map-deep-get($bk-grid-settings-custom, breakpoints));
+  // Get Breakpoints to to check if min & max exists
+  $bk-breakpoints-map: map-deep-get($bk-grid-settings, breakpoints);
 
+  // Merge Breakpoints into breakpoints
+  $bk-breakpoints-custom: (breakpoints: map-deep-get($bk-grid-settings, breakpoints));
+
+  // When min and max is defined do the Action otherwise grumble
   @if map_has_key($bk-breakpoints-map, min) and map_has_key($bk-breakpoints-map, max) {
+
+    // Clear default breakpoints if at least min and max are defined
     $bk-grid-settings: map_remove($bk-grid-settings, breakpoints);
+
+    // Merge Custom Breakpoints into Map
     $bk-grid-settings: recursive-map-merge($bk-grid-settings, $bk-breakpoints-custom);
+
+    // New empty Map
+    $bk-breakpoints: () !default;
+
+    // Loop over all Breakpoints
+    @each $key, $values in $bk-breakpoints-map {
+      // Get the From Value from the Breakpoint
+      $_breakpoint: map-get($values, from);
+
+      // Merge Key / Value into Map
+      $bk-breakpoints: map_merge($bk-breakpoints, ($key: $_breakpoint));
+    }
+
+    $breakpoints: $bk-breakpoints;
   } @else {
-    @error 'You have to set a "min" and "max" Breakpoint within your custom settings!';
+    @warn 'You have to set a "min" and "max" Breakpoint within your custom settings!';
   }
+} @else {
+  @warn 'You have to set a "min" and "max" Breakpoint within your custom settings!';
 }
+
+

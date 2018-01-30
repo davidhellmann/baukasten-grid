@@ -339,121 +339,61 @@
 
 @media screen and (min-width: 1000px) {
   .o-col-l-1 {
-    flex: 0 1 4.1666666667%;
-    max-width: 4.1666666667%;
-  }
-
-  .o-col-l-2 {
     flex: 0 1 8.3333333333%;
     max-width: 8.3333333333%;
   }
 
-  .o-col-l-3 {
-    flex: 0 1 12.5%;
-    max-width: 12.5%;
-  }
-
-  .o-col-l-4 {
+  .o-col-l-2 {
     flex: 0 1 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
-  .o-col-l-5 {
-    flex: 0 1 20.8333333333%;
-    max-width: 20.8333333333%;
-  }
-
-  .o-col-l-6 {
+  .o-col-l-3 {
     flex: 0 1 25%;
     max-width: 25%;
   }
 
-  .o-col-l-7 {
-    flex: 0 1 29.1666666667%;
-    max-width: 29.1666666667%;
-  }
-
-  .o-col-l-8 {
+  .o-col-l-4 {
     flex: 0 1 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
-  .o-col-l-9 {
-    flex: 0 1 37.5%;
-    max-width: 37.5%;
-  }
-
-  .o-col-l-10 {
+  .o-col-l-5 {
     flex: 0 1 41.6666666667%;
     max-width: 41.6666666667%;
   }
 
-  .o-col-l-11 {
-    flex: 0 1 45.8333333333%;
-    max-width: 45.8333333333%;
-  }
-
-  .o-col-l-12 {
+  .o-col-l-6 {
     flex: 0 1 50%;
     max-width: 50%;
   }
 
-  .o-col-l-13 {
-    flex: 0 1 54.1666666667%;
-    max-width: 54.1666666667%;
-  }
-
-  .o-col-l-14 {
+  .o-col-l-7 {
     flex: 0 1 58.3333333333%;
     max-width: 58.3333333333%;
   }
 
-  .o-col-l-15 {
-    flex: 0 1 62.5%;
-    max-width: 62.5%;
-  }
-
-  .o-col-l-16 {
+  .o-col-l-8 {
     flex: 0 1 66.6666666667%;
     max-width: 66.6666666667%;
   }
 
-  .o-col-l-17 {
-    flex: 0 1 70.8333333333%;
-    max-width: 70.8333333333%;
-  }
-
-  .o-col-l-18 {
+  .o-col-l-9 {
     flex: 0 1 75%;
     max-width: 75%;
   }
 
-  .o-col-l-19 {
-    flex: 0 1 79.1666666667%;
-    max-width: 79.1666666667%;
-  }
-
-  .o-col-l-20 {
+  .o-col-l-10 {
     flex: 0 1 83.3333333333%;
     max-width: 83.3333333333%;
   }
 
-  .o-col-l-21 {
-    flex: 0 1 87.5%;
-    max-width: 87.5%;
-  }
-
-  .o-col-l-22 {
+  .o-col-l-11 {
     flex: 0 1 91.6666666667%;
     max-width: 91.6666666667%;
   }
 
-  .o-col-l-23 {
-    flex: 0 1 95.8333333333%;
-    max-width: 95.8333333333%;
-  }
-
-  .o-col-l-24 {
+  .o-col-l-12 {
     flex: 0 1 100%;
     max-width: 100%;
   }

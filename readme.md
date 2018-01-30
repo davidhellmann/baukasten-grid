@@ -1,4 +1,4 @@
-<img alt="Baukasten" src="https://raw.githubusercontent.com/davidhellmann/baukasten-grid/master/baukasten.png" width="300">
+![Logo of the project](./baukasten.png)
 
 # Baukasten Grid
 

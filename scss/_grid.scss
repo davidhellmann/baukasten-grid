@@ -6,9 +6,9 @@
 
 $bk-grid-settings-custom: null !default;
 $bk-grid-settings: (
-  cssgrid: true,
-  cssgrid-fallback: true,
-  flexboxgrid: false,
+  cssgrid: false,
+  cssgrid-fallback: false,
+  flexboxgrid: true,
   testing: false,
   create-offset-classes: false,
   create-push-classes: false,

@@ -162,7 +162,7 @@
     margin-left: -8px;
     margin-right: -8px;
     display: grid;
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: repeat(12, 1fr);
   }
 }
 
@@ -544,7 +544,7 @@
   }
 
   .o-col-push-l-1 {
-    left: 4.1666666667%;
+    left: 8.3333333333%;
   }
 
   .o-col-pull-l-1 {
@@ -560,7 +560,7 @@
   }
 
   .o-col-push-l-2 {
-    left: 8.3333333333%;
+    left: 16.6666666667%;
   }
 
   .o-col-pull-l-2 {
@@ -576,7 +576,7 @@
   }
 
   .o-col-push-l-3 {
-    left: 12.5%;
+    left: 25%;
   }
 
   .o-col-pull-l-3 {
@@ -592,7 +592,7 @@
   }
 
   .o-col-push-l-4 {
-    left: 16.6666666667%;
+    left: 33.3333333333%;
   }
 
   .o-col-pull-l-4 {
@@ -608,7 +608,7 @@
   }
 
   .o-col-push-l-5 {
-    left: 20.8333333333%;
+    left: 41.6666666667%;
   }
 
   .o-col-pull-l-5 {
@@ -624,7 +624,7 @@
   }
 
   .o-col-push-l-6 {
-    left: 25%;
+    left: 50%;
   }
 
   .o-col-pull-l-6 {
@@ -640,7 +640,7 @@
   }
 
   .o-col-push-l-7 {
-    left: 29.1666666667%;
+    left: 58.3333333333%;
   }
 
   .o-col-pull-l-7 {
@@ -656,7 +656,7 @@
   }
 
   .o-col-push-l-8 {
-    left: 33.3333333333%;
+    left: 66.6666666667%;
   }
 
   .o-col-pull-l-8 {
@@ -672,7 +672,7 @@
   }
 
   .o-col-push-l-9 {
-    left: 37.5%;
+    left: 75%;
   }
 
   .o-col-pull-l-9 {
@@ -688,7 +688,7 @@
   }
 
   .o-col-push-l-10 {
-    left: 41.6666666667%;
+    left: 83.3333333333%;
   }
 
   .o-col-pull-l-10 {
@@ -704,7 +704,7 @@
   }
 
   .o-col-push-l-11 {
-    left: 45.8333333333%;
+    left: 91.6666666667%;
   }
 
   .o-col-pull-l-11 {
@@ -720,203 +720,11 @@
   }
 
   .o-col-push-l-12 {
-    left: 50%;
+    left: 100%;
   }
 
   .o-col-pull-l-12 {
     grid-column-start: 12;
-  }
-
-  .o-col-l-13 {
-    grid-column-end: span 13;
-  }
-
-  .o-col-offset-l-13 {
-    grid-column-start: 14;
-  }
-
-  .o-col-push-l-13 {
-    left: 54.1666666667%;
-  }
-
-  .o-col-pull-l-13 {
-    grid-column-start: 13;
-  }
-
-  .o-col-l-14 {
-    grid-column-end: span 14;
-  }
-
-  .o-col-offset-l-14 {
-    grid-column-start: 15;
-  }
-
-  .o-col-push-l-14 {
-    left: 58.3333333333%;
-  }
-
-  .o-col-pull-l-14 {
-    grid-column-start: 14;
-  }
-
-  .o-col-l-15 {
-    grid-column-end: span 15;
-  }
-
-  .o-col-offset-l-15 {
-    grid-column-start: 16;
-  }
-
-  .o-col-push-l-15 {
-    left: 62.5%;
-  }
-
-  .o-col-pull-l-15 {
-    grid-column-start: 15;
-  }
-
-  .o-col-l-16 {
-    grid-column-end: span 16;
-  }
-
-  .o-col-offset-l-16 {
-    grid-column-start: 17;
-  }
-
-  .o-col-push-l-16 {
-    left: 66.6666666667%;
-  }
-
-  .o-col-pull-l-16 {
-    grid-column-start: 16;
-  }
-
-  .o-col-l-17 {
-    grid-column-end: span 17;
-  }
-
-  .o-col-offset-l-17 {
-    grid-column-start: 18;
-  }
-
-  .o-col-push-l-17 {
-    left: 70.8333333333%;
-  }
-
-  .o-col-pull-l-17 {
-    grid-column-start: 17;
-  }
-
-  .o-col-l-18 {
-    grid-column-end: span 18;
-  }
-
-  .o-col-offset-l-18 {
-    grid-column-start: 19;
-  }
-
-  .o-col-push-l-18 {
-    left: 75%;
-  }
-
-  .o-col-pull-l-18 {
-    grid-column-start: 18;
-  }
-
-  .o-col-l-19 {
-    grid-column-end: span 19;
-  }
-
-  .o-col-offset-l-19 {
-    grid-column-start: 20;
-  }
-
-  .o-col-push-l-19 {
-    left: 79.1666666667%;
-  }
-
-  .o-col-pull-l-19 {
-    grid-column-start: 19;
-  }
-
-  .o-col-l-20 {
-    grid-column-end: span 20;
-  }
-
-  .o-col-offset-l-20 {
-    grid-column-start: 21;
-  }
-
-  .o-col-push-l-20 {
-    left: 83.3333333333%;
-  }
-
-  .o-col-pull-l-20 {
-    grid-column-start: 20;
-  }
-
-  .o-col-l-21 {
-    grid-column-end: span 21;
-  }
-
-  .o-col-offset-l-21 {
-    grid-column-start: 22;
-  }
-
-  .o-col-push-l-21 {
-    left: 87.5%;
-  }
-
-  .o-col-pull-l-21 {
-    grid-column-start: 21;
-  }
-
-  .o-col-l-22 {
-    grid-column-end: span 22;
-  }
-
-  .o-col-offset-l-22 {
-    grid-column-start: 23;
-  }
-
-  .o-col-push-l-22 {
-    left: 91.6666666667%;
-  }
-
-  .o-col-pull-l-22 {
-    grid-column-start: 22;
-  }
-
-  .o-col-l-23 {
-    grid-column-end: span 23;
-  }
-
-  .o-col-offset-l-23 {
-    grid-column-start: 24;
-  }
-
-  .o-col-push-l-23 {
-    left: 95.8333333333%;
-  }
-
-  .o-col-pull-l-23 {
-    grid-column-start: 23;
-  }
-
-  .o-col-l-24 {
-    grid-column-end: span 24;
-  }
-
-  .o-col-offset-l-24 {
-    grid-column-start: 25;
-  }
-
-  .o-col-push-l-24 {
-    left: 100%;
-  }
-
-  .o-col-pull-l-24 {
-    grid-column-start: 24;
   }
 }/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */html {
   font-family: sans-serif;

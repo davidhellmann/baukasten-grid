@@ -35,7 +35,6 @@ $bk-grid-settings: (
 
 // Check if Breakpoints exits
 @if map-has_key($bk-grid-settings, breakpoints) {
-
   // Get Breakpoints to to check if min & max exists
   $bk-breakpoints-map: map-deep-get($bk-grid-settings, breakpoints);
 

@@ -3,9 +3,8 @@ import runSequence from 'run-sequence';
 
 const defaultTask = (cb) => {
     runSequence(
-        ['clean:dist'],
+        ['build'],
         ['browser-sync', 'watch'],
-        ['minify:sass'],
         cb
     );
 };

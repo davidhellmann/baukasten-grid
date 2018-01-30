@@ -81,10 +81,10 @@ $bk-grid-settings-custom: (
   breakpoints: (
     min: (from: 320px, to: 399px, cols: 6),
     xs:  (from: 400px, to: 599px, cols: 6),
-    s:   (from: 600px, to: 799px, cols: 24),
-    m:   (from: 800px, to: 999px, cols: 24),
-    l:   (from: 1000px, to: 1439px, cols: 48),
-    max: (from: 1440px, to: 0, cols: 48)
+    s:   (from: 600px, to: 799px, cols: 12),
+    m:   (from: 800px, to: 999px, cols: 12),
+    l:   (from: 1000px, to: 1439px, cols: 24),
+    max: (from: 1440px, to: 0, cols: 24)
   )
 );
 ```

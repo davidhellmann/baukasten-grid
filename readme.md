@@ -2,9 +2,9 @@
 
 # Baukasten Grid
 
-Oh wait, another Grid System? Yes!
+Oh wait, another grid system? Yes!
 
-## How to use that fancy Grid…
+## How to use that fancy grid…
 
 ### Install Baukasten Grid
 ```bash
@@ -15,9 +15,8 @@ npm i baukaten-grid
 yarn add baukasten-grid
 ```
 
-### Basic Usage
-Maybe your Main CSS File called: `app.scss`.
-Open this File and add something like this to it
+### Basic usage
+Open your main CSS file and this
 
 ```scss
 // Nostalgic
@@ -27,10 +26,10 @@ Open this File and add something like this to it
 @import '~baukasten-grid/scss/baukasten-grid';
 ```
 
-### Advanced Usage
-Your project is so special? No Problem!
-You can overwrite the default Settings Map with your own settings.
-Now, it your `app.scss` must look like this:
+### Advanced usage
+Your project is so special? No problem!
+You can overwrite the default settings map with your own settings.
+Add this to your main CSS file before you import `baukasten-grid`
 ```scss
 // First: you have to add the Map
 $bk-grid-settings-custom: (
@@ -84,7 +83,4 @@ $bk-grid-settings-custom: (
     max: (from: 1440px, to: 0, cols: 48)
   )
 );
-
-// Second: Import the Grid
-@import '~baukasten-grid/scss/baukasten-grid';
 ```

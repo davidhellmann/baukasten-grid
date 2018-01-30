@@ -13,7 +13,7 @@ h2 {
   @include make-section-padding(2);
 
   h1 {
-    @include make-vs();
+    @include make-vr();
   }
 
   ul {
@@ -23,7 +23,11 @@ h2 {
   }
 
   li {
-    display: inline-block;
+    display: block;
+
+    @media screen and (min-width: 620px) {
+      display: inline-block;
+    }
   }
 
   a {
@@ -58,7 +62,6 @@ h2 {
   }
 }
 
-
 .foo-section {
   @include make-section();
   @include center();
@@ -84,4 +87,3 @@ h2 {
     @include make-col(12, 12);
   }
 }
-

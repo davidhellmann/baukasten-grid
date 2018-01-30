@@ -11,7 +11,7 @@ $bk-box-shadow-color: rgba(black, 1) !default;
 $bk-border-radius: 3px !default;
 
 %styling {
-  @include make-vs();
+  @include make-vr();
 }
 
 %styling-section {

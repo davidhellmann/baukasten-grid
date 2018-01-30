@@ -93,11 +93,6 @@
     @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
       flex: 0 1 $width;
       width: $width;
-
-      .use-flexbox > & {
-        flex: 0 1 $width;
-        width: $width;
-      }
     }
 
     // Set CSS Grid Settings
@@ -122,6 +117,11 @@
       grid-column-start: auto;
       grid-column-end: span ceil($cols);
     }
+  }
+
+  .use-flexbox > & {
+    flex: 0 1 $width;
+    width: $width;
   }
 }
 
@@ -217,14 +217,103 @@
 
 /*
  |--------------------------------------------------------------------------
- |  Vertical Spacing Mixin
+ |  Vertical Rhythm Mixin
  |--------------------------------------------------------------------------
  */
 
-@mixin make-vs($factor: 1) {
+@mixin make-vr($factor: 1) {
   $factor: $factor * 2;
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
 
   @include f($gutterMin, $gutterMax, margin-top);
+}
+
+
+/*
+ |--------------------------------------------------------------------------
+ |  Col Start At Mixin
+ |--------------------------------------------------------------------------
+ */
+
+@mixin col-offset($cols: 1, $context: 1, $sassMode: true) {
+  // Rounds to integer Numbers
+  @if $cols != auto {
+    $cols: ceil($cols);
+  }
+
+  // Calculate the Context
+  $offset: $cols  / $context * 100%;
+
+  @if $sassMode == true {
+    @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
+      margin-left: $offset;
+    }
+  }
+
+  @if $bk-cssgrid == false {
+    margin-left: $offset;
+  }
+
+  @if $bk-cssgrid == true {
+    grid-column-start: $cols + 1;
+  }
+
+  .use-flexbox > & {
+    margin-left: $offset;
+  }
+}
+
+
+/*
+ |--------------------------------------------------------------------------
+ |  Col Push Mixin
+ |--------------------------------------------------------------------------
+ */
+
+@mixin col-push($cols: 1, $context: 1, $sassMode: true) {
+  // Rounds to integer Numbers
+  @if $cols != auto {
+    $cols: ceil($cols);
+  }
+
+  // Calculate the Context
+  $offset: $cols  / $context * 100%;
+
+  position: relative;
+  left: $offset;
+}
+
+
+/*
+ |--------------------------------------------------------------------------
+ |  Col Pull Mixin
+ |--------------------------------------------------------------------------
+ */
+
+@mixin col-pull($cols: 1, $context: 1, $sassMode: true) {
+  // Rounds to integer Numbers
+  @if $cols != auto {
+    $cols: ceil($cols);
+  }
+
+  // Calculate the Context
+  $offset: $cols  / $context * 100%;
+
+  position: relative;
+
+  @if $sassMode == true {
+    @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
+      left: -$offset;
+    }
+  }
+
+  @if $bk-cssgrid == false {
+    // Calculate the Context
+    left: -$offset;
+  }
+
+  @if $bk-cssgrid == true {
+    grid-column-start: $cols;
+  }
 }

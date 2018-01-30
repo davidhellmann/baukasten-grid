@@ -51,8 +51,24 @@
     @media screen and (min-width: #{$from}) {
       // Col Classes
       @for $i from 1 through $cols {
+        // Col
         .#{$prefix}col-#{$i} {
           @include make-col($i, $cols, false);
+        }
+
+        // Offset
+        .#{$prefix}col-offset-#{$i} {
+          @include col-offset($i, $cols, false);
+        }
+
+        // Push
+        .#{$prefix}col-push-#{$i} {
+          @include col-push($i, $cols, false);
+        }
+
+        // Pull
+        .#{$prefix}col-pull-#{$i} {
+          @include col-pull($i, $cols, false);
         }
       }
     }
@@ -60,8 +76,24 @@
     @media screen and (min-width: #{$from}) {
       // Col Classes
       @for $i from 1 through $cols {
+        // Col
         .#{$prefix}col-#{$key}-#{$i} {
           @include make-col($i, $cols, false);
+        }
+
+        // Offset
+        .#{$prefix}col-offset-#{$key}-#{$i} {
+          @include col-offset($i, $cols, false);
+        }
+
+        // Push
+        .#{$prefix}col-push-#{$key}-#{$i} {
+          @include col-push($i, $cols, false);
+        }
+
+        // Pull
+        .#{$prefix}col-pull-#{$key}-#{$i} {
+          @include col-pull($i, $cols, false);
         }
       }
     }

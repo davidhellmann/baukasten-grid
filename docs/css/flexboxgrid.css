@@ -280,7 +280,7 @@
   position: relative;
   min-height: 1px;
   flex: 1 1 0;
-  max-width: auto;
+  max-width: none;
 }
 
 @media screen and (min-width: 320px) {
@@ -322,7 +322,7 @@
   position: relative;
   min-height: 1px;
   flex: 1 1 0;
-  max-width: auto;
+  max-width: none;
 }
 
 @media screen and (min-width: 320px) {

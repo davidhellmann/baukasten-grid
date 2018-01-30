@@ -98,7 +98,7 @@
     // Set CSS Grid Settings
     @if $bk-cssgrid == true {
       @if $bk-flexboxgrid == true or $bk-cssgrid-fallback == true {
-        max-width: none;
+        // max-width: none;
       }
       grid-column-end: span ceil($cols);
     }

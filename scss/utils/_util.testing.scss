@@ -69,19 +69,19 @@ $bk-border-radius: 3px !default;
     @include make-section-padding(2);
   }
 
-  [class^='#{$bk-prefix}-section'] {
+  [class^='#{$bk-prefix}section'] {
     @extend %styling-section;
   }
 
-  [class^='#{$bk-prefix}-row'] {
+  [class^='#{$bk-prefix}row'] {
     @extend %styling-row;
 
-    [class^='#{$bk-prefix}-row'] {
+    [class^='#{$bk-prefix}row'] {
       margin-top: 0;
     }
   }
 
-  [class^='#{$bk-prefix}-col'] {
+  [class^='#{$bk-prefix}col'] {
     @extend %styling-col;
   }
 }

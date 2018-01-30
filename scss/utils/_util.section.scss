@@ -5,7 +5,7 @@
  */
 
 // Default Class Settings
-[class^='#{$bk-prefix}-section'] {
+[class^='#{$bk-prefix}section'] {
   @include make-section();
   @include make-section-padding();
   @include center();

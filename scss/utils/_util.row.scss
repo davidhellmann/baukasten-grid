@@ -5,7 +5,7 @@
  */
 
 // Default Class Settings
-[class^='#{$bk-prefix}-row'] {
+[class^='#{$bk-prefix}row'] {
   @include make-row($sassMode: false);
 
   @if $bk-cssgrid == false {
@@ -19,19 +19,19 @@
   }
 }
 
-[class^='#{$bk-prefix}-row'].no-padding {
-  > [class^='#{$bk-prefix}-col'] {
+[class^='#{$bk-prefix}row'].no-padding {
+  > [class^='#{$bk-prefix}col'] {
     @include make-col-padding(0);
   }
 }
 
-[class^='#{$bk-prefix}-row'].use-flexbox {
+[class^='#{$bk-prefix}row'].use-flexbox {
   @include make-row($sassMode: false);
   display: flex;
   flex-flow: row wrap;
   flex: 1 1 0;
 
-  > [class='#{$bk-prefix}-col'] {
+  > [class='#{$bk-prefix}col'] {
     position: relative;
     min-height: 1px;
     flex: 1 1 0;

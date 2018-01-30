@@ -5,7 +5,7 @@
  */
 
 // Default Class Settings
-[class^='#{$bk-prefix}-col-']{
+[class^='#{$bk-prefix}col-']{
   @include make-col-padding();
 
   @if $bk-cssgrid == false {
@@ -21,11 +21,11 @@
   }
 }
 
-[class1^='#{$bk-prefix}-col'].no-padding {
+[class1^='#{$bk-prefix}col'].no-padding {
   @include make-col-padding(0);
 }
 
-[class='#{$bk-prefix}-col'] {
+[class='#{$bk-prefix}col'] {
   @include make-col-padding();
 
   @if $bk-cssgrid == false {

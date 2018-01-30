@@ -7,9 +7,9 @@
 // Default Class Settings
 [class^='#{$bk-prefix}col-']{
   @include make-col-padding();
+  position: relative;
 
   @if $bk-cssgrid == false {
-    position: relative;
     min-height: 1px;
     flex: 1 1 0;
     width: auto;

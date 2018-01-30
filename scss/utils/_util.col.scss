@@ -12,7 +12,7 @@
   @if $bk-cssgrid == false {
     min-height: 1px;
     flex: 1 1 0;
-    width: auto;
+    max-width: auto;
   }
 
   @if $bk-cssgrid == true {
@@ -32,7 +32,7 @@
     position: relative;
     min-height: 1px;
     flex: 1 1 0;
-    width: auto;
+    max-width: auto;
   }
 
   @if $bk-cssgrid == true {

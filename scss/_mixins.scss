@@ -92,13 +92,13 @@
     // Set Flexbox Settings when CSS Grid is no active
     @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
       flex: 0 1 $width;
-      width: $width;
+      max-width: $width;
     }
 
     // Set CSS Grid Settings
     @if $bk-cssgrid == true {
       @if $bk-flexboxgrid == true or $bk-cssgrid-fallback == true {
-        width: auto;
+        max-width: none;
       }
       grid-column-end: span ceil($cols);
     }
@@ -108,7 +108,7 @@
     @if $bk-cssgrid == false {
       min-height: 1px;
       flex: 0 1 $width;
-      width: $width;
+      max-width: $width;
     }
 
     // Set CSS Grid Settings
@@ -120,7 +120,7 @@
 
   .use-flexbox > & {
     flex: 0 1 $width;
-    width: $width;
+    max-width: $width;
   }
 }
 

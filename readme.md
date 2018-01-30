@@ -2,7 +2,7 @@
 
 # Baukasten Grid
 
-Oh wait, another grid system? Yes!
+**Oh wait, another grid system? Yes!**
 
 * [Demo CSS Grid](https://davidhellmann.github.io/baukasten-grid/)
 * [Demo Flexbox Grid](https://davidhellmann.github.io/baukasten-grid/flexbox-grid.html)
@@ -11,7 +11,7 @@ Oh wait, another grid system? Yes!
 ## How to use that fancy grid…
 
 ### Install Baukasten Grid
-```bash
+```
 // Nostalgic
 npm i baukaten-grid
 
@@ -22,7 +22,7 @@ yarn add baukasten-grid
 ### Basic usage
 Open your main CSS file and this
 
-```scss
+```
 // Nostalgic
 @import '../../../node_modules/baukasten-grid/scss/baukasten-grid';
 
@@ -34,7 +34,7 @@ Open your main CSS file and this
 Your project is so special? No problem!
 You can overwrite the default settings map with your own settings.
 Add this to your main CSS file before you import `baukasten-grid`
-```scss
+```
 // First: you have to add the Map
 $bk-grid-settings-custom: (
   // You want to use CSS Grid?

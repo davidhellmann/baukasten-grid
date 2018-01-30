@@ -25,7 +25,7 @@
   }
 }
 
-@if $bk-cssgrid == true {
+@if $bk-cssgrid == true and $bk-cssgrid-fallback == true {
   [class^='#{$bk-prefix}row'].use-flexbox {
     @include make-row($sassMode: false);
     display: flex;

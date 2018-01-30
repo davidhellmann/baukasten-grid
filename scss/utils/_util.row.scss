@@ -91,7 +91,7 @@
   $prefix: $bk-prefix;
 
   @media screen and (min-width: #{$from}) {
-    .#{$prefix}-row,
+    .#{$prefix}row,
     %row {
       @include make-row($cols, $sassMode: false);
     }

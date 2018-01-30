@@ -51,7 +51,7 @@
     @media screen and (min-width: #{$from}) {
       // Col Classes
       @for $i from 1 through $cols {
-        .#{$prefix}-col-#{$i} {
+        .#{$prefix}col-#{$i} {
           @include make-col($i, $cols, false);
         }
       }
@@ -60,7 +60,7 @@
     @media screen and (min-width: #{$from}) {
       // Col Classes
       @for $i from 1 through $cols {
-        .#{$prefix}-col-#{$key}-#{$i} {
+        .#{$prefix}col-#{$key}-#{$i} {
           @include make-col($i, $cols, false);
         }
       }

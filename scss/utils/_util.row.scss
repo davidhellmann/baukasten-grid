@@ -25,17 +25,19 @@
   }
 }
 
-[class^='#{$bk-prefix}row'].use-flexbox {
-  @include make-row($sassMode: false);
-  display: flex;
-  flex-flow: row wrap;
-  flex: 1 1 0;
-
-  > [class='#{$bk-prefix}col'] {
-    position: relative;
-    min-height: 1px;
+@if $bk-cssgrid == true {
+  [class^='#{$bk-prefix}row'].use-flexbox {
+    @include make-row($sassMode: false);
+    display: flex;
+    flex-flow: row wrap;
     flex: 1 1 0;
-    width: auto;
+
+    > [class='#{$bk-prefix}col'] {
+      position: relative;
+      min-height: 1px;
+      flex: 1 1 0;
+      width: auto;
+    }
   }
 }
 

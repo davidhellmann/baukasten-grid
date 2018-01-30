@@ -13,7 +13,7 @@
 ### Install Baukasten Grid
 ```
 // Nostalgic
-npm i baukaten-grid
+npm i baukasten-grid
 
 // Hipster
 yarn add baukasten-grid

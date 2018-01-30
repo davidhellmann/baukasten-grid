@@ -45,6 +45,7 @@
 @each $key, $value in $bk-breakpoints {
   $from: map-get($value, from);
   $cols: map-get($value, cols);
+  $create-classes: map-get($value, create-classes);
   $prefix: $bk-prefix;
 
   @if $key == 'min' {
@@ -57,21 +58,21 @@
         }
 
         // Offset
-        @if $bk-create-offset-classes == true {
+        @if $bk-create-offset-classes == true and $create-classes == true {
           .#{$prefix}col-offset-#{$i} {
             @include col-offset($i, $cols, false);
           }
         }
 
         // Push
-        @if $bk-create-push-classes == true {
+        @if $bk-create-push-classes == true and $create-classes == true {
           .#{$prefix}col-push-#{$i} {
             @include col-push($i, $cols, false);
           }
         }
 
         // Pull
-        @if $bk-create-push-classes == true {
+        @if $bk-create-push-classes == true and $create-classes == true {
           .#{$prefix}col-pull-#{$i} {
             @include col-pull($i, $cols, false);
           }
@@ -80,32 +81,34 @@
       }
     }
   } @else if $key != 'min' {
-    @media screen and (min-width: #{$from}) {
-      // Col Classes
-      @for $i from 1 through $cols {
-        // Col
-        .#{$prefix}col-#{$key}-#{$i} {
-          @include make-col($i, $cols, false);
-        }
-
-        // Offset
-        @if $bk-create-offset-classes == true {
-          .#{$prefix}col-offset-#{$key}-#{$i} {
-            @include col-offset($i, $cols, false);
+    @if $create-classes == true {
+      @media screen and (min-width: #{$from}) {
+        // Col Classes
+        @for $i from 1 through $cols {
+          // Col
+          .#{$prefix}col-#{$key}-#{$i} {
+            @include make-col($i, $cols, false);
           }
-        }
 
-        // Push
-        @if $bk-create-push-classes == true {
-          .#{$prefix}col-push-#{$key}-#{$i} {
-            @include col-push($i, $cols, false);
+          // Offset
+          @if $bk-create-offset-classes == true {
+            .#{$prefix}col-offset-#{$key}-#{$i} {
+              @include col-offset($i, $cols, false);
+            }
           }
-        }
 
-        // Pull
-        @if $bk-create-pull-classes == true {
-          .#{$prefix}col-pull-#{$key}-#{$i} {
-            @include col-pull($i, $cols, false);
+          // Push
+          @if $bk-create-push-classes == true {
+            .#{$prefix}col-push-#{$key}-#{$i} {
+              @include col-push($i, $cols, false);
+            }
+          }
+
+          // Pull
+          @if $bk-create-pull-classes == true {
+            .#{$prefix}col-pull-#{$key}-#{$i} {
+              @include col-pull($i, $cols, false);
+            }
           }
         }
       }

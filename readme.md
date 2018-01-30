@@ -57,6 +57,11 @@ $bk-grid-settings-custom: (
   // default: false
   testing: false,
 
+  // Class Creation
+  create-offset-classes: false,
+  create-push-classes: false,
+  create-pull-classes: false,
+
   // Naming Conventions? No Problem. You can choose you prefix!
   // @String
   // default: 'o-'

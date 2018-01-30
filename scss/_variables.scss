@@ -16,6 +16,11 @@ $bk-cssgrid: map-deep-get($bk-gs, cssgrid);
 $bk-cssgrid-fallback: map-deep-get($bk-gs, cssgrid-fallback);
 $bk-testing: map-deep-get($bk-gs, testing);
 
+// Class Creation
+$bk-create-offset-classes: map-deep-get($bk-gs, create-offset-classes);
+$bk-create-push-classes: map-deep-get($bk-gs, create-push-classes);
+$bk-create-pull-classes: map-deep-get($bk-gs, create-pull-classes);
+
 // Get Breakpoints
 $bk-breakpoints: map-deep-get($bk-gs, breakpoints);
 

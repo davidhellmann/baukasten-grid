@@ -76,11 +76,11 @@ h2 {
 
 .foo-col {
   @extend %styling-col;
-  @include make-col(3, 12);
+  @include make-col(6, 6);
   @include make-col-padding();
 
-  @media screen and (min-width: 1000px) {
-    @include make-col(6, 12);
+  @media screen and (min-width: 600px) {
+    @include make-col(3, 12);
   }
 
   &--full {

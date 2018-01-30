@@ -10,6 +10,9 @@ $bk-grid-settings: (
   cssgrid-fallback: true,
   flexboxgrid: false,
   testing: false,
+  create-offset-classes: false,
+  create-push-classes: false,
+  create-pull-classes: false,
   prefix: 'o-',
   units: (
     gutter: 8px,

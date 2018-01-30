@@ -1930,8 +1930,8 @@ h2 {
 
 .foo-col {
   min-height: 1px;
-  flex: 0 1 25%;
-  max-width: 25%;
+  flex: 0 1 100%;
+  max-width: 100%;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -1950,11 +1950,11 @@ h2 {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
   .foo-col {
     min-height: 1px;
-    flex: 0 1 50%;
-    max-width: 50%;
+    flex: 0 1 25%;
+    max-width: 25%;
   }
 }
 

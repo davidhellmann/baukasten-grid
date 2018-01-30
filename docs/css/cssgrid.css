@@ -1871,7 +1871,7 @@ h2 {
 
 .foo-col {
   grid-column-start: auto;
-  grid-column-end: span 3;
+  grid-column-end: span 6;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -1890,10 +1890,10 @@ h2 {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
   .foo-col {
     grid-column-start: auto;
-    grid-column-end: span 6;
+    grid-column-end: span 3;
   }
 }
 

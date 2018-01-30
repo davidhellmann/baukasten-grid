@@ -90,12 +90,15 @@
 @each $key, $value in $bk-breakpoints {
   $from: map-get($value, from);
   $cols: map-get($value, cols);
+  $create-classes: map-get($value, create-classes);
   $prefix: $bk-prefix;
 
-  @media screen and (min-width: #{$from}) {
-    .#{$prefix}row,
-    %row {
-      @include make-row($cols, $sassMode: false);
+  @if $create-classes == true {
+    @media screen and (min-width: #{$from}) {
+      .#{$prefix}row,
+      %row {
+        @include make-row($cols, $sassMode: false);
+      }
     }
   }
 }

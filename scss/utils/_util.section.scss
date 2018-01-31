@@ -5,11 +5,15 @@
  */
 
 // Default Class Settings
-[class^='#{$bk-prefix}section'] {
+[class*='#{$bk-prefix}section'] {
   @include make-section();
   @include center();
 
   &.is-fluid {
     @include make-section('fluid');
+  }
+
+  [class*='#{$bk-prefix}section'] {
+    @include make-col-padding(0);
   }
 }

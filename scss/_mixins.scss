@@ -158,8 +158,10 @@
  */
 
 // Mixin
-@mixin make-row($cols: 1, $sassMode: true) {
-  @include make-row-margin();
+@mixin make-row($cols: 1, $margin: true, $sassMode: true) {
+  @if $margin == true {
+    @include make-row-margin();
+  }
   @if $sassMode == true {
     @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
       flex-flow: row wrap;

@@ -6,7 +6,11 @@
 
 // Default Class Settings
 [class^='#{$bk-prefix}row'] {
-  @include make-row($sassMode: false);
+  @if $bk-disable-padding-horizontal == false {
+    @include make-row($sassMode: false);
+  } @else {
+    @include make-row($margin: false, $sassMode: false);
+  }
 
   @if $bk-cssgrid == false {
     display: flex;
@@ -21,13 +25,19 @@
 
 [class^='#{$bk-prefix}row'].no-padding {
   > [class^='#{$bk-prefix}col'] {
-    @include make-col-padding(0);
+    @if $bk-disable-padding-horizontal == false {
+      @include make-col-padding(0);
+    }
   }
 }
 
 @if $bk-cssgrid == true and $bk-cssgrid-fallback == true {
   [class^='#{$bk-prefix}row'].use-flexbox {
-    @include make-row($sassMode: false);
+    @if $bk-disable-padding-horizontal == false {
+      @include make-row($sassMode: false);
+    } @else {
+      @include make-row($margin: false, $sassMode: false);
+    }
     display: flex;
     flex-flow: row wrap;
     flex: 1 1 0;
@@ -56,7 +66,7 @@
   justify-content: flex-end;
 }
 
-.items-x-around ,
+.items-x-around,
 %items-x-around {
   justify-content: space-around;
 }
@@ -97,7 +107,11 @@
     @media screen and (min-width: #{$from}) {
       .#{$prefix}row,
       %row {
-        @include make-row($cols, $sassMode: false);
+        @if $bk-disable-padding-horizontal == false {
+          @include make-row($cols, $sassMode: false);
+        } @else {
+          @include make-row($cols, $margin: false, $sassMode: false);
+        }
       }
     }
   }

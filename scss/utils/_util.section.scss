@@ -6,14 +6,24 @@
 
 // Default Class Settings
 [class*='#{$bk-prefix}section'] {
-  @include make-section();
+  @if $bk-disable-padding-horizontal == false {
+    @include make-section('fixed');
+  } @else {
+    @include make-section('fixed', false);
+  }
   @include center();
 
   &.is-fluid {
-    @include make-section('fluid');
+    @if $bk-disable-padding-horizontal == false {
+      @include make-section('fluid');
+    } @else {
+      @include make-section('fluid', false);
+    }
   }
 
   [class*='#{$bk-prefix}section'] {
-    @include make-col-padding(0);
+    @if $bk-disable-padding-horizontal == false {
+      @include make-section-padding(0);
+    }
   }
 }

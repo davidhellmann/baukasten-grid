@@ -96,6 +96,11 @@ $bk-grid-settings-custom: (
   push-classes: false,
   pull-classes: false,
 
+  // Disbale Padding Horizontal for Sections. Rows. Cols
+  // @Boolean
+  // default: false
+  disable-padding-horizontal: false,
+
   // Breakpoints must have at least a "min" and a "max". The other Breakpoints as u like
   // We use all the time "min-width".
   // Cols are how many cols can have a row on that specific breakpoint.

@@ -20,6 +20,7 @@ $bk-grid-settings-custom: (
   offset-classes: true,
   push-classes: true,
   pull-classes: true,
+  disable-padding-horizontal: true,
   breakpoints: (
     min: (from: 320px, cols: 6, create-classes: true),
     xs:  (from: 400px, cols: 6, create-classes: false),

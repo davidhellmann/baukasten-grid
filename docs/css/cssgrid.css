@@ -1,103 +1,17 @@
 [class*='o-section'] {
   max-width: 1440px;
-  padding-left: 16px;
-  padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media screen and (min-width: 320px) {
-  [class*='o-section'] {
-    padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
-    padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  [class*='o-section'] {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
 [class*='o-section'].is-fluid {
   max-width: none;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-@media screen and (min-width: 320px) {
-  [class*='o-section'].is-fluid {
-    padding-left: calc(16px + 16 * (100vw - 320px) / (1120));
-    padding-right: calc(16px + 16 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  [class*='o-section'].is-fluid {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
-[class*='o-section'] [class*='o-section'] {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-@media screen and (min-width: 320px) {
-  [class*='o-section'] [class*='o-section'] {
-    padding-left: calc(0px + 0 * (100vw - 320px) / (1120));
-    padding-right: calc(0px + 0 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  [class*='o-section'] [class*='o-section'] {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
 }
 
 [class^='o-row'] {
-  margin-left: -8px;
-  margin-right: -8px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   display: grid;
-}
-
-@media screen and (min-width: 320px) {
-  [class^='o-row'] {
-    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
-    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  [class^='o-row'] {
-    margin-left: -16px;
-    margin-right: -16px;
-  }
-}
-
-[class^='o-row'].no-padding > [class^='o-col'] {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-@media screen and (min-width: 320px) {
-  [class^='o-row'].no-padding > [class^='o-col'] {
-    padding-left: calc(0px + 0 * (100vw - 320px) / (1120));
-    padding-right: calc(0px + 0 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  [class^='o-row'].no-padding > [class^='o-col'] {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
 }
 
 .items-x-start {
@@ -138,133 +52,34 @@
 
 @media screen and (min-width: 320px) {
   .o-row {
-    margin-left: -8px;
-    margin-right: -8px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
   }
 }
 
-@media screen and (min-width: 320px) and (min-width: 320px) {
-  .o-row {
-    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
-    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 320px) and (min-width: 1440px) {
-  .o-row {
-    margin-left: -16px;
-    margin-right: -16px;
-  }
-}
-
 @media screen and (min-width: 600px) {
   .o-row {
-    margin-left: -8px;
-    margin-right: -8px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-  }
-}
-
-@media screen and (min-width: 600px) and (min-width: 320px) {
-  .o-row {
-    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
-    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 600px) and (min-width: 1440px) {
-  .o-row {
-    margin-left: -16px;
-    margin-right: -16px;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .o-row {
-    margin-left: -8px;
-    margin-right: -8px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
 }
 
-@media screen and (min-width: 1000px) and (min-width: 320px) {
-  .o-row {
-    margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
-    margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 1000px) and (min-width: 1440px) {
-  .o-row {
-    margin-left: -16px;
-    margin-right: -16px;
-  }
-}
-
 [class^='o-col-'] {
-  padding-left: 8px;
-  padding-right: 8px;
   position: relative;
   grid-column-start: auto;
   grid-column-end: auto;
 }
 
-@media screen and (min-width: 320px) {
-  [class^='o-col-'] {
-    padding-left: calc(8px + 8 * (100vw - 320px) / (1120));
-    padding-right: calc(8px + 8 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  [class^='o-col-'] {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-[class1^='o-col'].no-padding {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-@media screen and (min-width: 320px) {
-  [class1^='o-col'].no-padding {
-    padding-left: calc(0px + 0 * (100vw - 320px) / (1120));
-    padding-right: calc(0px + 0 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  [class1^='o-col'].no-padding {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-
 [class='o-col'] {
-  padding-left: 8px;
-  padding-right: 8px;
   grid-column-start: 1;
   grid-column-end: -1;
-}
-
-@media screen and (min-width: 320px) {
-  [class='o-col'] {
-    padding-left: calc(8px + 8 * (100vw - 320px) / (1120));
-    padding-right: calc(8px + 8 * (100vw - 320px) / (1120));
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  [class='o-col'] {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media screen and (min-width: 320px) {
@@ -1272,7 +1087,7 @@ h2 {
 
 .custom-section a:hover {
   transform: translateY(-1px);
-  box-shadow: inset 0 0 0 1px #fff,0 3px 10px rgba(0,0,0,0.05);
+  box-shadow: inset 0 0 0 1px white,0 3px 10px rgba(0,0,0,0.05);
 }
 
 .custom-section a.is-active {

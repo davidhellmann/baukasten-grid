@@ -100,12 +100,12 @@ $bk-grid-settings-custom: (
   // We use all the time "min-width".
   // Cols are how many cols can have a row on that specific breakpoint.
   breakpoints: (
-    min: (from: 320px, to: 399px, cols: 6, create-classes: true),
-    xs:  (from: 400px, to: 599px, cols: 6, create-classes: false),
-    s:   (from: 600px, to: 799px, cols: 12, create-classes: true),
-    m:   (from: 800px, to: 999px, cols: 12, create-classes: false),
-    l:   (from: 1000px, to: 1439px, cols: 24, create-classes: true),
-    max: (from: 1440px, to: 0, cols: 24, create-classes: false)
+    min: (from: 320px, cols: 6, create-classes: true),
+    xs:  (from: 400px, cols: 6, create-classes: false),
+    s:   (from: 600px, cols: 12, create-classes: true),
+    m:   (from: 800px, cols: 12, create-classes: false),
+    l:   (from: 1000px, cols: 24, create-classes: true),
+    max: (from: 1440px, cols: 24, create-classes: false)
   )
 );
 ```

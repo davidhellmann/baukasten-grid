@@ -234,10 +234,10 @@
 
 @mixin make-vr($factor: 1) {
   $factor: $factor * 2;
-  $gutterMin: $factor * $bk-gutterMin;
-  $gutterMax: $factor * $bk-gutterMax;
+  $gutterMinVertical: $factor * $bk-gutterMinVertical;
+  $gutterMaxVertical: $factor * $bk-gutterMaxVertical;
 
-  @include f($gutterMin, $gutterMax, margin-top);
+  @include f($gutterMinVertical, $gutterMaxVertical, margin-top);
 }
 
 

@@ -1449,7 +1449,7 @@ h2 {
 
 .custom-section a:hover {
   transform: translateY(-1px);
-  box-shadow: inset 0 0 0 1px #fff,0 3px 10px rgba(0,0,0,0.05);
+  box-shadow: inset 0 0 0 1px white,0 3px 10px rgba(0,0,0,0.05);
 }
 
 .custom-section a.is-active {

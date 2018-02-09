@@ -313,13 +313,13 @@
 
   @if $sassMode == true {
     @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
-      left: -$offset;
+      right: $offset;
     }
   }
 
   @if $bk-cssgrid == false {
     // Calculate the Context
-    left: -$offset;
+    right: $offset;
   }
 
   @if $bk-cssgrid == true {

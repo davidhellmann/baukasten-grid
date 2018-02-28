@@ -21,7 +21,7 @@
     }
   }
 
-  [class*='#{$bk-prefix}section'] {
+  > [class*='#{$bk-prefix}section'] {
     @if $bk-disable-padding-horizontal == false {
       @include make-section-padding(0);
     }

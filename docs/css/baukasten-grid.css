@@ -40,19 +40,19 @@
   }
 }
 
-[class*='o-section'] [class*='o-section'] {
+[class*='o-section'] > [class*='o-section'] {
   padding-top: 0;
   padding-bottom: 0px;
 }
 
 @media screen and (min-width: 320px) {
-  [class*='o-section'] [class*='o-section'] {
+  [class*='o-section'] > [class*='o-section'] {
     padding-bottom: calc(0px + 0 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
-  [class*='o-section'] [class*='o-section'] {
+  [class*='o-section'] > [class*='o-section'] {
     padding-bottom: 0px;
   }
 }

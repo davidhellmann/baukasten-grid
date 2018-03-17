@@ -248,7 +248,7 @@
  */
 
 @mixin col-offset($cols: 1, $context: 1, $sassMode: true) {
-  $offset: auto;
+  $offset: 0;
 
   // Rounds to integer Numbers
   @if $cols != auto {
@@ -260,6 +260,7 @@
 
   // If Cols auto set it to 0
   @if $cols == auto {
+    $offset: auto;
     $cols: 0;
   }
 

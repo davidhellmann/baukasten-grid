@@ -248,13 +248,20 @@
  */
 
 @mixin col-offset($cols: 1, $context: 1, $sassMode: true) {
+  $offset: auto;
+
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
+
+    // Calculate the Context
+    $offset: $cols  / $context * 100%;
   }
 
-  // Calculate the Context
-  $offset: $cols  / $context * 100%;
+  // If Cols auto set it to 0
+  @if $cols == auto {
+    $cols: 0;
+  }
 
   @if $sassMode == true {
     @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {

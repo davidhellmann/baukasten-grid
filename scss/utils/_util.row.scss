@@ -15,7 +15,7 @@
   @if $bk-cssgrid == false {
     display: flex;
     flex-flow: row wrap;
-    flex: 1 1 0;
+    flex: 1 1 auto;
   }
 
   @if $bk-cssgrid == true {
@@ -40,12 +40,12 @@
     }
     display: flex;
     flex-flow: row wrap;
-    flex: 1 1 0;
+    flex: 1 1 auto;
 
     > [class='#{$bk-prefix}col'] {
       position: relative;
       min-height: 1px;
-      flex: 1 1 0;
+      flex: 1 1 auto;
       width: auto;
     }
   }

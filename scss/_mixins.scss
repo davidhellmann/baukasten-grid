@@ -159,6 +159,7 @@
 
 // Mixin
 @mixin make-row($cols: 1, $margin: true, $sassMode: true) {
+  width: auto;
   @if $margin == true {
     @include make-row-margin();
   }

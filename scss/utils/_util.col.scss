@@ -23,7 +23,7 @@
   }
 }
 
-[class1^='#{$bk-prefix}col'].no-padding {
+[class^='#{$bk-prefix}col'].no-padding {
   @if $bk-disable-padding-horizontal == false {
     @include make-col-padding(0);
   }

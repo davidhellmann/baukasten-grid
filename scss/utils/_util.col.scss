@@ -29,7 +29,7 @@
   }
 }
 
-[class='#{$bk-prefix}col'] {
+[class^='#{$bk-prefix}col'] {
   @if $bk-disable-padding-horizontal == false {
     @include make-col-padding();
   }

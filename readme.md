@@ -91,10 +91,10 @@ $bk-grid-settings-custom: (
   // Class Creation
   // Not every projects need all this offset / push / pull classes. You decide!
   // @Boolean
-  // default: false
-  offset-classes: false,
-  push-classes: false,
-  pull-classes: false,
+  // default: true
+  offset-classes: true,
+  push-classes: true,
+  pull-classes: true,
 
   // Disbale Padding Horizontal for Sections. Rows. Cols
   // @Boolean
@@ -106,11 +106,11 @@ $bk-grid-settings-custom: (
   // Cols are how many cols can have a row on that specific breakpoint.
   breakpoints: (
     min: (from: 320px, cols: 6, create-classes: true),
-    xs:  (from: 400px, cols: 6, create-classes: false),
+    xs:  (from: 400px, cols: 6, create-classes: true),
     s:   (from: 600px, cols: 12, create-classes: true),
-    m:   (from: 800px, cols: 12, create-classes: false),
+    m:   (from: 800px, cols: 12, create-classes: true),
     l:   (from: 1000px, cols: 24, create-classes: true),
-    max: (from: 1440px, cols: 24, create-classes: false)
+    max: (from: 1440px, cols: 24, create-classes: true)
   )
 );
 ```

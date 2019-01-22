@@ -1483,7 +1483,7 @@ h2 {
   margin-left: -8px;
   margin-right: -8px;
   flex-flow: row wrap;
-  flex: 1 1 0;
+  flex: 1 1 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   margin-left: -8px;

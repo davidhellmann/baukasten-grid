@@ -272,7 +272,7 @@ $bk-grid-settings-custom: (
   @if $sassMode == true {
     @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
       flex-flow: row wrap;
-      flex: 1 1 0;
+      flex: 1 1 auto;
     }
   }
 

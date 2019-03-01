@@ -246,12 +246,13 @@
 
 // Mixin
 @mixin make-section($behaviour: 'fixed', $padding: true, $factor: 1) {
+  width: 100%;
   max-width: if($behaviour == 'fixed', $bk-maxWidth, none);
-  $factor: $factor * 2;
-  $gutterMin: $factor * $bk-gutterMin;
-  $gutterMax: $factor * $bk-gutterMax;
 
   @if $padding == true {
+    $factor: $factor * 2;
+    $gutterMin: $factor * $bk-gutterMin;
+    $gutterMax: $factor * $bk-gutterMax;
     @include f($gutterMin, $gutterMax, padding-left padding-right);
   }
 }

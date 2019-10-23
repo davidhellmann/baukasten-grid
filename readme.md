@@ -1,5 +1,13 @@
 ![Logo of the project](./baukasten.png)
 
+```
+INFO --------------------------------------------------------------
+
+We removed CSS Grid!
+
+-----------------------------------------------------------INFO END
+```
+
 # Baukasten Grid
 ## Table of content
 * [Intro](#intro)
@@ -14,9 +22,7 @@
 ## Intro
 **Oh wait, another grid system? Yes!**
 
-* [Demo CSS Grid](https://davidhellmann.github.io/baukasten-grid/)
-* [Demo Flexbox Grid](https://davidhellmann.github.io/baukasten-grid/flexbox-grid.html)
-* [Demo CSS Grid + Fallback](https://davidhellmann.github.io/baukasten-grid/fallbackgrid.html)
+* [Demo Flexbox Grid](https://davidhellmann.github.io/baukasten-grid)
 
 ---
 

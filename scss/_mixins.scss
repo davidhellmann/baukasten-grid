@@ -247,7 +247,6 @@
   @include make-space($properties, $factor, 'x');
 }
 
-
 @mixin spaceY($properties: null, $factor: 1) {
   @include make-space($properties, $factor, 'y');
 }

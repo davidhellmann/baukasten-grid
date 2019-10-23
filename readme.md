@@ -50,21 +50,6 @@ Add this to your main CSS file before you import `baukasten-grid`
 ```
 // First: you have to add the Map
 $bk-grid-settings-custom: (
-  // You want to use CSS Grid?
-  // @Boolean
-  // default: true
-  cssgrid: true,
-
-  // Your Project must support older browsers? No Problem, we've a Fallback (flexbox) here!
-  // @Boolean
-  // default: true
-  cssgrid-fallback: true,
-
-  // You want to use Flexbox only? Also no Problem! But you must set the "cssgrid-fallback" and "cssgrid" to false.
-  // @Boolean
-  // default: false
-  flexboxgrid: false,
-
   // This add some CSS Styleing to the "section", "row" and "col" classes.
   // @Boolean
   // default: false
@@ -185,18 +170,10 @@ $bk-grid-settings-custom: (
 
   @include f($gutterMin, $gutterMax, padding-left padding-right);
 }
-```
 
-### Make Col Position
-```
-@mixin col-pos($cols: auto, $context: 1) {
-  @if $cols != auto {
-    $cols: ceil($cols);
-  }
-
-  @if $bk-cssgrid == true {
-    grid-column-start: $cols;
-  }
+// Shorthand Version
+@mixin col-padding($args...) {
+  @include make-col-padding($args...);
 }
 ```
 
@@ -207,50 +184,19 @@ $bk-grid-settings-custom: (
   $width: $cols / $context * 100%;
 
   // Check if SassMode active
-  @if $sassMode == false  {
-    // Set Flexbox Settings when CSS Grid is no active
-    @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
-      flex: 0 1 $width;
-      max-width: $width;
-    }
-
-    // Set CSS Grid Settings
-    @if $bk-cssgrid == true {
-      @if $bk-cssgrid-fallback == true {
-        max-width: none;
-      }
-
-      grid-column-end: span ceil($cols);
-
-      @if $bk-cssgrid-fallback == true {
-        .use-flexbox > & {
-          flex: 0 1 $width;
-          max-width: $width;
-        }
-      }
-    }
-
+  @if $sassMode == false {
+    flex: 0 1 $width;
+    max-width: $width;
   } @else {
-    // Set Flexbox Settings when CSS Grid is no active
-    @if $bk-cssgrid == false {
-      min-height: 1px;
-      flex: 0 1 $width;
-      max-width: $width;
-    }
-
-    // Set CSS Grid Settings
-    @if $bk-cssgrid == true {
-      grid-column-start: auto;
-      grid-column-end: span ceil($cols);
-
-      @if $bk-cssgrid-fallback == true {
-        .use-flexbox > & {
-          flex: 0 1 $width;
-          max-width: $width;
-        }
-      }
-    }
+    min-height: 1px;
+    flex: 0 1 $width;
+    max-width: $width;
   }
+}
+
+// Shorthand Version
+@mixin col($args...) {
+  @include make-col($args...);
 }
 ```
 
@@ -263,27 +209,31 @@ $bk-grid-settings-custom: (
 
   @include f($gutterMin, $gutterMax, margin-left margin-right);
 }
+
+// Shorthand Version
+@mixin row-margin($args...) {
+  @include make-row-margin($args...);
+}
 ```
 
 ### Make Row
 ```
-@mixin make-row($cols: 1, $sassMode: true) {
-  @include make-row-margin();
+@mixin make-row($cols: 1, $margin: true, $sassMode: true) {
+  width: auto;
+  @if $margin == true {
+    @include make-row-margin();
+  }
   @if $sassMode == true {
-    @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
-      flex-flow: row wrap;
-      flex: 1 1 auto;
-    }
+    flex-flow: row wrap;
+    flex: 1 1 0;
   }
 
-  @if $bk-cssgrid == false {
-    display: flex;
-  }
+  display: flex;
+}
 
-  @if $bk-cssgrid == true {
-    display: grid;
-    grid-template-columns: repeat($cols, 1fr);
-  }
+// Shorthand Version
+@mixin row($args...) {
+  @include make-row($args...);
 }
 ```
 
@@ -307,19 +257,30 @@ $bk-grid-settings-custom: (
     @include f($gutterMin * ($factor), $gutterMax * ($factor), padding-bottom);
   }
 }
+
+// Shorthand Version
+@mixin section-padding($args...) {
+  @include make-section-padding($args...);
+}
 ```
 
 ### Make Section
 ```
 @mixin make-section($behaviour: 'fixed', $padding: true, $factor: 1) {
+  width: 100%;
   max-width: if($behaviour == 'fixed', $bk-maxWidth, none);
-  $factor: $factor * 2;
-  $gutterMin: $factor * $bk-gutterMin;
-  $gutterMax: $factor * $bk-gutterMax;
 
   @if $padding == true {
+    $factor: $factor * 2;
+    $gutterMin: $factor * $bk-gutterMin;
+    $gutterMax: $factor * $bk-gutterMax;
     @include f($gutterMin, $gutterMax, padding-left padding-right);
   }
+}
+
+// Shorthand Version
+@mixin section($args...) {
+  @include make-section($args...);
 }
 ```
 
@@ -327,49 +288,82 @@ $bk-grid-settings-custom: (
 ```
 @mixin make-vr($factor: 1) {
   $factor: $factor * 2;
+  $gutterMinVertical: $factor * $bk-gutterMinVertical;
+  $gutterMaxVertical: $factor * $bk-gutterMaxVertical;
+
+  @include f($gutterMinVertical, $gutterMaxVertical, margin-top);
+}
+
+// Shorthand Version
+@mixin vr($args...) {
+  @include make-vr($args...);
+}
+```
+
+### Space Mixins
+```
+@mixin make-space($properties: null, $factor: 1, $direction: 'x') {
+  $factor: $factor * 2;
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
 
-  @include f($gutterMin, $gutterMax, margin-top);
+  @if ($direction != 'x') {
+    $gutterMin: $factor * $bk-gutterMinVertical;
+    $gutterMax: $factor * $bk-gutterMaxVertical;
+  }
+
+  @if ($properties != null) {
+    @each $property in $properties {
+      @include f($gutterMin, $gutterMax, $property);
+    }
+  }
+}
+
+// Shorthand Version
+@mixin space($args...) {
+  @include make-space($args...);
+}
+
+@mixin spaceX($properties: null, $factor: 1) {
+  @include make-space($properties, $factor, 'x');
+}
+
+@mixin spaceY($properties: null, $factor: 1) {
+  @include make-space($properties, $factor, 'y');
 }
 ```
 
 ### Col Offset
 ```
-@mixin col-offset($cols: 1, $context: 1, $sassMode: true) {
+@mixin make-col-offset($cols: 1, $context: 1, $sassMode: true) {
+  $offset: 0;
+
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
+
+    // Calculate the Context
+    $offset: $cols  / $context * 100%;
   }
 
-  // Calculate the Context
-  $offset: $cols  / $context * 100%;
-
-  @if $sassMode == true {
-    @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
-      margin-left: $offset;
-    }
+  // If Cols auto set it to 0
+  @if $cols == auto {
+    $offset: auto;
+    $cols: 0;
   }
 
-  @if $bk-cssgrid == false {
-    margin-left: $offset;
-  }
+  margin-left: $offset;
+}
 
-  @if $bk-cssgrid == true {
-    grid-column-start: $cols + 1;
-
-    @if $bk-cssgrid-fallback == true {
-      .use-flexbox > & {
-        margin-left: $offset;
-      }
-    }
-  }
+// Shorthand Version
+@mixin col-offset($args...) {
+  @include make-col-offset($args...);
 }
 ```
 
 ### Col Push
 ```
-@mixin col-push($cols: 1, $context: 1, $sassMode: true) {
+@mixin make-col-push($cols: 1, $context: 1, $sassMode: true) {
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
@@ -379,11 +373,16 @@ $bk-grid-settings-custom: (
   $offset: $cols  / $context * 100%;
   left: $offset;
 }
+
+// Shorthand Version
+@mixin col-push($args...) {
+  @include make-col-push($args...);
+}
 ```
 
 ### Col Pull
 ```
-@mixin col-pull($cols: 1, $context: 1, $sassMode: true) {
+@mixin make-col-pull($cols: 1, $context: 1, $sassMode: true) {
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
@@ -391,20 +390,11 @@ $bk-grid-settings-custom: (
 
   // Calculate the Context
   $offset: $cols  / $context * 100%;
+  right: $offset;
+}
 
-  @if $sassMode == true {
-    @if $bk-cssgrid == false or $bk-cssgrid-fallback == true {
-      left: -$offset;
-    }
-  }
-
-  @if $bk-cssgrid == false {
-    // Calculate the Context
-    left: -$offset;
-  }
-
-  @if $bk-cssgrid == true {
-    grid-column-start: $cols;
-  }
+// Shorthand Version
+@mixin col-pull($args...) {
+  @include make-col-pull($args...);
 }
 ```

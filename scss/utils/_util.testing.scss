@@ -71,24 +71,24 @@ $bk-border-radius: 2px !default;
     @include make-section-padding(2);
   }
 
-  [class^='#{$bk-prefix}section'] {
+  [class*='#{$bk-prefix}section'] {
     @extend %styling-section;
   }
 
-  [class^='#{$bk-prefix}row'] {
+  [class*='#{$bk-prefix}row'] {
     @extend %styling-row;
     padding: 0;
 
-    [class^='#{$bk-prefix}row'] {
+    [class*='#{$bk-prefix}row'] {
       margin-top: 0;
     }
   }
 
-  [class^='#{$bk-prefix}col'] {
+  [class*='#{$bk-prefix}col'] {
     @extend %styling-col;
     margin-top: 0 !important;
 
-    > [class^='#{$bk-prefix}row'] {
+    > [class*='#{$bk-prefix}row'] {
       @include f($bk-gutterMin * -2, $bk-gutterMax * -2, margin-top);
     }
   }

@@ -59,7 +59,7 @@
   }
 }
 
-[class^='o-row'] {
+[class*='o-row'] {
   width: auto;
   margin-left: -8px;
   margin-right: -8px;
@@ -70,33 +70,33 @@
 }
 
 @media screen and (min-width: 320px) {
-  [class^='o-row'] {
+  [class*='o-row'] {
     margin-left: calc(-8px + -8 * (100vw - 320px) / (1120));
     margin-right: calc(-8px + -8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
-  [class^='o-row'] {
+  [class*='o-row'] {
     margin-left: -16px;
     margin-right: -16px;
   }
 }
 
-[class^='o-row'].no-padding > [class^='o-col'] {
+[class*='o-row'].no-padding > [class*='o-col'] {
   padding-left: 0px;
   padding-right: 0px;
 }
 
 @media screen and (min-width: 320px) {
-  [class^='o-row'].no-padding > [class^='o-col'] {
+  [class*='o-row'].no-padding > [class*='o-col'] {
     padding-left: calc(0px + 0 * (100vw - 320px) / (1120));
     padding-right: calc(0px + 0 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
-  [class^='o-row'].no-padding > [class^='o-col'] {
+  [class*='o-row'].no-padding > [class*='o-col'] {
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -207,7 +207,7 @@
   }
 }
 
-[class^='o-col'] {
+[class*='o-col'] {
   padding-left: 8px;
   padding-right: 8px;
   position: relative;
@@ -217,20 +217,20 @@
 }
 
 @media screen and (min-width: 320px) {
-  [class^='o-col'] {
+  [class*='o-col'] {
     padding-left: calc(8px + 8 * (100vw - 320px) / (1120));
     padding-right: calc(8px + 8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
-  [class^='o-col'] {
+  [class*='o-col'] {
     padding-left: 16px;
     padding-right: 16px;
   }
 }
 
-[class^='o-col-'] {
+[class*='o-col-'] {
   padding-left: 8px;
   padding-right: 8px;
   position: relative;
@@ -240,33 +240,33 @@
 }
 
 @media screen and (min-width: 320px) {
-  [class^='o-col-'] {
+  [class*='o-col-'] {
     padding-left: calc(8px + 8 * (100vw - 320px) / (1120));
     padding-right: calc(8px + 8 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
-  [class^='o-col-'] {
+  [class*='o-col-'] {
     padding-left: 16px;
     padding-right: 16px;
   }
 }
 
-[class^='o-col'].no-padding {
+[class*='o-col'].no-padding {
   padding-left: 0px;
   padding-right: 0px;
 }
 
 @media screen and (min-width: 320px) {
-  [class^='o-col'].no-padding {
+  [class*='o-col'].no-padding {
     padding-left: calc(0px + 0 * (100vw - 320px) / (1120));
     padding-right: calc(0px + 0 * (100vw - 320px) / (1120));
   }
 }
 
 @media screen and (min-width: 1440px) {
-  [class^='o-col'].no-padding {
+  [class*='o-col'].no-padding {
     padding-left: 0px;
     padding-right: 0px;
   }

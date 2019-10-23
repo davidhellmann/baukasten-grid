@@ -5,94 +5,59 @@
  */
 
 // Default Class Settings
-[class^='#{$bk-prefix}row'] {
+[class*='#{$bk-prefix}row'] {
   @if $bk-disable-padding-horizontal == false {
-    @include make-row($sassMode: false);
+    @include row($sassMode: false);
   } @else {
-    @include make-row($margin: false, $sassMode: false);
+    @include row($margin: false, $sassMode: false);
   }
 
-  @if $bk-cssgrid == false {
-    display: flex;
-    flex-flow: row wrap;
-    flex: 1 1 auto;
-  }
-
-  @if $bk-cssgrid == true {
-    display: grid;
-  }
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 auto;
 }
 
-[class^='#{$bk-prefix}row'].no-padding {
-  > [class^='#{$bk-prefix}col'] {
+[class*='#{$bk-prefix}row'].no-padding {
+  > [class*='#{$bk-prefix}col'] {
     @if $bk-disable-padding-horizontal == false {
-      @include make-col-padding(0);
+      @include col-padding(0);
     }
   }
 }
 
-@if $bk-cssgrid == true and $bk-cssgrid-fallback == true {
-  [class^='#{$bk-prefix}row'].use-flexbox {
-    @if $bk-disable-padding-horizontal == false {
-      @include make-row($sassMode: false);
-    } @else {
-      @include make-row($margin: false, $sassMode: false);
-    }
-    display: flex;
-    flex-flow: row wrap;
-    flex: 1 1 auto;
-
-    > [class='#{$bk-prefix}col'] {
-      position: relative;
-      min-height: 1px;
-      flex: 1 1 auto;
-      width: auto;
-    }
-  }
-}
-
-.items-x-start,
-%items-x-start {
+.items-x-start {
   justify-content: flex-start;
 }
 
-.items-x-center,
-%items-x-center {
+.items-x-center {
   justify-content: center;
 }
 
-.items-x-end,
-%items-x-end {
+.items-x-end {
   justify-content: flex-end;
 }
 
-.items-x-around,
-%items-x-around {
+.items-x-around {
   justify-content: space-around;
 }
 
-.items-x-between,
-%items-x-between {
+.items-x-between {
   justify-content: space-between;
 }
 
-.items-y-start,
-%items-y-start {
+.items-y-start {
   align-items: flex-start;
 }
 
-.items-y-center,
-%items-y-center {
+.items-y-center {
   align-items: center;
 }
 
-.items-y-end,
-%items-y-end {
+.items-y-end {
   align-items: flex-end;
 }
 
-.items-y-stretch,
-%items-y-stretch {
+.items-y-stretch {
   align-items: stretch;
 }
 
@@ -108,9 +73,9 @@
       .#{$prefix}row,
       %row {
         @if $bk-disable-padding-horizontal == false {
-          @include make-row($cols, $sassMode: false);
+          @include row($cols, $sassMode: false);
         } @else {
-          @include make-row($cols, $margin: false, $sassMode: false);
+          @include row($cols, $margin: false, $sassMode: false);
         }
       }
     }

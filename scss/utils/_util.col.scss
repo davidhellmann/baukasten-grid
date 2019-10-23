@@ -5,44 +5,29 @@
  */
 
 // Default Class Settings
-[class^='#{$bk-prefix}col'] {
+[class*='#{$bk-prefix}col'] {
   @if $bk-disable-padding-horizontal == false {
     @include make-col-padding();
   }
 
-  @if $bk-cssgrid == false {
-    position: relative;
-    min-height: 1px;
-    flex: 1 1 auto;
-    max-width: none;
-  }
-
-  @if $bk-cssgrid == true {
-    grid-column-start: 1;
-    grid-column-end: -1;
-  }
+  position: relative;
+  min-height: 1px;
+  flex: 1 1 auto;
+  max-width: none;
 }
 
 
-[class^='#{$bk-prefix}col-']{
+[class*='#{$bk-prefix}col-'] {
   @if $bk-disable-padding-horizontal == false {
     @include make-col-padding();
   }
   position: relative;
-
-  @if $bk-cssgrid == false {
-    min-height: 1px;
-    flex: 1 1 auto;
-    max-width: none;
-  }
-
-  @if $bk-cssgrid == true {
-    grid-column-start: auto;
-    grid-column-end: auto;
-  }
+  min-height: 1px;
+  flex: 1 1 auto;
+  max-width: none;
 }
 
-[class^='#{$bk-prefix}col'].no-padding {
+[class*='#{$bk-prefix}col'].no-padding {
   @if $bk-disable-padding-horizontal == false {
     @include make-col-padding(0);
   }

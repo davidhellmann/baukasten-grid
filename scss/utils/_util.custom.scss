@@ -10,10 +10,10 @@ h2 {
 
 .custom-section {
   text-align: center;
-  @include make-section-padding(2);
+  @include section-padding(2);
 
   h1 {
-    @include make-vr();
+    @include vr();
   }
 
   ul {
@@ -62,28 +62,3 @@ h2 {
   }
 }
 
-.foo-section {
-  @include make-section();
-  @include center();
-  @extend %styling-section;
-}
-
-.foo-row {
-  @include make-row(12);
-  @include make-row-margin();
-  @extend %styling-row;
-}
-
-.foo-col {
-  @extend %styling-col;
-  @include make-col(6, 6);
-  @include make-col-padding();
-
-  @media screen and (min-width: 600px) {
-    @include make-col(3, 12);
-  }
-
-  &--full {
-    @include make-col(12, 12);
-  }
-}

@@ -23,7 +23,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build"
+      "pre-commit": ""
     }
   },
   "src": {
@@ -38,7 +38,7 @@
     "css": "docs/css/"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   },
   "css": {
     "sourcemap": true
@@ -67,7 +67,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-watch": "^5.0.0",
-    "husky": "^1.2.0",
+    "husky": "^3.0.9",
     "require-dir": "^0.3.2",
     "run-sequence": "^2.2.1"
   }

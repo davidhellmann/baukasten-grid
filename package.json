@@ -21,9 +21,9 @@
     "clean": "gulp clean",
     "build": "gulp build"
   },
-  "husky": {
+  "_husky": {
     "hooks": {
-      "pre-commit": ""
+      "pre-commit": "npm run build"
     }
   },
   "src": {

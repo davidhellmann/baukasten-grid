@@ -12,9 +12,11 @@
   $cols: 24;
   $pxCols: 64;
   $pxMulti: 8;
+  $fluidSpacingCols: 6;
 
   @if $key == 'min' {
     @media (min-width: #{$from}) {
+      // Widths
       @for $i from 1 through $cols {
         .w-#{$i}\/#{$cols} {
           @include make-col($i, $cols);
@@ -29,6 +31,10 @@
         }
       }
 
+      .container {
+        max-width: #{$from};
+      }
+
       .w-full {
         width: 100%;
       }
@@ -37,6 +43,39 @@
         width: 100vw;
       }
 
+
+      // Paddings
+      .p-0 {
+        padding: 0;
+      }
+
+      .pt-0 {
+        padding-top: 0;
+      }
+
+      .pb-0 {
+        padding-bottom: 0;
+      }
+
+      .pl-0 {
+        padding-left: 0;
+      }
+
+      .pr-0 {
+        padding-right: 0;
+      }
+
+      .px-0 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .py-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      // Margins
       .mx-auto {
         margin-left: auto;
         margin-right: auto;
@@ -49,25 +88,600 @@
       .mr-auto {
         margin-right: auto;
       }
+
+      // Display
+      .block {
+        display: block;
+      }
+
+      .inline-block {
+        display: inline-block;
+      }
+
+      .inline {
+        display: inline;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .inline-flex {
+        display: inline-flex;
+      }
+
+      .table {
+        display: table;
+      }
+
+      .table-row {
+        display: table-row;
+      }
+
+      .table-cell {
+        display: table-cell;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+
+      // Float
+      .float-left {
+        float: left;
+      }
+
+      .float-right {
+        float: right;
+      }
+
+      .float-none {
+        float: none;
+      }
+
+      .clearfix {
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+
+      // Object Fit
+      .object-contain {
+        object-fit: contain;
+      }
+
+      .object-cover {
+        object-fit: cover;
+      }
+
+      .object-fill {
+        object-fit: fill;
+      }
+
+      .object-none {
+        object-fit: none;
+      }
+
+      .object-scale-down {
+        object-fit: scale-down;
+      }
+
+      // Object Position
+      .object-bottom {
+        object-position: bottom;
+      }
+
+      .object-center {
+        object-position: center;
+      }
+
+      .object-left {
+        object-position: left;
+      }
+
+      .object-left-bottom {
+        object-position: left bottom;
+      }
+
+      .object-left-top {
+        object-position: left top;
+      }
+
+      .object-right {
+        object-position: right;
+      }
+
+      .object-right-bottom {
+        object-position: right bottom;
+      }
+
+      .object-right-top {
+        object-position: right top;
+      }
+
+      .object-top {
+        object-position: top;
+      }
+
+
+      // Overflow
+      .overflow-auto {
+        overflow: auto;
+      }
+
+      .overflow-hidden {
+        overflow: hidden;
+      }
+
+      .overflow-visible {
+        overflow: visible;
+      }
+
+      .overflow-scroll {
+        overflow: scroll;
+      }
+
+      .overflow-x-auto {
+        overflow-x: auto;
+      }
+
+      .overflow-y-auto {
+        overflow-y: auto;
+      }
+
+      .overflow-x-hidden {
+        overflow-x: hidden;
+      }
+
+      .overflow-y-hidden {
+        overflow-y: hidden;
+      }
+
+      .overflow-x-visible {
+        overflow-x: visible;
+      }
+
+      .overflow-y-visible {
+        overflow-y: visible;
+      }
+
+      .overflow-x-scroll {
+        overflow-x: scroll;
+      }
+
+      .overflow-y-scroll {
+        overflow-y: scroll;
+      }
+
+      .scrolling-touch {
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .scrolling-auto {
+        -webkit-overflow-scrolling: auto;
+      }
+
+
+      // Position
+      .static {
+        position: static;
+      }
+
+      .fixed {
+        position: fixed;
+      }
+
+      .absolute {
+        position: absolute;
+      }
+
+      .relative {
+        position: relative;
+      }
+
+      .sticky {
+        position: sticky;
+      }
+
+      // Top / Right / Bottom / Left
+      .inset-0 {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      .inset-y-0 {
+        top: 0;
+        bottom: 0;
+      }
+
+      .inset-x-0 {
+        right: 0;
+        left: 0;
+      }
+
+      .top-0 {
+        top: 0;
+      }
+
+      .right-0 {
+        right: 0;
+      }
+
+      .bottom-0 {
+        bottom: 0;
+      }
+
+      .left-0 {
+        left: 0;
+      }
+
+      .inset-auto {
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+      }
+
+      .inset-y-auto {
+        top: auto;
+        bottom: auto;
+      }
+
+      .inset-x-auto {
+        left: auto;
+        right: auto;
+      }
+
+      .top-auto {
+        top: auto;
+      }
+
+      .bottom-auto {
+        bottom: auto;
+      }
+
+      .left-auto {
+        left: auto;
+      }
+
+      .right-auto {
+        right: auto;
+      }
+
+
+      // Visibility
+      .visible {
+        visibility: visible;
+      }
+
+      .invisible {
+        visibility: hidden;
+      }
+
+      // z-index
+      .z-0 {
+        z-index: 0;
+      }
+
+      .z-10 {
+        z-index: 10;
+      }
+
+      .z-20 {
+        z-index: 20;
+      }
+
+      .z-30 {
+        z-index: 30;
+      }
+
+      .z-40 {
+        z-index: 40;
+      }
+
+      .z-50 {
+        z-index: 50;
+      }
+
+      .z-auto {
+        z-index: auto;
+      }
+
+      // Flex Direction
+      .flex-row {
+        flex-direction: row;
+      }
+
+      .flex-row-reverse {
+        flex-direction: row-reverse;
+      }
+
+      .flex-col {
+        flex-direction: column;
+      }
+
+      .flex-col-reverse {
+        flex-direction: column-reverse;
+      }
+
+      // Flex Wrap
+      .flex-no-wrap {
+        flex-wrap: nowrap;
+      }
+
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+
+      .flex-wrap-reverse {
+        flex-wrap: wrap-reverse;
+      }
+
+      // Align Items
+      .items-stretch {
+        align-items: stretch;
+      }
+
+      .items-start {
+        align-items: flex-start;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .items-end {
+        align-items: flex-end;
+      }
+
+      .items-baseline {
+        align-items: baseline;
+      }
+
+      // Align Content
+      .content-start {
+        align-content: flex-start;
+      }
+
+      .content-center {
+        align-content: center;
+      }
+
+      .content-end {
+        align-content: flex-end;
+      }
+
+      .content-between {
+        align-content: space-between;
+      }
+
+      .content-around {
+        align-content: space-around;
+      }
+
+      // Align Self
+      .self-auto {
+        align-self: auto;
+      }
+
+      .self-start {
+        align-self: flex-start;
+      }
+
+      .self-center {
+        align-self: center;
+      }
+
+      .self-end {
+        align-self: flex-end;
+      }
+
+      .self-stretch {
+        align-self: stretch;
+      }
+
+      // Justify Content
+      .justify-start {
+        justify-content: flex-start;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      .justify-end {
+        justify-content: flex-end;
+      }
+
+      .justify-between {
+        justify-content: space-between;
+      }
+
+      .justify-around {
+        justify-content: space-around;
+      }
+
+      // Flex
+      .flex-initial {
+        flex: 0 1 auto;
+      }
+
+      .flex-1 {
+        flex: 1 1 0%;
+      }
+
+      .flex-auto {
+        flex: 1 1 auto;
+      }
+
+      .flex-none {
+        flex: none;
+      }
+
+      // Flex Grow
+      .flex-grow {
+        flex-grow: 1;
+      }
+
+      .flex-grow-0 {
+        flex-grow: 0;
+      }
+
+      // Flex Shrink
+      .flex-shrink {
+        flex-shrink: 1;
+      }
+
+      .flex-shrink-0 {
+        flex-shrink: 0;
+      }
+
+      // Order
+      .order-first {
+        order: -9999;
+      }
+
+      .order-last {
+        order: 9999;
+      }
+
+      .order-none {
+        order: 0;
+      }
+
+      .order-1 {
+        order: 1;
+      }
+
+      .order-2 {
+        order: 2;
+      }
+
+      .order-3 {
+        order: 3;
+      }
+
+      .order-4 {
+        order: 4;
+      }
+
+      .order-5 {
+        order: 5;
+      }
+
+      .order-6 {
+        order: 6;
+      }
+
+      .order-7 {
+        order: 7;
+      }
+
+      .order-8 {
+        order: 8;
+      }
+
+      .order-9 {
+        order: 9;
+      }
+
+      .order-10 {
+        order: 10;
+      }
+
+      .order-11 {
+        order: 11;
+      }
+
+      .order-12 {
+        order: 12;
+      }
     }
 
+    // Fluid Stuff
+    // Paddings & Margins
+    @for $i from 1 through $fluidSpacingCols {
+      .p-#{$i} {
+        @include space(padding, $i);
+      }
+
+      .pl-#{$i} {
+        @include space(padding-left, $i);
+      }
+
+      .pr-#{$i} {
+        @include space(padding-right, $i);
+      }
+
+      .pt-#{$i} {
+        @include space(padding-top, $i);
+      }
+
+      .pb-#{$i} {
+        @include space(padding-bottom, $i);
+      }
+
+      .px-#{$i} {
+        @include space(padding-left padding-right, $i);
+      }
+
+      .py-#{$i} {
+        @include space(padding-top padding-bottom, $i);
+      }
+
+      .m-#{$i} {
+        @include space(margin, $i);
+      }
+
+      .ml-#{$i} {
+        @include space(margin-left, $i);
+      }
+
+      .mr-#{$i} {
+        @include space(margin-right, $i);
+      }
+
+      .mt-#{$i} {
+        @include space(margin-top, $i);
+      }
+
+      .mb-#{$i} {
+        @include space(margin-bottom, $i);
+      }
+
+      .mx-#{$i} {
+        @include space(margin-left margin-right, $i);
+      }
+
+      .my-#{$i} {
+        @include space(margin-top margin-bottom, $i);
+      }
+    }
 
   } @else if $key != 'min' {
     @media (min-width: #{$from}) {
-      // Width Segments
+      // Widths
       @for $i from 1 through $cols {
         .#{$key}\:w-#{$i}\/#{$cols} {
           @include make-col($i, $cols);
         }
       }
 
-      // Width PX Classes
       @for $i from 1 through $pxCols {
         $value: $pxMulti * $i;
 
         .#{$key}\:w-#{$value}px {
           width: #{$value}px;
         }
+      }
+
+      .#{$key}\:container {
+        max-width: #{$from};
       }
 
       // Screen Class
@@ -80,6 +694,8 @@
         width: 100%;
       }
 
+
+      // Margins
       .#{$key}\:mx-auto {
         margin-left: auto;
         margin-right: auto;
@@ -91,6 +707,583 @@
 
       .#{$key}\:mr-auto {
         margin-right: auto;
+      }
+
+
+      // Display
+      .#{$key}\:block {
+        display: block;
+      }
+
+      .#{$key}\:inline-block {
+        display: inline-block;
+      }
+
+      .#{$key}\:inline {
+        display: inline;
+      }
+
+      .#{$key}\:flex {
+        display: flex;
+      }
+
+      .#{$key}\:inline-flex {
+        display: inline-flex;
+      }
+
+      .#{$key}\:table {
+        display: table;
+      }
+
+      .#{$key}\:table-row {
+        display: table-row;
+      }
+
+      .#{$key}\:table-cell {
+        display: table-cell;
+      }
+
+      .#{$key}\:hidden {
+        display: none;
+      }
+
+      // Float
+      .#{$key}\:float-left {
+        float: left;
+      }
+
+      .#{$key}\:float-right {
+        float: right;
+      }
+
+      .#{$key}\:float-none {
+        float: none;
+      }
+
+      .#{$key}\:clearfix {
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+
+
+      // Object Fit
+      .#{$key}\:object-contain {
+        object-fit: contain;
+      }
+
+      .#{$key}\:object-cover {
+        object-fit: cover;
+      }
+
+      .#{$key}\:object-fill {
+        object-fit: fill;
+      }
+
+      .#{$key}\:object-none {
+        object-fit: none;
+      }
+
+      .#{$key}\:object-scale-down {
+        object-fit: scale-down;
+      }
+
+
+      // Object Position
+      .#{$key}\:object-bottom {
+        object-position: bottom;
+      }
+
+      .#{$key}\:object-center {
+        object-position: center;
+      }
+
+      .#{$key}\:object-left {
+        object-position: left;
+      }
+
+      .#{$key}\:object-left-bottom {
+        object-position: left bottom;
+      }
+
+      .#{$key}\:object-left-top {
+        object-position: left top;
+      }
+
+      .#{$key}\:object-right {
+        object-position: right;
+      }
+
+      .#{$key}\:object-right-bottom {
+        object-position: right bottom;
+      }
+
+      .#{$key}\:object-right-top {
+        object-position: right top;
+      }
+
+      .#{$key}\:object-top {
+        object-position: top;
+      }
+
+
+      // Overflow
+      .#{$key}\:overflow-auto {
+        overflow: auto;
+      }
+
+      .#{$key}\:overflow-hidden {
+        overflow: hidden;
+      }
+
+      .#{$key}\:overflow-visible {
+        overflow: visible;
+      }
+
+      .#{$key}\:overflow-scroll {
+        overflow: scroll;
+      }
+
+      .#{$key}\:overflow-x-auto {
+        overflow-x: auto;
+      }
+
+      .#{$key}\:overflow-y-auto {
+        overflow-y: auto;
+      }
+
+      .#{$key}\:overflow-x-hidden {
+        overflow-x: hidden;
+      }
+
+      .#{$key}\:overflow-y-hidden {
+        overflow-y: hidden;
+      }
+
+      .#{$key}\:overflow-x-visible {
+        overflow-x: visible;
+      }
+
+      .#{$key}\:overflow-y-visible {
+        overflow-y: visible;
+      }
+
+      .#{$key}\:overflow-x-scroll {
+        overflow-x: scroll;
+      }
+
+      .#{$key}\:overflow-y-scroll {
+        overflow-y: scroll;
+      }
+
+      .#{$key}\:scrolling-touch {
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .#{$key}\:scrolling-auto {
+        -webkit-overflow-scrolling: auto;
+      }
+
+
+      // Position
+      .#{$key}\:static {
+        position: static;
+      }
+
+      .#{$key}\:fixed {
+        position: fixed;
+      }
+
+      .#{$key}\:absolute {
+        position: absolute;
+      }
+
+      .#{$key}\:relative {
+        position: relative;
+      }
+
+      .#{$key}\:sticky {
+        position: sticky;
+      }
+
+
+      // Top / Right / Bottom / Left
+      .#{$key}\:inset-0 {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      .#{$key}\:inset-y-0 {
+        top: 0;
+        bottom: 0;
+      }
+
+      .#{$key}\:inset-x-0 {
+        right: 0;
+        left: 0;
+      }
+
+      .#{$key}\:top-0 {
+        top: 0;
+      }
+
+      .#{$key}\:right-0 {
+        right: 0;
+      }
+
+      .#{$key}\:bottom-0 {
+        bottom: 0;
+      }
+
+      .#{$key}\:left-0 {
+        left: 0;
+      }
+
+      .#{$key}\:inset-auto {
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+      }
+
+      .#{$key}\:inset-y-auto {
+        top: auto;
+        bottom: auto;
+      }
+
+      .#{$key}\:inset-x-auto {
+        left: auto;
+        right: auto;
+      }
+
+      .#{$key}\:top-auto {
+        top: auto;
+      }
+
+      .#{$key}\:bottom-auto {
+        bottom: auto;
+      }
+
+      .#{$key}\:left-auto {
+        left: auto;
+      }
+
+      .#{$key}\:right-auto {
+        right: auto;
+      }
+
+
+      // Visibility
+      .#{$key}\:visible {
+        visibility: visible;
+      }
+
+      .#{$key}\:invisible {
+        visibility: hidden;
+      }
+
+      // z-index
+      .#{$key}\:z-0 {
+        z-index: 0;
+      }
+
+      .#{$key}\:z-10 {
+        z-index: 10;
+      }
+
+      .#{$key}\:z-20 {
+        z-index: 20;
+      }
+
+      .#{$key}\:z-30 {
+        z-index: 30;
+      }
+
+      .#{$key}\:z-40 {
+        z-index: 40;
+      }
+
+      .#{$key}\:z-50 {
+        z-index: 50;
+      }
+
+      .#{$key}\:z-auto {
+        z-index: auto;
+      }
+
+      // Flex Direction
+      .#{$key}\:flex-row {
+        flex-direction: row;
+      }
+
+      .#{$key}\:flex-row-reverse {
+        flex-direction: row-reverse;
+      }
+
+      .#{$key}\:flex-col {
+        flex-direction: column;
+      }
+
+      .#{$key}\:flex-col-reverse {
+        flex-direction: column-reverse;
+      }
+
+      // Flex Wrap
+      .#{$key}\:flex-no-wrap {
+        flex-wrap: nowrap;
+      }
+
+      .#{$key}\:flex-wrap {
+        flex-wrap: wrap;
+      }
+
+      .#{$key}\:flex-wrap-reverse {
+        flex-wrap: wrap-reverse;
+      }
+
+      // Align Items
+      .#{$key}\:items-stretch {
+        align-items: stretch;
+      }
+
+      .#{$key}\:items-start {
+        align-items: flex-start;
+      }
+
+      .#{$key}\:items-center {
+        align-items: center;
+      }
+
+      .#{$key}\:items-end {
+        align-items: flex-end;
+      }
+
+      .#{$key}\:items-baseline {
+        align-items: baseline;
+      }
+
+      // Align Content
+      .#{$key}\:content-start {
+        align-content: flex-start;
+      }
+
+      .#{$key}\:content-center {
+        align-content: center;
+      }
+
+      .#{$key}\:content-end {
+        align-content: flex-end;
+      }
+
+      .#{$key}\:content-between {
+        align-content: space-between;
+      }
+
+      .#{$key}\:content-around {
+        align-content: space-around;
+      }
+
+      // Align Self
+      .#{$key}\:self-auto {
+        align-self: auto;
+      }
+
+      .#{$key}\:self-start {
+        align-self: flex-start;
+      }
+
+      .#{$key}\:self-center {
+        align-self: center;
+      }
+
+      .#{$key}\:self-end {
+        align-self: flex-end;
+      }
+
+      .#{$key}\:self-stretch {
+        align-self: stretch;
+      }
+
+      // Justify Content
+      .#{$key}\:justify-start {
+        justify-content: flex-start;
+      }
+
+      .#{$key}\:justify-center {
+        justify-content: center;
+      }
+
+      .#{$key}\:justify-end {
+        justify-content: flex-end;
+      }
+
+      .#{$key}\:justify-between {
+        justify-content: space-between;
+      }
+
+      .#{$key}\:justify-around {
+        justify-content: space-around;
+      }
+
+      // Flex
+      .#{$key}\:flex-initial {
+        flex: 0 1 auto;
+      }
+
+      .#{$key}\:flex-1 {
+        flex: 1 1 0%;
+      }
+
+      .#{$key}\:flex-auto {
+        flex: 1 1 auto;
+      }
+
+      .#{$key}\:flex-none {
+        flex: none;
+      }
+
+      // Flex Grow
+      .#{$key}\:flex-grow {
+        flex-grow: 1;
+      }
+
+      .#{$key}\:flex-grow-0 {
+        flex-grow: 0;
+      }
+
+      // Flex Shrink
+      .#{$key}\:flex-shrink {
+        flex-shrink: 1;
+      }
+
+      .#{$key}\:flex-shrink-0 {
+        flex-shrink: 0;
+      }
+
+      // Order
+      .#{$key}\:order-first {
+        order: -9999;
+      }
+
+      .#{$key}\:order-last {
+        order: 9999;
+      }
+
+      .#{$key}\:order-none {
+        order: 0;
+      }
+
+      .#{$key}\:order-1 {
+        order: 1;
+      }
+
+      .#{$key}\:order-2 {
+        order: 2;
+      }
+
+      .#{$key}\:order-3 {
+        order: 3;
+      }
+
+      .#{$key}\:order-4 {
+        order: 4;
+      }
+
+      .#{$key}\:order-5 {
+        order: 5;
+      }
+
+      .#{$key}\:order-6 {
+        order: 6;
+      }
+
+      .#{$key}\:order-7 {
+        order: 7;
+      }
+
+      .#{$key}\:order-8 {
+        order: 8;
+      }
+
+      .#{$key}\:order-9 {
+        order: 9;
+      }
+
+      .#{$key}\:order-10 {
+        order: 10;
+      }
+
+      .#{$key}\:order-11 {
+        order: 11;
+      }
+
+      .#{$key}\:order-12 {
+        order: 12;
+      }
+    }
+
+
+    // Fluid Stuff
+    // Paddings & Margins
+    @for $i from 1 through $fluidSpacingCols {
+      .#{$key}\:p-#{$i} {
+        @include space(padding, $i);
+      }
+
+      .#{$key}\:pl-#{$i} {
+        @include space(padding-left, $i);
+      }
+
+      .#{$key}\:pr-#{$i} {
+        @include space(padding-right, $i);
+      }
+
+      .#{$key}\:pt-#{$i} {
+        @include space(padding-top, $i);
+      }
+
+      .#{$key}\:pb-#{$i} {
+        @include space(padding-bottom, $i);
+      }
+
+      .#{$key}\:px-#{$i} {
+        @include space(padding-left padding-right, $i);
+      }
+
+      .#{$key}\:py-#{$i} {
+        @include space(padding-top padding-bottom, $i);
+      }
+
+      .#{$key}\:m-#{$i} {
+        @include space(margin, $i);
+      }
+
+      .#{$key}\:ml-#{$i} {
+        @include space(margin-left, $i);
+      }
+
+      .#{$key}\:mr-#{$i} {
+        @include space(margin-right, $i);
+      }
+
+      .#{$key}\:mt-#{$i} {
+        @include space(margin-top, $i);
+      }
+
+      .#{$key}\:mb-#{$i} {
+        @include space(margin-bottom, $i);
+      }
+
+      .#{$key}\:mx-#{$i} {
+        @include space(margin-left margin-right, $i);
+      }
+
+      .#{$key}\:my-#{$i} {
+        @include space(margin-top margin-bottom, $i);
       }
     }
   }

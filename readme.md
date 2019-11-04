@@ -404,3 +404,49 @@ $bk-grid-settings-custom: (
   @include make-col-pull($args...);
 }
 ```
+
+
+## Utility Classes
+All classes are available for all breakpoints:
+
+```html
+<div class="w-24/24">Breakpoint: min</div>
+<div class="s:w-12/24">Breakpoint: s</div>
+<div class="m:w-8/24">Breakpoint: m</div>
+<div class="l:w-6/24">Breakpoint: l</div>
+<div class="max:w-3/24">Breakpoint: max</div>
+```
+
+### Width Classes
+
+| Class  | Properties |
+| :--- | :--- |
+| `.w-1/24` | `width: 4.1666666667%;` |
+| `.w-2/24` | `width: 8.3333333333%;` |
+| `.w-3/24` | `width: 12.5%;` |
+| `.w-4/24` | `width: 16.6666666667%;` |
+| `.w-5/24` | `width: 20.8333333333%;` |
+| `.w-6/24` | `width: 25%;` |
+| `.w-7/24` | `width: 29.1666666667%;` |
+| `.w-8/24` | `width: 33.3333333333%;` |
+| `.w-9/24` | `width: 37.5%;` |
+| `.w-10/24` | `width: 41.6666666667%;` |
+| `.w-11/24` | `width: 45.8333333333%;` |
+| `.w-12/24` | `width: 50%;` |
+| `.w-13/24` | `width: 54.1666666667%;` |
+| `.w-14/24` | `width: 58.3333333333%;` |
+| `.w-15/24` | `width: 62.5%;` |
+| `.w-16/24` | `width: 66.6666666667%;` |
+| `.w-17/24` | `width: 70.8333333333%;` |
+| `.w-18/24` | `width: 75%;` |
+| `.w-19/24` | `width: 79.1666666667%;` |
+| `.w-20/24` | `width: 83.3333333333%;` |
+| `.w-21/24` | `width: 87.5%;` |
+| `.w-22/24` | `width: 91.6666666667%;` |
+| `.w-23/24` | `width: 95.8333333333%;` |
+| `.w-24/24` | `width: 100%;` |
+
+
+.w-1\/24 {
+    width: 4.1666666667%;
+  }

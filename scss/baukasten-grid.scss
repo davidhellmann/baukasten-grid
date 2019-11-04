@@ -20,11 +20,10 @@ $bk-grid-settings-custom: (
   disable-padding-horizontal: false,
   breakpoints: (
     min: (from: 320px, cols: 6, create-classes: true),
-    xs:  (from: 400px, cols: 6, create-classes: true),
-    s:   (from: 600px, cols: 24, create-classes: true),
-    m:   (from: 800px, cols: 24, create-classes: true),
-    l:   (from: 1000px, cols: 24, create-classes: true),
-    max: (from: 1440px, cols: 24, create-classes: true)
+    s: (from: 600px, cols: 12, create-classes: true),
+    m: (from: 800px, cols: 12, create-classes: true),
+    l: (from: 1200px, cols: 24, create-classes: true),
+    max: (from: 1600px, cols: 24, create-classes: true)
   )
 );
 

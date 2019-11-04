@@ -70,19 +70,10 @@
  */
 
 // Mixin
-@mixin make-col($cols: 1, $context: 1, $sassMode: true) {
+@mixin make-col($cols: 1, $context: 1) {
   // Calculate the Context
   $width: $cols / $context * 100%;
-
-  // Check if SassMode active
-  @if $sassMode == false {
-    flex: 0 1 $width;
-    max-width: $width;
-  } @else {
-    min-height: 1px;
-    flex: 0 1 $width;
-    max-width: $width;
-  }
+  width: $width;
 }
 
 // Shorthand Version

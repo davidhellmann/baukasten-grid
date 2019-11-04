@@ -1,0 +1,97 @@
+/*
+ |--------------------------------------------------------------------------
+ |  Create all the utility classes
+ |  Recommended to use Purge CSS to clean up for production
+ |--------------------------------------------------------------------------
+ */
+
+
+// Loop that shit!
+@each $key, $value in $bk-breakpoints {
+  $from: map-get($value, from);
+  $cols: 24;
+  $pxCols: 64;
+  $pxMulti: 8;
+
+  @if $key == 'min' {
+    @media (min-width: #{$from}) {
+      @for $i from 1 through $cols {
+        .w-#{$i}\/#{$cols} {
+          @include make-col($i, $cols);
+        }
+      }
+
+      @for $i from 1 through $pxCols {
+        $value: $pxMulti * $i;
+
+        .w-#{$value}px {
+          width: #{$value}px;
+        }
+      }
+
+      .w-full {
+        width: 100%;
+      }
+
+      .w-screen {
+        width: 100vw;
+      }
+
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .ml-auto {
+        margin-left: auto;
+      }
+
+      .mr-auto {
+        margin-right: auto;
+      }
+    }
+
+
+  } @else if $key != 'min' {
+    @media (min-width: #{$from}) {
+      // Width Segments
+      @for $i from 1 through $cols {
+        .#{$key}\:w-#{$i}\/#{$cols} {
+          @include make-col($i, $cols);
+        }
+      }
+
+      // Width PX Classes
+      @for $i from 1 through $pxCols {
+        $value: $pxMulti * $i;
+
+        .#{$key}\:w-#{$value}px {
+          width: #{$value}px;
+        }
+      }
+
+      // Screen Class
+      .#{$key}\:w-screen {
+        width: 100vw;
+      }
+
+      // Screen Class
+      .#{$key}\:w-full {
+        width: 100%;
+      }
+
+      .#{$key}\:mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .#{$key}\:ml-auto {
+        margin-left: auto;
+      }
+
+      .#{$key}\:mr-auto {
+        margin-right: auto;
+      }
+    }
+  }
+}

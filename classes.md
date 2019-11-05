@@ -71,38 +71,6 @@ All classes are available for all breakpoints:
 | `.w-240px` | `width: 240px;` |
 | `.w-248px` | `width: 248px;` |
 | `.w-256px` | `width: 256px;` |
-| `.w-264px` | `width: 264px;` |
-| `.w-272px` | `width: 272px;` |
-| `.w-280px` | `width: 280px;` |
-| `.w-288px` | `width: 288px;` |
-| `.w-296px` | `width: 296px;` |
-| `.w-304px` | `width: 304px;` |
-| `.w-312px` | `width: 312px;` |
-| `.w-320px` | `width: 320px;` |
-| `.w-328px` | `width: 328px;` |
-| `.w-336px` | `width: 336px;` |
-| `.w-344px` | `width: 344px;` |
-| `.w-352px` | `width: 352px;` |
-| `.w-360px` | `width: 360px;` |
-| `.w-368px` | `width: 368px;` |
-| `.w-376px` | `width: 376px;` |
-| `.w-384px` | `width: 384px;` |
-| `.w-392px` | `width: 392px;` |
-| `.w-400px` | `width: 400px;` |
-| `.w-408px` | `width: 408px;` |
-| `.w-416px` | `width: 416px;` |
-| `.w-424px` | `width: 424px;` |
-| `.w-432px` | `width: 432px;` |
-| `.w-440px` | `width: 440px;` |
-| `.w-448px` | `width: 448px;` |
-| `.w-456px` | `width: 456px;` |
-| `.w-464px` | `width: 464px;` |
-| `.w-472px` | `width: 472px;` |
-| `.w-480px` | `width: 480px;` |
-| `.w-488px` | `width: 488px;` |
-| `.w-496px` | `width: 496px;` |
-| `.w-504px` | `width: 504px;` |
-| `.w-512px` | `width: 512px;` |
 
 
 ## Width: Additional
@@ -160,38 +128,6 @@ All classes are available for all breakpoints:
 | `.h-240px` | `height: 240px;` |
 | `.h-248px` | `height: 248px;` |
 | `.h-256px` | `height: 256px;` |
-| `.h-264px` | `height: 264px;` |
-| `.h-272px` | `height: 272px;` |
-| `.h-280px` | `height: 280px;` |
-| `.h-288px` | `height: 288px;` |
-| `.h-296px` | `height: 296px;` |
-| `.h-304px` | `height: 304px;` |
-| `.h-312px` | `height: 312px;` |
-| `.h-320px` | `height: 320px;` |
-| `.h-328px` | `height: 328px;` |
-| `.h-336px` | `height: 336px;` |
-| `.h-344px` | `height: 344px;` |
-| `.h-352px` | `height: 352px;` |
-| `.h-360px` | `height: 360px;` |
-| `.h-368px` | `height: 368px;` |
-| `.h-376px` | `height: 376px;` |
-| `.h-384px` | `height: 384px;` |
-| `.h-392px` | `height: 392px;` |
-| `.h-400px` | `height: 400px;` |
-| `.h-408px` | `height: 408px;` |
-| `.h-416px` | `height: 416px;` |
-| `.h-424px` | `height: 424px;` |
-| `.h-432px` | `height: 432px;` |
-| `.h-440px` | `height: 440px;` |
-| `.h-448px` | `height: 448px;` |
-| `.h-456px` | `height: 456px;` |
-| `.h-464px` | `height: 464px;` |
-| `.h-472px` | `height: 472px;` |
-| `.h-480px` | `height: 480px;` |
-| `.h-488px` | `height: 488px;` |
-| `.h-496px` | `height: 496px;` |
-| `.h-504px` | `height: 504px;` |
-| `.h-512px` | `height: 512px;` |
 
 
 ## Height: Additional
@@ -226,6 +162,118 @@ All classes are available for all breakpoints:
 | `.pr-0` | `padding-right: 0;` |
 | `.px-0` | `padding-left: 0; padding-right: 0` |
 | `.py-0` | `padding-top: 0; padding-bottom: 0` |
+| `.p-8px` | `padding: 8px;` |
+| `.p-16px` | `padding: 16px;` |
+| `.p-24px` | `padding: 24px;` |
+| `.p-32px` | `padding: 32px;` |
+| `.p-40px` | `padding: 40px;` |
+| `.p-48px` | `padding: 48px;` |
+| `.p-56px` | `padding: 56px;` |
+| `.p-64px` | `padding: 64px;` |
+| `.p-72px` | `padding: 72px;` |
+| `.p-80px` | `padding: 80px;` |
+| `.p-88px` | `padding: 88px;` |
+| `.p-96px` | `padding: 96px;` |
+| `.p-104px` | `padding: 104px;` |
+| `.p-112px` | `padding: 112px;` |
+| `.p-120px` | `padding: 120px;` |
+| `.p-128px` | `padding: 128px;` |
+| `.pl-8px` | `padding-left: 8px;` |
+| `.pl-16px` | `padding-left: 16px;` |
+| `.pl-24px` | `padding-left: 24px;` |
+| `.pl-32px` | `padding-left: 32px;` |
+| `.pl-40px` | `padding-left: 40px;` |
+| `.pl-48px` | `padding-left: 48px;` |
+| `.pl-56px` | `padding-left: 56px;` |
+| `.pl-64px` | `padding-left: 64px;` |
+| `.pl-72px` | `padding-left: 72px;` |
+| `.pl-80px` | `padding-left: 80px;` |
+| `.pl-88px` | `padding-left: 88px;` |
+| `.pl-96px` | `padding-left: 96px;` |
+| `.pl-104px` | `padding-left: 104px;` |
+| `.pl-112px` | `padding-left: 112px;` |
+| `.pl-120px` | `padding-left: 120px;` |
+| `.pl-128px` | `padding-left: 128px;` |
+| `.pr-8px` | `padding-right: 8px;` |
+| `.pr-16px` | `padding-right: 16px;` |
+| `.pr-24px` | `padding-right: 24px;` |
+| `.pr-32px` | `padding-right: 32px;` |
+| `.pr-40px` | `padding-right: 40px;` |
+| `.pr-48px` | `padding-right: 48px;` |
+| `.pr-56px` | `padding-right: 56px;` |
+| `.pr-64px` | `padding-right: 64px;` |
+| `.pr-72px` | `padding-right: 72px;` |
+| `.pr-80px` | `padding-right: 80px;` |
+| `.pr-88px` | `padding-right: 88px;` |
+| `.pr-96px` | `padding-right: 96px;` |
+| `.pr-104px` | `padding-right: 104px;` |
+| `.pr-112px` | `padding-right: 112px;` |
+| `.pr-120px` | `padding-right: 120px;` |
+| `.pr-128px` | `padding-right: 128px;` |
+| `.pt-8px` | `padding-top: 8px;` |
+| `.pt-16px` | `padding-top: 16px;` |
+| `.pt-24px` | `padding-top: 24px;` |
+| `.pt-32px` | `padding-top: 32px;` |
+| `.pt-40px` | `padding-top: 40px;` |
+| `.pt-48px` | `padding-top: 48px;` |
+| `.pt-56px` | `padding-top: 56px;` |
+| `.pt-64px` | `padding-top: 64px;` |
+| `.pt-72px` | `padding-top: 72px;` |
+| `.pt-80px` | `padding-top: 80px;` |
+| `.pt-88px` | `padding-top: 88px;` |
+| `.pt-96px` | `padding-top: 96px;` |
+| `.pt-104px` | `padding-top: 104px;` |
+| `.pt-112px` | `padding-top: 112px;` |
+| `.pt-120px` | `padding-top: 120px;` |
+| `.pt-128px` | `padding-top: 128px;` |
+| `.pb-8px` | `padding-bottom: 8px;` |
+| `.pb-16px` | `padding-bottom: 16px;` |
+| `.pb-24px` | `padding-bottom: 24px;` |
+| `.pb-32px` | `padding-bottom: 32px;` |
+| `.pb-40px` | `padding-bottom: 40px;` |
+| `.pb-48px` | `padding-bottom: 48px;` |
+| `.pb-56px` | `padding-bottom: 56px;` |
+| `.pb-64px` | `padding-bottom: 64px;` |
+| `.pb-72px` | `padding-bottom: 72px;` |
+| `.pb-80px` | `padding-bottom: 80px;` |
+| `.pb-88px` | `padding-bottom: 88px;` |
+| `.pb-96px` | `padding-bottom: 96px;` |
+| `.pb-104px` | `padding-bottom: 104px;` |
+| `.pb-112px` | `padding-bottom: 112px;` |
+| `.pb-120px` | `padding-bottom: 120px;` |
+| `.pb-128px` | `padding-bottom: 128px;` |
+| `.px-8px` | `padding-left: 8px; padding-right: 8px;` |
+| `.px-16px` | `padding-left: 16px; padding-right: 16px;` |
+| `.px-24px` | `padding-left: 24px; padding-right: 24px;` |
+| `.px-32px` | `padding-left: 32px; padding-right: 32px;` |
+| `.px-40px` | `padding-left: 40px; padding-right: 40px;` |
+| `.px-48px` | `padding-left: 48px; padding-right: 48px;` |
+| `.px-56px` | `padding-left: 56px; padding-right: 56px;` |
+| `.px-64px` | `padding-left: 64px; padding-right: 64px;` |
+| `.px-72px` | `padding-left: 72px; padding-right: 72px;` |
+| `.px-80px` | `padding-left: 80px; padding-right: 80px;` |
+| `.px-88px` | `padding-left: 88px; padding-right: 88px;` |
+| `.px-96px` | `padding-left: 96px; padding-right: 96px;` |
+| `.px-104px` | `padding-left: 104px; padding-right: 104px;` |
+| `.px-112px` | `padding-left: 112px; padding-right: 112px;` |
+| `.px-120px` | `padding-left: 120px; padding-right: 120px;` |
+| `.px-128px` | `padding-left: 128px; padding-right: 128px;` |
+| `.py-8px` | `padding-top: 8px; padding-bottom: 8px;` |
+| `.py-16px` | `padding-top: 16px; padding-bottom: 16px;` |
+| `.py-24px` | `padding-top: 24px; padding-bottom: 24px;` |
+| `.py-32px` | `padding-top: 32px; padding-bottom: 32px;` |
+| `.py-40px` | `padding-top: 40px; padding-bottom: 40px;` |
+| `.py-48px` | `padding-top: 48px; padding-bottom: 48px;` |
+| `.py-56px` | `padding-top: 56px; padding-bottom: 56px;` |
+| `.py-64px` | `padding-top: 64px; padding-bottom: 64px;` |
+| `.py-72px` | `padding-top: 72px; padding-bottom: 72px;` |
+| `.py-80px` | `padding-top: 80px; padding-bottom: 80px;` |
+| `.py-88px` | `padding-top: 88px; padding-bottom: 88px;` |
+| `.py-96px` | `padding-top: 96px; padding-bottom: 96px;` |
+| `.py-104px` | `padding-top: 104px; padding-bottom: 104px;` |
+| `.py-112px` | `padding-top: 112px; padding-bottom: 112px;` |
+| `.py-120px` | `padding-top: 120px; padding-bottom: 120px;` |
+| `.py-128px` | `padding-top: 128px; padding-bottom: 128px;` |
 
 
 ## Margin
@@ -241,6 +289,230 @@ All classes are available for all breakpoints:
 | `.mx-auto` | `margin-left: auto; margin-right: auto;` |
 | `.ml-auto` | `margin-left: auto;` |
 | `.mr-auto` | `margin-right: auto;` |
+| `.m-8px` | `margin: 8px;` |
+| `.m-16px` | `margin: 16px;` |
+| `.m-24px` | `margin: 24px;` |
+| `.m-32px` | `margin: 32px;` |
+| `.m-40px` | `margin: 40px;` |
+| `.m-48px` | `margin: 48px;` |
+| `.m-56px` | `margin: 56px;` |
+| `.m-64px` | `margin: 64px;` |
+| `.m-72px` | `margin: 72px;` |
+| `.m-80px` | `margin: 80px;` |
+| `.m-88px` | `margin: 88px;` |
+| `.m-96px` | `margin: 96px;` |
+| `.m-104px` | `margin: 104px;` |
+| `.m-112px` | `margin: 112px;` |
+| `.m-120px` | `margin: 120px;` |
+| `.m-128px` | `margin: 128px;` |
+| `.ml-8px` | `margin-left: 8px;` |
+| `.ml-16px` | `margin-left: 16px;` |
+| `.ml-24px` | `margin-left: 24px;` |
+| `.ml-32px` | `margin-left: 32px;` |
+| `.ml-40px` | `margin-left: 40px;` |
+| `.ml-48px` | `margin-left: 48px;` |
+| `.ml-56px` | `margin-left: 56px;` |
+| `.ml-64px` | `margin-left: 64px;` |
+| `.ml-72px` | `margin-left: 72px;` |
+| `.ml-80px` | `margin-left: 80px;` |
+| `.ml-88px` | `margin-left: 88px;` |
+| `.ml-96px` | `margin-left: 96px;` |
+| `.ml-104px` | `margin-left: 104px;` |
+| `.ml-112px` | `margin-left: 112px;` |
+| `.ml-120px` | `margin-left: 120px;` |
+| `.ml-128px` | `margin-left: 128px;` |
+| `.mr-8px` | `margin-right: 8px;` |
+| `.mr-16px` | `margin-right: 16px;` |
+| `.mr-24px` | `margin-right: 24px;` |
+| `.mr-32px` | `margin-right: 32px;` |
+| `.mr-40px` | `margin-right: 40px;` |
+| `.mr-48px` | `margin-right: 48px;` |
+| `.mr-56px` | `margin-right: 56px;` |
+| `.mr-64px` | `margin-right: 64px;` |
+| `.mr-72px` | `margin-right: 72px;` |
+| `.mr-80px` | `margin-right: 80px;` |
+| `.mr-88px` | `margin-right: 88px;` |
+| `.mr-96px` | `margin-right: 96px;` |
+| `.mr-104px` | `margin-right: 104px;` |
+| `.mr-112px` | `margin-right: 112px;` |
+| `.mr-120px` | `margin-right: 120px;` |
+| `.mr-128px` | `margin-right: 128px;` |
+| `.mt-8px` | `margin-top: 8px;` |
+| `.mt-16px` | `margin-top: 16px;` |
+| `.mt-24px` | `margin-top: 24px;` |
+| `.mt-32px` | `margin-top: 32px;` |
+| `.mt-40px` | `margin-top: 40px;` |
+| `.mt-48px` | `margin-top: 48px;` |
+| `.mt-56px` | `margin-top: 56px;` |
+| `.mt-64px` | `margin-top: 64px;` |
+| `.mt-72px` | `margin-top: 72px;` |
+| `.mt-80px` | `margin-top: 80px;` |
+| `.mt-88px` | `margin-top: 88px;` |
+| `.mt-96px` | `margin-top: 96px;` |
+| `.mt-104px` | `margin-top: 104px;` |
+| `.mt-112px` | `margin-top: 112px;` |
+| `.mt-120px` | `margin-top: 120px;` |
+| `.mt-128px` | `margin-top: 128px;` |
+| `.mb-8px` | `margin-bottom: 8px;` |
+| `.mb-16px` | `margin-bottom: 16px;` |
+| `.mb-24px` | `margin-bottom: 24px;` |
+| `.mb-32px` | `margin-bottom: 32px;` |
+| `.mb-40px` | `margin-bottom: 40px;` |
+| `.mb-48px` | `margin-bottom: 48px;` |
+| `.mb-56px` | `margin-bottom: 56px;` |
+| `.mb-64px` | `margin-bottom: 64px;` |
+| `.mb-72px` | `margin-bottom: 72px;` |
+| `.mb-80px` | `margin-bottom: 80px;` |
+| `.mb-88px` | `margin-bottom: 88px;` |
+| `.mb-96px` | `margin-bottom: 96px;` |
+| `.mb-104px` | `margin-bottom: 104px;` |
+| `.mb-112px` | `margin-bottom: 112px;` |
+| `.mb-120px` | `margin-bottom: 120px;` |
+| `.mb-128px` | `margin-bottom: 128px;` |
+| `.mx-8px` | `margin-left: 8px; margin-right: 8px;` |
+| `.mx-16px` | `margin-left: 16px; margin-right: 16px;` |
+| `.mx-24px` | `margin-left: 24px; margin-right: 24px;` |
+| `.mx-32px` | `margin-left: 32px; margin-right: 32px;` |
+| `.mx-40px` | `margin-left: 40px; margin-right: 40px;` |
+| `.mx-48px` | `margin-left: 48px; margin-right: 48px;` |
+| `.mx-56px` | `margin-left: 56px; margin-right: 56px;` |
+| `.mx-64px` | `margin-left: 64px; margin-right: 64px;` |
+| `.mx-72px` | `margin-left: 72px; margin-right: 72px;` |
+| `.mx-80px` | `margin-left: 80px; margin-right: 80px;` |
+| `.mx-88px` | `margin-left: 88px; margin-right: 88px;` |
+| `.mx-96px` | `margin-left: 96px; margin-right: 96px;` |
+| `.mx-104px` | `margin-left: 104px; margin-right: 104px;` |
+| `.mx-112px` | `margin-left: 112px; margin-right: 112px;` |
+| `.mx-120px` | `margin-left: 120px; margin-right: 120px;` |
+| `.mx-128px` | `margin-left: 128px; margin-right: 128px;` |
+| `.my-8px` | `margin-top: 8px; margin-bottom: 8px;` |
+| `.my-16px` | `margin-top: 16px; margin-bottom: 16px;` |
+| `.my-24px` | `margin-top: 24px; margin-bottom: 24px;` |
+| `.my-32px` | `margin-top: 32px; margin-bottom: 32px;` |
+| `.my-40px` | `margin-top: 40px; margin-bottom: 40px;` |
+| `.my-48px` | `margin-top: 48px; margin-bottom: 48px;` |
+| `.my-56px` | `margin-top: 56px; margin-bottom: 56px;` |
+| `.my-64px` | `margin-top: 64px; margin-bottom: 64px;` |
+| `.my-72px` | `margin-top: 72px; margin-bottom: 72px;` |
+| `.my-80px` | `margin-top: 80px; margin-bottom: 80px;` |
+| `.my-88px` | `margin-top: 88px; margin-bottom: 88px;` |
+| `.my-96px` | `margin-top: 96px; margin-bottom: 96px;` |
+| `.my-104px` | `margin-top: 104px; margin-bottom: 104px;` |
+| `.my-112px` | `margin-top: 112px; margin-bottom: 112px;` |
+| `.my-120px` | `margin-top: 120px; margin-bottom: 120px;` |
+| `.my-128px` | `margin-top: 128px; margin-bottom: 128px;` |
+| `.-m-8px` | `margin: -8px;` |
+| `.-m-16px` | `margin: -16px;` |
+| `.-m-24px` | `margin: -24px;` |
+| `.-m-32px` | `margin: -32px;` |
+| `.-m-40px` | `margin: -40px;` |
+| `.-m-48px` | `margin: -48px;` |
+| `.-m-56px` | `margin: -56px;` |
+| `.-m-64px` | `margin: -64px;` |
+| `.-m-72px` | `margin: -72px;` |
+| `.-m-80px` | `margin: -80px;` |
+| `.-m-88px` | `margin: -88px;` |
+| `.-m-96px` | `margin: -96px;` |
+| `.-m-104px` | `margin: -104px;` |
+| `.-m-112px` | `margin: -112px;` |
+| `.-m-120px` | `margin: -120px;` |
+| `.-m-128px` | `margin: -128px;` |
+| `.-ml-8px` | `margin-left: -8px;` |
+| `.-ml-16px` | `margin-left: -16px;` |
+| `.-ml-24px` | `margin-left: -24px;` |
+| `.-ml-32px` | `margin-left: -32px;` |
+| `.-ml-40px` | `margin-left: -40px;` |
+| `.-ml-48px` | `margin-left: -48px;` |
+| `.-ml-56px` | `margin-left: -56px;` |
+| `.-ml-64px` | `margin-left: -64px;` |
+| `.-ml-72px` | `margin-left: -72px;` |
+| `.-ml-80px` | `margin-left: -80px;` |
+| `.-ml-88px` | `margin-left: -88px;` |
+| `.-ml-96px` | `margin-left: -96px;` |
+| `.-ml-104px` | `margin-left: -104px;` |
+| `.-ml-112px` | `margin-left: -112px;` |
+| `.-ml-120px` | `margin-left: -120px;` |
+| `.-ml-128px` | `margin-left: -128px;` |
+| `.-mr-8px` | `margin-right: -8px;` |
+| `.-mr-16px` | `margin-right: -16px;` |
+| `.-mr-24px` | `margin-right: -24px;` |
+| `.-mr-32px` | `margin-right: -32px;` |
+| `.-mr-40px` | `margin-right: -40px;` |
+| `.-mr-48px` | `margin-right: -48px;` |
+| `.-mr-56px` | `margin-right: -56px;` |
+| `.-mr-64px` | `margin-right: -64px;` |
+| `.-mr-72px` | `margin-right: -72px;` |
+| `.-mr-80px` | `margin-right: -80px;` |
+| `.-mr-88px` | `margin-right: -88px;` |
+| `.-mr-96px` | `margin-right: -96px;` |
+| `.-mr-104px` | `margin-right: -104px;` |
+| `.-mr-112px` | `margin-right: -112px;` |
+| `.-mr-120px` | `margin-right: -120px;` |
+| `.-mr-128px` | `margin-right: -128px;` |
+| `.-mt-8px` | `margin-top: -8px;` |
+| `.-mt-16px` | `margin-top: -16px;` |
+| `.-mt-24px` | `margin-top: -24px;` |
+| `.-mt-32px` | `margin-top: -32px;` |
+| `.-mt-40px` | `margin-top: -40px;` |
+| `.-mt-48px` | `margin-top: -48px;` |
+| `.-mt-56px` | `margin-top: -56px;` |
+| `.-mt-64px` | `margin-top: -64px;` |
+| `.-mt-72px` | `margin-top: -72px;` |
+| `.-mt-80px` | `margin-top: -80px;` |
+| `.-mt-88px` | `margin-top: -88px;` |
+| `.-mt-96px` | `margin-top: -96px;` |
+| `.-mt-104px` | `margin-top: -104px;` |
+| `.-mt-112px` | `margin-top: -112px;` |
+| `.-mt-120px` | `margin-top: -120px;` |
+| `.-mt-128px` | `margin-top: -128px;` |
+| `.-mb-8px` | `margin-bottom: -8px;` |
+| `.-mb-16px` | `margin-bottom: -16px;` |
+| `.-mb-24px` | `margin-bottom: -24px;` |
+| `.-mb-32px` | `margin-bottom: -32px;` |
+| `.-mb-40px` | `margin-bottom: -40px;` |
+| `.-mb-48px` | `margin-bottom: -48px;` |
+| `.-mb-56px` | `margin-bottom: -56px;` |
+| `.-mb-64px` | `margin-bottom: -64px;` |
+| `.-mb-72px` | `margin-bottom: -72px;` |
+| `.-mb-80px` | `margin-bottom: -80px;` |
+| `.-mb-88px` | `margin-bottom: -88px;` |
+| `.-mb-96px` | `margin-bottom: -96px;` |
+| `.-mb-104px` | `margin-bottom: -104px;` |
+| `.-mb-112px` | `margin-bottom: -112px;` |
+| `.-mb-120px` | `margin-bottom: -120px;` |
+| `.-mb-128px` | `margin-bottom: -128px;` |
+| `.-mx-8px` | `margin-left: -8px; margin-right: -8px;` |
+| `.-mx-16px` | `margin-left: -16px; margin-right: -16px;` |
+| `.-mx-24px` | `margin-left: -24px; margin-right: -24px;` |
+| `.-mx-32px` | `margin-left: -32px; margin-right: -32px;` |
+| `.-mx-40px` | `margin-left: -40px; margin-right: -40px;` |
+| `.-mx-48px` | `margin-left: -48px; margin-right: -48px;` |
+| `.-mx-56px` | `margin-left: -56px; margin-right: -56px;` |
+| `.-mx-64px` | `margin-left: -64px; margin-right: -64px;` |
+| `.-mx-72px` | `margin-left: -72px; margin-right: -72px;` |
+| `.-mx-80px` | `margin-left: -80px; margin-right: -80px;` |
+| `.-mx-88px` | `margin-left: -88px; margin-right: -88px;` |
+| `.-mx-96px` | `margin-left: -96px; margin-right: -96px;` |
+| `.-mx-104px` | `margin-left: -104px; margin-right: -104px;` |
+| `.-mx-112px` | `margin-left: -112px; margin-right: -112px;` |
+| `.-mx-120px` | `margin-left: -120px; margin-right: -120px;` |
+| `.-mx-128px` | `margin-left: -128px; margin-right: -128px;` |
+| `.-my-8px` | `margin-top: -8px; margin-bottom: -8px;` |
+| `.-my-16px` | `margin-top: -16px; margin-bottom: -16px;` |
+| `.-my-24px` | `margin-top: -24px; margin-bottom: -24px;` |
+| `.-my-32px` | `margin-top: -32px; margin-bottom: -32px;` |
+| `.-my-40px` | `margin-top: -40px; margin-bottom: -40px;` |
+| `.-my-48px` | `margin-top: -48px; margin-bottom: -48px;` |
+| `.-my-56px` | `margin-top: -56px; margin-bottom: -56px;` |
+| `.-my-64px` | `margin-top: -64px; margin-bottom: -64px;` |
+| `.-my-72px` | `margin-top: -72px; margin-bottom: -72px;` |
+| `.-my-80px` | `margin-top: -80px; margin-bottom: -80px;` |
+| `.-my-88px` | `margin-top: -88px; margin-bottom: -88px;` |
+| `.-my-96px` | `margin-top: -96px; margin-bottom: -96px;` |
+| `.-my-104px` | `margin-top: -104px; margin-bottom: -104px;` |
+| `.-my-112px` | `margin-top: -112px; margin-bottom: -112px;` |
+| `.-my-120px` | `margin-top: -120px; margin-bottom: -120px;` |
+| `.-my-128px` | `margin-top: -128px; margin-bottom: -128px;` |
 
 
 ## Display
@@ -424,24 +696,24 @@ All classes are available for all breakpoints:
 ## Fluid Stuff
 | Class | Properties |
 | :--- | :--- |
-| `.p-1--fluid / .p-2--fluid / .p-3--fluid / .p-4--fluid / .p-5--fluid / .p-6--fluid` | magic calc |
-| `.pl-1--fluid / .pl-2--fluid / .pl-3--fluid / .pl-4--fluid / .pl-5--fluid / .pl-6--fluid` | magic calc |
-| `.pr-1--fluid / .pr-2--fluid / .pr-3--fluid / .pr-4--fluid / .pr-5--fluid / .pr-6--fluid` | magic calc |
-| `.pt-1--fluid / .pt-2--fluid / .pt-3--fluid / .pt-4--fluid / .pt-5--fluid / .pt-6--fluid` | magic calc |
-| `.pb-1--fluid / .pb-2--fluid / .pb-3--fluid / .pb-4--fluid / .pb-5--fluid / .pb-6--fluid` | magic calc |
-| `.px-1--fluid / .px-2--fluid / .px-3--fluid / .px-4--fluid / .px-5--fluid / .px-6--fluid` | magic calc |
-| `.py-1--fluid / .py-2--fluid / .py-3--fluid / .py-4--fluid / .py-5--fluid / .py-6--fluid` | magic calc |
-| `.m-1--fluid / .m-2--fluid / .m-3--fluid / .m-4--fluid / .m-5--fluid / .m-6--fluid` | magic calc |
-| `.ml-1--fluid / .ml-2--fluid / .ml-3--fluid / .ml-4--fluid / .ml-5--fluid / .ml-6--fluid` | magic calc |
-| `.mr-1--fluid / .mr-2--fluid / .mr-3--fluid / .mr-4--fluid / .mr-5--fluid / .mr-6--fluid` | magic calc |
-| `.mt-1--fluid / .mt-2--fluid / .mt-3--fluid / .mt-4--fluid / .mt-5--fluid / .mt-6--fluid` | magic calc |
-| `.mb-1--fluid / .mb-2--fluid / .mb-3--fluid / .mb-4--fluid / .mb-5--fluid / .mb-6--fluid` | magic calc |
-| `.mx-1--fluid / .mx-2--fluid / .mx-3--fluid / .mx-4--fluid / .mx-5--fluid / .mx-6--fluid` | magic calc |
-| `.my-1--fluid / .my-2--fluid / .my-3--fluid / .my-4--fluid / .my-5--fluid / .my-6--fluid` | magic calc |
-| `.-m-1--fluid / .-m-2--fluid / .-m-3--fluid / .-m-4--fluid / .-m-5--fluid / .-m-6--fluid` | magic calc |
-| `.-ml-1--fluid / .-ml-2--fluid / .-ml-3--fluid / .-ml-4--fluid / .-ml-5--fluid / .-ml-6--fluid` | magic calc |
-| `.-mr-1--fluid / .-mr-2--fluid / .-mr-3--fluid / .-mr-4--fluid / .-mr-5--fluid / .-mr-6--fluid` | magic calc |
-| `.-mt-1--fluid / .-mt-2--fluid / .-mt-3--fluid / .-mt-4--fluid / .-mt-5--fluid / .-mt-6--fluid` | magic calc |
-| `.-mb-1--fluid / .-mb-2--fluid / .-mb-3--fluid / .-mb-4--fluid / .-mb-5--fluid / .-mb-6--fluid` | magic calc |
-| `.-mx-1--fluid / .-mx-2--fluid / .-mx-3--fluid / .-mx-4--fluid / .-mx-5--fluid / .-mx-6--fluid` | magic calc |
-| `.-my-1--fluid / .-my-2--fluid / .-my-3--fluid / .-my-4--fluid / .-my-5--fluid / .-my-6--fluid` | magic calc |
+| `.p-1--fluid / .p-2--fluid / .p-3--fluid / .p-4--fluid / .p-5--fluid / .p-6--fluid` / .p-7--fluid` / .p-8--fluid` / .p-9--fluid` / .p-10--fluid` | magic calc |
+| `.pl-1--fluid / .pl-2--fluid / .pl-3--fluid / .pl-4--fluid / .pl-5--fluid / .pl-6--fluid` / .pl-7--fluid` / .pl-8--fluid` / .pl-9--fluid` / .pl-10--fluid` | magic calc |
+| `.pr-1--fluid / .pr-2--fluid / .pr-3--fluid / .pr-4--fluid / .pr-5--fluid / .pr-6--fluid` / .pr-7--fluid` / .pr-8--fluid` / .pr-9--fluid` / .pr-10--fluid` | magic calc |
+| `.pt-1--fluid / .pt-2--fluid / .pt-3--fluid / .pt-4--fluid / .pt-5--fluid / .pt-6--fluid` / .pt-7--fluid` / .pt-8--fluid` / .pt-9--fluid` / .pt-10--fluid` | magic calc |
+| `.pb-1--fluid / .pb-2--fluid / .pb-3--fluid / .pb-4--fluid / .pb-5--fluid / .pb-6--fluid` / .pb-7--fluid` / .pb-8--fluid` / .pb-9--fluid` / .pb-10--fluid` | magic calc |
+| `.px-1--fluid / .px-2--fluid / .px-3--fluid / .px-4--fluid / .px-5--fluid / .px-6--fluid` / .px-7--fluid` / .px-8--fluid` / .px-9--fluid` / .px-10--fluid` | magic calc |
+| `.py-1--fluid / .py-2--fluid / .py-3--fluid / .py-4--fluid / .py-5--fluid / .py-6--fluid` / .py-7--fluid` / .py-8--fluid` / .py-9--fluid` / .py-10--fluid` | magic calc |
+| `.m-1--fluid / .m-2--fluid / .m-3--fluid / .m-4--fluid / .m-5--fluid / .m-6--fluid` / .m-7--fluid` / .m-8--fluid` / .m-9--fluid` / .m-10--fluid` | magic calc |
+| `.ml-1--fluid / .ml-2--fluid / .ml-3--fluid / .ml-4--fluid / .ml-5--fluid / .ml-6--fluid` / .ml-7--fluid` / .ml-8--fluid` / .ml-9--fluid` / .ml-10--fluid` | magic calc |
+| `.mr-1--fluid / .mr-2--fluid / .mr-3--fluid / .mr-4--fluid / .mr-5--fluid / .mr-6--fluid` / .mr-7--fluid` / .mr-8--fluid` / .mr-9--fluid` / .mr-10--fluid` | magic calc |
+| `.mt-1--fluid / .mt-2--fluid / .mt-3--fluid / .mt-4--fluid / .mt-5--fluid / .mt-6--fluid` / .mt-7--fluid` / .mt-8--fluid` / .mt-9--fluid` / .mt-10--fluid` | magic calc |
+| `.mb-1--fluid / .mb-2--fluid / .mb-3--fluid / .mb-4--fluid / .mb-5--fluid / .mb-6--fluid` / .mb-7--fluid` / .mb-8--fluid` / .mb-9--fluid` / .mb-10--fluid` | magic calc |
+| `.mx-1--fluid / .mx-2--fluid / .mx-3--fluid / .mx-4--fluid / .mx-5--fluid / .mx-6--fluid` / .mx-7--fluid` / .mx-8--fluid` / .mx-9--fluid` / .mx-10--fluid` | magic calc |
+| `.my-1--fluid / .my-2--fluid / .my-3--fluid / .my-4--fluid / .my-5--fluid / .my-6--fluid` / .my-7--fluid` / .my-8--fluid` / .my-9--fluid` / .my-10--fluid` | magic calc |
+| `.-m-1--fluid / .-m-2--fluid / .-m-3--fluid / .-m-4--fluid / .-m-5--fluid / .-m-6--fluid` / .-m-7--fluid` / .-m-8--fluid` / .-m-9--fluid` / .-m-10--fluid` | magic calc |
+| `.-ml-1--fluid / .-ml-2--fluid / .-ml-3--fluid / .-ml-4--fluid / .-ml-5--fluid / .-ml-6--fluid` / .-ml-7--fluid` / .-ml-8--fluid` / .-ml-9--fluid` / .-ml-10--fluid` | magic calc |
+| `.-mr-1--fluid / .-mr-2--fluid / .-mr-3--fluid / .-mr-4--fluid / .-mr-5--fluid / .-mr-6--fluid` / .-mr-7--fluid` / .-mr-8--fluid` / .-mr-9--fluid` / .-mr-10--fluid` | magic calc |
+| `.-mt-1--fluid / .-mt-2--fluid / .-mt-3--fluid / .-mt-4--fluid / .-mt-5--fluid / .-mt-6--fluid` / .-mt-7--fluid` / .-mt-8--fluid` / .-mt-9--fluid` / .-mt-10--fluid` | magic calc |
+| `.-mb-1--fluid / .-mb-2--fluid / .-mb-3--fluid / .-mb-4--fluid / .-mb-5--fluid / .-mb-6--fluid` / .-mb-7--fluid` / .-mb-8--fluid` / .-mb-9--fluid` / .-mb-10--fluid` | magic calc |
+| `.-mx-1--fluid / .-mx-2--fluid / .-mx-3--fluid / .-mx-4--fluid / .-mx-5--fluid / .-mx-6--fluid` / .-mx-7--fluid` / .-mx-8--fluid` / .-mx-9--fluid` / .-mx-10--fluid` | magic calc |
+| `.-my-1--fluid / .-my-2--fluid / .-my-3--fluid / .-my-4--fluid / .-my-5--fluid / .-my-6--fluid` / .-my-7--fluid` / .-my-8--fluid` / .-my-9--fluid` / .-my-10--fluid` | magic calc |

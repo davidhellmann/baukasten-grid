@@ -10,9 +10,10 @@
 @each $key, $value in $bk-breakpoints {
   $from: map-get($value, from);
   $colLoopCount: 24;
-  $pxLoopCount: 64;
+  $pxLoopCountSizing: 32;
+  $pxLoopCountMarginPadding: 16;
   $pxBaseValue: 8;
-  $fluidLoopCount: 12;
+  $fluidLoopCount: 10;
   $bpPrefix: #{$key}\:;
 
   @if $key == 'min' {
@@ -23,11 +24,11 @@
     // Widths
     @for $i from 1 through $colLoopCount {
       .#{$bpPrefix}w-#{$i}\/#{$colLoopCount} {
-        @include make-col($i, $colLoopCount);
+        width: calc(#{$i} / #{$colLoopCount} * 100%);
       }
     }
 
-    @for $i from 1 through $pxLoopCount {
+    @for $i from 1 through $pxLoopCountSizing {
       $value: $pxBaseValue * $i;
 
       .#{$bpPrefix}w-#{$value}px {
@@ -60,7 +61,7 @@
 
 
     // Heights
-    @for $i from 1 through $pxLoopCount {
+    @for $i from 1 through $pxLoopCountSizing {
       $value: $pxBaseValue * $i;
 
       .#{$bpPrefix}h-#{$value}px {
@@ -638,94 +639,191 @@
   }
 
 
-  // Fluid Stuff
   // Paddings & Margins
-  @for $i from 1 through $fluidLoopCount {
-    $min: 8px * $i;
-    $max: $min * 2;
+  // PX Values
+  @for $i from 1 through $pxLoopCountMarginPadding {
+    $value: $pxBaseValue * $i;
 
-    .#{$bpPrefix}p-#{$i}--fluid {
-      @include f($min, $max, padding)
+    .#{$bpPrefix}p-#{$i} {
+      padding: #{$value}px;
     }
 
-    .#{$bpPrefix}pl-#{$i}--fluid {
-      @include f($min, $max, padding-left)
+    .#{$bpPrefix}pl-#{$i} {
+      padding-left: #{$value}px;
     }
 
-    .#{$bpPrefix}pr-#{$i}--fluid {
-      @include f($min, $max, padding-right)
+    .#{$bpPrefix}pr-#{$i} {
+      padding-right: #{$value}px;
     }
 
-    .#{$bpPrefix}pt-#{$i}--fluid {
-      @include f($min, $max, padding-top)
+    .#{$bpPrefix}pt-#{$i} {
+      padding-top: #{$value}px;
     }
 
-    .#{$bpPrefix}pb-#{$i}--fluid {
-      @include f($min, $max, padding-bottom)
+    .#{$bpPrefix}pb-#{$i} {
+      padding-bottom: #{$value}px;
     }
 
-    .#{$bpPrefix}px-#{$i}--fluid {
-      @include f($min, $max, padding-left padding-right)
+    .#{$bpPrefix}px-#{$i} {
+      padding-left: #{$value}px;
+      padding-right: #{$value}px;
     }
 
-    .#{$bpPrefix}py-#{$i}--fluid {
-      @include f($min, $max, padding-top padding-bottom)
+    .#{$bpPrefix}py-#{$i} {
+      padding-top: #{$value}px;
+      padding-bottom: #{$value}px;
     }
 
-    .#{$bpPrefix}m-#{$i}--fluid {
-      @include f($min, $max, margin)
+    .#{$bpPrefix}m-#{$i} {
+      margin: #{$value}px;
     }
 
-    .#{$bpPrefix}ml-#{$i}--fluid {
-      @include f($min, $max, margin-left)
+    .#{$bpPrefix}ml-#{$i} {
+      margin-left: #{$value}px;
     }
 
-    .#{$bpPrefix}mr-#{$i}--fluid {
-      @include f($min, $max, margin-right)
+    .#{$bpPrefix}mr-#{$i} {
+      margin-right: #{$value}px;
     }
 
-    .#{$bpPrefix}mt-#{$i}--fluid {
-      @include f($min, $max, margin-top)
+    .#{$bpPrefix}mt-#{$i} {
+      margin-top: #{$value}px;
     }
 
-    .#{$bpPrefix}mb-#{$i}--fluid {
-      @include f($min, $max, margin-bottom)
+    .#{$bpPrefix}mb-#{$i} {
+      margin-bottom: #{$value}px;
     }
 
-    .#{$bpPrefix}mx-#{$i}--fluid {
-      @include f($min, $max, margin-left margin-right)
+    .#{$bpPrefix}mx-#{$i} {
+      margin-left: #{$value}px;
+      margin-right: #{$value}px;
     }
 
-    .#{$bpPrefix}my-#{$i}--fluid {
-      @include f($min, $max, margin-top margin-bottom)
+    .#{$bpPrefix}my-#{$i} {
+      margin-top: #{$value}px;
+      margin-bottom: #{$value}px;
     }
 
-    .#{$bpPrefix}-m-#{$i}--fluid {
-      @include f(-$min, -$max, margin)
+    .#{$bpPrefix}-m-#{$i} {
+      margin: -#{$value}px;
     }
 
-    .#{$bpPrefix}-ml-#{$i}--fluid {
-      @include f(-$min, -$max, margin-left)
+    .#{$bpPrefix}-ml-#{$i} {
+      margin-left: -#{$value}px;
     }
 
-    .#{$bpPrefix}-mr-#{$i}--fluid {
-      @include f(-$min, -$max, margin-right)
+    .#{$bpPrefix}-mr-#{$i} {
+      margin-right: -#{$value}px;
     }
 
-    .#{$bpPrefix}-mt-#{$i}--fluid {
-      @include f(-$min, -$max, margin-top)
+    .#{$bpPrefix}-mt-#{$i} {
+      margin-top: -#{$value}px;
     }
 
-    .#{$bpPrefix}-mb-#{$i}--fluid {
-      @include f(-$min, -$max, margin-bottom)
+    .#{$bpPrefix}-mb-#{$i} {
+      margin-bottom: -#{$value}px;
     }
 
-    .#{$bpPrefix}-mx-#{$i}--fluid {
-      @include f(-$min, -$max, margin-left margin-right)
+    .#{$bpPrefix}-mx-#{$i} {
+      margin-left: -#{$value}px;
+      margin-right: -#{$value}px;
     }
 
-    .#{$bpPrefix}-my-#{$i}--fluid {
-      @include f(-$min, -$max, margin-top margin-bottom)
+    .#{$bpPrefix}-my-#{$i} {
+      margin-top: -#{$value}px;
+      margin-bottom: -#{$value}px;
+    }
+  }
+
+  // Fluid Stuff
+  @if $key == 'min' {
+    @for $i from 1 through $fluidLoopCount {
+      $min: 8px * $i;
+      $max: $min * 2;
+
+      .p-#{$i}--fluid {
+        @include f($min, $max, padding)
+      }
+
+      .pl-#{$i}--fluid {
+        @include f($min, $max, padding-left)
+      }
+
+      .pr-#{$i}--fluid {
+        @include f($min, $max, padding-right)
+      }
+
+      .pt-#{$i}--fluid {
+        @include f($min, $max, padding-top)
+      }
+
+      .pb-#{$i}--fluid {
+        @include f($min, $max, padding-bottom)
+      }
+
+      .px-#{$i}--fluid {
+        @include f($min, $max, padding-left padding-right)
+      }
+
+      .py-#{$i}--fluid {
+        @include f($min, $max, padding-top padding-bottom)
+      }
+
+      .m-#{$i}--fluid {
+        @include f($min, $max, margin)
+      }
+
+      .ml-#{$i}--fluid {
+        @include f($min, $max, margin-left)
+      }
+
+      .mr-#{$i}--fluid {
+        @include f($min, $max, margin-right)
+      }
+
+      .mt-#{$i}--fluid {
+        @include f($min, $max, margin-top)
+      }
+
+      .mb-#{$i}--fluid {
+        @include f($min, $max, margin-bottom)
+      }
+
+      .mx-#{$i}--fluid {
+        @include f($min, $max, margin-left margin-right)
+      }
+
+      .my-#{$i}--fluid {
+        @include f($min, $max, margin-top margin-bottom)
+      }
+
+      .-m-#{$i}--fluid {
+        @include f(-$min, -$max, margin)
+      }
+
+      .-ml-#{$i}--fluid {
+        @include f(-$min, -$max, margin-left)
+      }
+
+      .-mr-#{$i}--fluid {
+        @include f(-$min, -$max, margin-right)
+      }
+
+      .-mt-#{$i}--fluid {
+        @include f(-$min, -$max, margin-top)
+      }
+
+      .-mb-#{$i}--fluid {
+        @include f(-$min, -$max, margin-bottom)
+      }
+
+      .-mx-#{$i}--fluid {
+        @include f(-$min, -$max, margin-left margin-right)
+      }
+
+      .-my-#{$i}--fluid {
+        @include f(-$min, -$max, margin-top margin-bottom)
+      }
     }
   }
 }

@@ -10,18 +10,19 @@
 // Section
 .section {
   width: 100%;
-  @include spaceX(padding-left padding-right, 2);
-
-  .section {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 // Container
 .container {
+  @include spaceX(padding-left padding-right, 2);
+  @include center();
   width: 100%;
   max-width: $bk-maxWidth;
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 // Row
@@ -50,6 +51,26 @@
     @for $i from 1 through $colLoopCount {
       .#{$bpPrefix}w-#{$i}\/#{$colLoopCount} {
         width: calc(#{$i} / #{$colLoopCount} * 100%);
+      }
+
+      .#{$bpPrefix}offset-#{$i}\/#{$colLoopCount} {
+        margin-left: calc(#{$i} / #{$colLoopCount} * 100%);
+      }
+
+      .#{$bpPrefix}push-left-#{$i}\/#{$colLoopCount} {
+        left: calc(#{$i} / #{$colLoopCount} * 100%);
+      }
+
+      .#{$bpPrefix}pull-left-#{$i}\/#{$colLoopCount} {
+        left: calc(#{$i} / #{$colLoopCount} * -100%);
+      }
+
+      .#{$bpPrefix}push-right-#{$i}\/#{$colLoopCount} {
+        right: calc(#{$i} / #{$colLoopCount} * 100%);
+      }
+
+      .#{$bpPrefix}pull-right-#{$i}\/#{$colLoopCount} {
+        right: calc(#{$i} / #{$colLoopCount} * -100%);
       }
     }
 

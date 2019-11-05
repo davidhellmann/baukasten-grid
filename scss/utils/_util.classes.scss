@@ -32,7 +32,7 @@
       }
 
       .container {
-        max-width: #{$from};
+        width: 100%;
       }
 
       .w-full {
@@ -795,9 +795,10 @@
         }
       }
 
-      /* TODO: Container Fluid kleiner 1600*/
       .container {
-        max-width: #{$from};
+        @if $key == 'max' {
+          max-width: #{$from};
+        }
       }
 
       .#{$key}\:w-screen {

@@ -352,7 +352,7 @@
   }
 
   .container {
-    max-width: 320px;
+    width: 100%;
   }
 
   .w-full {
@@ -5826,10 +5826,6 @@
     width: 512px;
   }
 
-  .container {
-    max-width: 600px;
-  }
-
   .s\:w-screen {
     width: 100vw;
   }
@@ -11241,10 +11237,6 @@
     width: 512px;
   }
 
-  .container {
-    max-width: 800px;
-  }
-
   .m\:w-screen {
     width: 100vw;
   }
@@ -16654,10 +16646,6 @@
 
   .l\:w-512px {
     width: 512px;
-  }
-
-  .container {
-    max-width: 1200px;
   }
 
   .l\:w-screen {

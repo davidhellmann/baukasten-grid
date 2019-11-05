@@ -10,7 +10,7 @@ Here is a small example how it looks like:
 
 ## Single Classes
 | Class | Info |
-| :--- | ---: |
+| :--- | :--- |
 | `.section` | Just a simple div with 100% width. For creating sections one the page |
 | `.container` | Creates a 100% div with doubled padding left and right (Grid Container) and the maxWidth is set to the Max Breakpoint. Div is centered per default. Nested containers have no padding |
 | `.row` | Have a negative margin left and right to bring cols in the right position |

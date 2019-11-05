@@ -9,10 +9,10 @@
 // Loop that shit!
 @each $key, $value in $bk-breakpoints {
   $from: map-get($value, from);
-  $cols: 24;
-  $pxCols: 64;
-  $pxMulti: 8;
-  $fluidSpacingCols: 12;
+  $colLoopCount: 24;
+  $pxLoopCount: 64;
+  $pxBaseValue: 8;
+  $fluidLoopCount: 12;
   $bpPrefix: #{$key}\:;
 
   @if $key == 'min' {
@@ -21,14 +21,14 @@
 
   @media (min-width: #{$from}) {
     // Widths
-    @for $i from 1 through $cols {
-      .#{$bpPrefix}w-#{$i}\/#{$cols} {
-        @include make-col($i, $cols);
+    @for $i from 1 through $colLoopCount {
+      .#{$bpPrefix}w-#{$i}\/#{$colLoopCount} {
+        @include make-col($i, $colLoopCount);
       }
     }
 
-    @for $i from 1 through $pxCols {
-      $value: $pxMulti * $i;
+    @for $i from 1 through $pxLoopCount {
+      $value: $pxBaseValue * $i;
 
       .#{$bpPrefix}w-#{$value}px {
         width: #{$value}px;
@@ -60,8 +60,8 @@
 
 
     // Heights
-    @for $i from 1 through $pxCols {
-      $value: $pxMulti * $i;
+    @for $i from 1 through $pxLoopCount {
+      $value: $pxBaseValue * $i;
 
       .#{$bpPrefix}h-#{$value}px {
         height: #{$value}px;
@@ -640,7 +640,7 @@
 
   // Fluid Stuff
   // Paddings & Margins
-  @for $i from 1 through $fluidSpacingCols {
+  @for $i from 1 through $fluidLoopCount {
     $min: 8px * $i;
     $max: $min * 2;
 

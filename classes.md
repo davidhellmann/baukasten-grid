@@ -424,24 +424,24 @@ All classes are available for all breakpoints:
 ## Fluid Stuff
 | Class | Properties |
 | :--- | :--- |
-| `.p-1 / .p-2 / .p-3 / .p-4 / .p-5 / .p-6` | magic calc |
-| `.pl-1 / .pl-2 / .pl-3 / .pl-4 / .pl-5 / .pl-6` | magic calc |
-| `.pr-1 / .pr-2 / .pr-3 / .pr-4 / .pr-5 / .pr-6` | magic calc |
-| `.pt-1 / .pt-2 / .pt-3 / .pt-4 / .pt-5 / .pt-6` | magic calc |
-| `.pb-1 / .pb-2 / .pb-3 / .pb-4 / .pb-5 / .pb-6` | magic calc |
-| `.px-1 / .px-2 / .px-3 / .px-4 / .px-5 / .px-6` | magic calc |
-| `.py-1 / .py-2 / .py-3 / .py-4 / .py-5 / .py-6` | magic calc |
-| `.m-1 / .m-2 / .m-3 / .m-4 / .m-5 / .m-6` | magic calc |
-| `.ml-1 / .ml-2 / .ml-3 / .ml-4 / .ml-5 / .ml-6` | magic calc |
-| `.mr-1 / .mr-2 / .mr-3 / .mr-4 / .mr-5 / .mr-6` | magic calc |
-| `.mt-1 / .mt-2 / .mt-3 / .mt-4 / .mt-5 / .mt-6` | magic calc |
-| `.mb-1 / .mb-2 / .mb-3 / .mb-4 / .mb-5 / .mb-6` | magic calc |
-| `.mx-1 / .mx-2 / .mx-3 / .mx-4 / .mx-5 / .mx-6` | magic calc |
-| `.my-1 / .my-2 / .my-3 / .my-4 / .my-5 / .my-6` | magic calc |
-| `.-m-1 / .-m-2 / .-m-3 / .-m-4 / .-m-5 / .-m-6` | magic calc |
-| `.-ml-1 / .-ml-2 / .-ml-3 / .-ml-4 / .-ml-5 / .-ml-6` | magic calc |
-| `.-mr-1 / .-mr-2 / .-mr-3 / .-mr-4 / .-mr-5 / .-mr-6` | magic calc |
-| `.-mt-1 / .-mt-2 / .-mt-3 / .-mt-4 / .-mt-5 / .-mt-6` | magic calc |
-| `.-mb-1 / .-mb-2 / .-mb-3 / .-mb-4 / .-mb-5 / .-mb-6` | magic calc |
-| `.-mx-1 / .-mx-2 / .-mx-3 / .-mx-4 / .-mx-5 / .-mx-6` | magic calc |
-| `.-my-1 / .-my-2 / .-my-3 / .-my-4 / .-my-5 / .-my-6` | magic calc |
+| `.p-1--fluid / .p-2--fluid / .p-3--fluid / .p-4--fluid / .p-5--fluid / .p-6--fluid` | magic calc |
+| `.pl-1--fluid / .pl-2--fluid / .pl-3--fluid / .pl-4--fluid / .pl-5--fluid / .pl-6--fluid` | magic calc |
+| `.pr-1--fluid / .pr-2--fluid / .pr-3--fluid / .pr-4--fluid / .pr-5--fluid / .pr-6--fluid` | magic calc |
+| `.pt-1--fluid / .pt-2--fluid / .pt-3--fluid / .pt-4--fluid / .pt-5--fluid / .pt-6--fluid` | magic calc |
+| `.pb-1--fluid / .pb-2--fluid / .pb-3--fluid / .pb-4--fluid / .pb-5--fluid / .pb-6--fluid` | magic calc |
+| `.px-1--fluid / .px-2--fluid / .px-3--fluid / .px-4--fluid / .px-5--fluid / .px-6--fluid` | magic calc |
+| `.py-1--fluid / .py-2--fluid / .py-3--fluid / .py-4--fluid / .py-5--fluid / .py-6--fluid` | magic calc |
+| `.m-1--fluid / .m-2--fluid / .m-3--fluid / .m-4--fluid / .m-5--fluid / .m-6--fluid` | magic calc |
+| `.ml-1--fluid / .ml-2--fluid / .ml-3--fluid / .ml-4--fluid / .ml-5--fluid / .ml-6--fluid` | magic calc |
+| `.mr-1--fluid / .mr-2--fluid / .mr-3--fluid / .mr-4--fluid / .mr-5--fluid / .mr-6--fluid` | magic calc |
+| `.mt-1--fluid / .mt-2--fluid / .mt-3--fluid / .mt-4--fluid / .mt-5--fluid / .mt-6--fluid` | magic calc |
+| `.mb-1--fluid / .mb-2--fluid / .mb-3--fluid / .mb-4--fluid / .mb-5--fluid / .mb-6--fluid` | magic calc |
+| `.mx-1--fluid / .mx-2--fluid / .mx-3--fluid / .mx-4--fluid / .mx-5--fluid / .mx-6--fluid` | magic calc |
+| `.my-1--fluid / .my-2--fluid / .my-3--fluid / .my-4--fluid / .my-5--fluid / .my-6--fluid` | magic calc |
+| `.-m-1--fluid / .-m-2--fluid / .-m-3--fluid / .-m-4--fluid / .-m-5--fluid / .-m-6--fluid` | magic calc |
+| `.-ml-1--fluid / .-ml-2--fluid / .-ml-3--fluid / .-ml-4--fluid / .-ml-5--fluid / .-ml-6--fluid` | magic calc |
+| `.-mr-1--fluid / .-mr-2--fluid / .-mr-3--fluid / .-mr-4--fluid / .-mr-5--fluid / .-mr-6--fluid` | magic calc |
+| `.-mt-1--fluid / .-mt-2--fluid / .-mt-3--fluid / .-mt-4--fluid / .-mt-5--fluid / .-mt-6--fluid` | magic calc |
+| `.-mb-1--fluid / .-mb-2--fluid / .-mb-3--fluid / .-mb-4--fluid / .-mb-5--fluid / .-mb-6--fluid` | magic calc |
+| `.-mx-1--fluid / .-mx-2--fluid / .-mx-3--fluid / .-mx-4--fluid / .-mx-5--fluid / .-mx-6--fluid` | magic calc |
+| `.-my-1--fluid / .-my-2--fluid / .-my-3--fluid / .-my-4--fluid / .-my-5--fluid / .-my-6--fluid` | magic calc |

@@ -693,87 +693,87 @@
       $min: 8px * $i;
       $max: $min * 2;
 
-      .p-#{$i} {
+      .p-#{$i}--fluid {
         @include f($min, $max, padding)
       }
 
-      .pl-#{$i} {
+      .pl-#{$i}--fluid {
         @include f($min, $max, padding-left)
       }
 
-      .pr-#{$i} {
+      .pr-#{$i}--fluid {
         @include f($min, $max, padding-right)
       }
 
-      .pt-#{$i} {
+      .pt-#{$i}--fluid {
         @include f($min, $max, padding-top)
       }
 
-      .pb-#{$i} {
+      .pb-#{$i}--fluid {
         @include f($min, $max, padding-bottom)
       }
 
-      .px-#{$i} {
+      .px-#{$i}--fluid {
         @include f($min, $max, padding-left padding-right)
       }
 
-      .py-#{$i} {
+      .py-#{$i}--fluid {
         @include f($min, $max, padding-top padding-bottom)
       }
 
-      .m-#{$i} {
+      .m-#{$i}--fluid {
         @include f($min, $max, margin)
       }
 
-      .ml-#{$i} {
+      .ml-#{$i}--fluid {
         @include f($min, $max, margin-left)
       }
 
-      .mr-#{$i} {
+      .mr-#{$i}--fluid {
         @include f($min, $max, margin-right)
       }
 
-      .mt-#{$i} {
+      .mt-#{$i}--fluid {
         @include f($min, $max, margin-top)
       }
 
-      .mb-#{$i} {
+      .mb-#{$i}--fluid {
         @include f($min, $max, margin-bottom)
       }
 
-      .mx-#{$i} {
+      .mx-#{$i}--fluid {
         @include f($min, $max, margin-left margin-right)
       }
 
-      .my-#{$i} {
+      .my-#{$i}--fluid {
         @include f($min, $max, margin-top margin-bottom)
       }
 
-      .-m-#{$i} {
+      .-m-#{$i}--fluid {
         @include f(-$min, -$max, margin)
       }
 
-      .-ml-#{$i} {
+      .-ml-#{$i}--fluid {
         @include f(-$min, -$max, margin-left)
       }
 
-      .-mr-#{$i} {
+      .-mr-#{$i}--fluid {
         @include f(-$min, -$max, margin-right)
       }
 
-      .-mt-#{$i} {
+      .-mt-#{$i}--fluid {
         @include f(-$min, -$max, margin-top)
       }
 
-      .-mb-#{$i} {
+      .-mb-#{$i}--fluid {
         @include f(-$min, -$max, margin-bottom)
       }
 
-      .-mx-#{$i} {
+      .-mx-#{$i}--fluid {
         @include f(-$min, -$max, margin-left margin-right)
       }
 
-      .-my-#{$i} {
+      .-my-#{$i}--fluid {
         @include f(-$min, -$max, margin-top margin-bottom)
       }
     }
@@ -1403,87 +1403,87 @@
       $min: 8px * $i;
       $max: $min * 2;
 
-      .#{$key}\:p-#{$i} {
+      .#{$key}\:p-#{$i}--fluid {
         @include f($min, $max, padding)
       }
 
-      .#{$key}\:pl-#{$i} {
+      .#{$key}\:pl-#{$i}--fluid {
         @include f($min, $max, padding-left)
       }
 
-      .#{$key}\:pr-#{$i} {
+      .#{$key}\:pr-#{$i}--fluid {
         @include f($min, $max, padding-right)
       }
 
-      .#{$key}\:pt-#{$i} {
+      .#{$key}\:pt-#{$i}--fluid {
         @include f($min, $max, padding-top)
       }
 
-      .#{$key}\:pb-#{$i} {
+      .#{$key}\:pb-#{$i}--fluid {
         @include f($min, $max, padding-bottom)
       }
 
-      .#{$key}\:px-#{$i} {
+      .#{$key}\:px-#{$i}--fluid {
         @include f($min, $max, padding-left padding-right)
       }
 
-      .#{$key}\:py-#{$i} {
+      .#{$key}\:py-#{$i}--fluid {
         @include f($min, $max, padding-top padding-bottom)
       }
 
-      .#{$key}\:m-#{$i} {
+      .#{$key}\:m-#{$i}--fluid {
         @include f($min, $max, margin)
       }
 
-      .#{$key}\:ml-#{$i} {
+      .#{$key}\:ml-#{$i}--fluid {
         @include f($min, $max, margin-left)
       }
 
-      .#{$key}\:mr-#{$i} {
+      .#{$key}\:mr-#{$i}--fluid {
         @include f($min, $max, margin-right)
       }
 
-      .#{$key}\:mt-#{$i} {
+      .#{$key}\:mt-#{$i}--fluid {
         @include f($min, $max, margin-top)
       }
 
-      .#{$key}\:mb-#{$i} {
+      .#{$key}\:mb-#{$i}--fluid {
         @include f($min, $max, margin-bottom)
       }
 
-      .#{$key}\:mx-#{$i} {
+      .#{$key}\:mx-#{$i}--fluid {
         @include f($min, $max, margin-left margin-right)
       }
 
-      .#{$key}\:my-#{$i} {
+      .#{$key}\:my-#{$i}--fluid {
         @include f($min, $max, margin-top margin-bottom)
       }
 
-      .#{$key}\:-m-#{$i} {
+      .#{$key}\:-m-#{$i}--fluid {
         @include f(-$min, -$max, margin)
       }
 
-      .#{$key}\:-ml-#{$i} {
+      .#{$key}\:-ml-#{$i}--fluid {
         @include f(-$min, -$max, margin-left)
       }
 
-      .#{$key}\:-mr-#{$i} {
+      .#{$key}\:-mr-#{$i}--fluid {
         @include f(-$min, -$max, margin-right)
       }
 
-      .#{$key}\:-mt-#{$i} {
+      .#{$key}\:-mt-#{$i}--fluid {
         @include f(-$min, -$max, margin-top)
       }
 
-      .#{$key}\:-mb-#{$i} {
+      .#{$key}\:-mb-#{$i}--fluid {
         @include f(-$min, -$max, margin-bottom)
       }
 
-      .#{$key}\:-mx-#{$i} {
+      .#{$key}\:-mx-#{$i}--fluid {
         @include f(-$min, -$max, margin-left margin-right)
       }
 
-      .#{$key}\:-my-#{$i} {
+      .#{$key}\:-my-#{$i}--fluid {
         @include f(-$min, -$max, margin-top margin-bottom)
       }
     }

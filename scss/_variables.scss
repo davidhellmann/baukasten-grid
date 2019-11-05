@@ -7,19 +7,8 @@
 // Create Shorthand Class
 $bk-gs: $bk-grid-settings;
 
-// Get Prefix
-$bk-prefix: map-get($bk-gs, prefix);
-
 // Get Grid Settings
 $bk-testing: map-deep-get($bk-gs, testing);
-
-// Class Creation
-$bk-offset-classes: map-deep-get($bk-gs, offset-classes);
-$bk-push-classes: map-deep-get($bk-gs, push-classes);
-$bk-pull-classes: map-deep-get($bk-gs, pull-classes);
-
-// Disable Padding Horizontal
-$bk-disable-padding-horizontal: map-deep-get($bk-gs, disable-padding-horizontal);
 
 // Get Breakpoints
 $bk-breakpoints: map-deep-get($bk-gs, breakpoints);

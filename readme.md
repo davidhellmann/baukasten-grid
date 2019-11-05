@@ -65,11 +65,6 @@ $bk-grid-settings-custom: (
   // default: false
   testing: false,
 
-  // Naming Conventions? No Problem. You can choose you prefix!
-  // @String
-  // default: 'o-'
-  prefix: 'o-',
-
   // Units are for Paddings and Margins. All Paddings an Margins are Fluid.
   // That means that on the smallest breakpoint the Padding on each col side
   // is: gutter * gutter-min-factor (8px * 1) and on the biggest breakpoint it
@@ -83,29 +78,15 @@ $bk-grid-settings-custom: (
     gutter-max-vertical-factor: 2
   ),
 
-  // Class Creation
-  // Not every projects need all this offset / push / pull classes. You decide!
-  // @Boolean
-  // default: true
-  offset-classes: true,
-  push-classes: true,
-  pull-classes: true,
-
-  // Disbale Padding Horizontal for Sections. Rows. Cols
-  // @Boolean
-  // default: false
-  disable-padding-horizontal: false,
-
   // Breakpoints must have at least a "min" and a "max". The other Breakpoints as u like
   // We use all the time "min-width".
   // Cols are how many cols can have a row on that specific breakpoint.
   breakpoints: (
     min: (from: 320px, cols: 6, create-classes: true),
-    xs:  (from: 400px, cols: 6, create-classes: true),
-    s:   (from: 600px, cols: 12, create-classes: true),
-    m:   (from: 800px, cols: 12, create-classes: true),
-    l:   (from: 1000px, cols: 24, create-classes: true),
-    max: (from: 1440px, cols: 24, create-classes: true)
+    s: (from: 600px, cols: 12, create-classes: true),
+    m: (from: 800px, cols: 12, create-classes: true),
+    l: (from: 1200px, cols: 24, create-classes: true),
+    max: (from: 1600px, cols: 24, create-classes: true)
   )
 );
 ```

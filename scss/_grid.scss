@@ -6,8 +6,7 @@
 
 $bk-grid-settings-custom: null !default;
 $bk-grid-settings: (
-  testing: false,
-  prefix: 'o-',
+  testing: true,
   units: (
     gutter: 8px,
     gutter-min-factor: 1,
@@ -15,10 +14,6 @@ $bk-grid-settings: (
     gutter-min-vertical-factor: 1,
     gutter-max-vertical-factor: 2
   ),
-  offset-classes: false,
-  push-classes: false,
-  pull-classes: false,
-  disable-padding-horizontal: false,
   breakpoints: (
     min: (from: 320px, cols: 6, create-classes: true),
     s: (from: 600px, cols: 12, create-classes: true),

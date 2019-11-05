@@ -170,22 +170,17 @@ $bk-grid-settings-custom: (
 
 ### Make Col Padding
 ```
-@mixin make-col-padding($factor: 1) {
+@mixin col-padding($factor: 1) {
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
 
   @include f($gutterMin, $gutterMax, padding-left padding-right);
 }
-
-// Shorthand Version
-@mixin col-padding($args...) {
-  @include make-col-padding($args...);
-}
 ```
 
 ### Make Col Mixin
 ```
-@mixin make-col($cols: 1, $context: 1, $sassMode: true) {
+@mixin col($cols: 1, $context: 1, $sassMode: true) {
   // Calculate the Context
   $width: $cols / $context * 100%;
 
@@ -199,35 +194,25 @@ $bk-grid-settings-custom: (
     max-width: $width;
   }
 }
-
-// Shorthand Version
-@mixin col($args...) {
-  @include make-col($args...);
-}
 ```
 
 ### Make Row Margin
 ```
-@mixin make-row-margin($factor: 1) {
+@mixin row-margin($factor: 1) {
   $factor: $factor * -1;
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
 
   @include f($gutterMin, $gutterMax, margin-left margin-right);
 }
-
-// Shorthand Version
-@mixin row-margin($args...) {
-  @include make-row-margin($args...);
-}
 ```
 
 ### Make Row
 ```
-@mixin make-row($cols: 1, $margin: true, $sassMode: true) {
+@mixin row($cols: 1, $margin: true, $sassMode: true) {
   width: auto;
   @if $margin == true {
-    @include make-row-margin();
+    @include row-margin();
   }
   @if $sassMode == true {
     flex-flow: row wrap;
@@ -236,16 +221,11 @@ $bk-grid-settings-custom: (
 
   display: flex;
 }
-
-// Shorthand Version
-@mixin row($args...) {
-  @include make-row($args...);
-}
 ```
 
 ### Make Section Padding
 ```
-@mixin make-section-padding($factor: 1) {
+@mixin section-padding($factor: 1) {
   @if $factor <= 1 {
     $factor: $factor * 2;
     $gutterMin: $factor * $bk-gutterMinVertical;
@@ -263,16 +243,11 @@ $bk-grid-settings-custom: (
     @include f($gutterMin * ($factor), $gutterMax * ($factor), padding-bottom);
   }
 }
-
-// Shorthand Version
-@mixin section-padding($args...) {
-  @include make-section-padding($args...);
-}
 ```
 
 ### Make Section
 ```
-@mixin make-section($behaviour: 'fixed', $padding: true, $factor: 1) {
+@mixin section($behaviour: 'fixed', $padding: true, $factor: 1) {
   width: 100%;
   max-width: if($behaviour == 'fixed', $bk-maxWidth, none);
 
@@ -283,32 +258,22 @@ $bk-grid-settings-custom: (
     @include f($gutterMin, $gutterMax, padding-left padding-right);
   }
 }
-
-// Shorthand Version
-@mixin section($args...) {
-  @include make-section($args...);
-}
 ```
 
 ### Make VR
 ```
-@mixin make-vr($factor: 1) {
+@mixin vr($factor: 1) {
   $factor: $factor * 2;
   $gutterMinVertical: $factor * $bk-gutterMinVertical;
   $gutterMaxVertical: $factor * $bk-gutterMaxVertical;
 
   @include f($gutterMinVertical, $gutterMaxVertical, margin-top);
 }
-
-// Shorthand Version
-@mixin vr($args...) {
-  @include make-vr($args...);
-}
 ```
 
 ### Space Mixins
 ```
-@mixin make-space($properties: null, $factor: 1, $direction: 'x') {
+@mixin space($properties: null, $factor: 1, $direction: 'x') {
   $factor: $factor * 2;
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
@@ -325,23 +290,18 @@ $bk-grid-settings-custom: (
   }
 }
 
-// Shorthand Version
-@mixin space($args...) {
-  @include make-space($args...);
-}
-
 @mixin spaceX($properties: null, $factor: 1) {
-  @include make-space($properties, $factor, 'x');
+  @include space($properties, $factor, 'x');
 }
 
 @mixin spaceY($properties: null, $factor: 1) {
-  @include make-space($properties, $factor, 'y');
+  @include space($properties, $factor, 'y');
 }
 ```
 
 ### Col Offset
 ```
-@mixin make-col-offset($cols: 1, $context: 1, $sassMode: true) {
+@mixin col-offset($cols: 1, $context: 1, $sassMode: true) {
   $offset: 0;
 
   // Rounds to integer Numbers
@@ -360,16 +320,11 @@ $bk-grid-settings-custom: (
 
   margin-left: $offset;
 }
-
-// Shorthand Version
-@mixin col-offset($args...) {
-  @include make-col-offset($args...);
-}
 ```
 
 ### Col Push
 ```
-@mixin make-col-push($cols: 1, $context: 1, $sassMode: true) {
+@mixin col-push($cols: 1, $context: 1, $sassMode: true) {
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
@@ -379,16 +334,11 @@ $bk-grid-settings-custom: (
   $offset: $cols  / $context * 100%;
   left: $offset;
 }
-
-// Shorthand Version
-@mixin col-push($args...) {
-  @include make-col-push($args...);
-}
 ```
 
 ### Col Pull
 ```
-@mixin make-col-pull($cols: 1, $context: 1, $sassMode: true) {
+@mixin col-pull($cols: 1, $context: 1, $sassMode: true) {
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
@@ -397,10 +347,5 @@ $bk-grid-settings-custom: (
   // Calculate the Context
   $offset: $cols  / $context * 100%;
   right: $offset;
-}
-
-// Shorthand Version
-@mixin col-pull($args...) {
-  @include make-col-pull($args...);
 }
 ```

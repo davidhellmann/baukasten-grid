@@ -11,7 +11,7 @@ $bk-box-shadow-color: rgba(black, 1) !default;
 $bk-border-radius: 2px !default;
 
 %styling {
-  @include make-vr();
+  @include vr();
 }
 
 %styling-section {
@@ -32,7 +32,7 @@ $bk-border-radius: 2px !default;
   background-color: $bk-background-color;
   box-shadow: inset 0 0 0 0 $bk-box-shadow-color;
   border-radius: $bk-border-radius;
-  @include make-section-padding();
+  @include section-padding();
 }
 
 %styling-col {
@@ -68,7 +68,7 @@ $bk-border-radius: 2px !default;
 
 @if $bk-testing == true {
   body {
-    @include make-section-padding(2);
+    @include section-padding(2);
   }
 
   [class*='#{$bk-prefix}section'] {

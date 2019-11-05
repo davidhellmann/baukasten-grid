@@ -1,11 +1,17 @@
 ![Logo of the project](./baukasten.png)
 
 # Utility Classes
-All classes are available for all breakpoints:
+Most of the classes (Fluid Classes and Single Classes not) are available for all breakpoints.
+Here is a small example how it looks like:
 
 ```html
 <div class="w-24/24  s:w-12/24  m:w-8/24  l:w-6/24  max:w-3/24">Oh, nice!</div>
 ```
+
+## Single Classes
+| Class  | Properties |
+| :--- | :--- |
+| `.w-1/24` | `width: 4.1666666667%;` |
 
 ## Width: Percentages
 | Class  | Properties |
@@ -694,6 +700,7 @@ All classes are available for all breakpoints:
 | `.table-fixed` | `table-layout: fixed;` |
 
 ## Fluid Stuff
+## This classes are not available with Breakpoint Variants
 | Class | Properties |
 | :--- | :--- |
 | `.p-1--fluid / .p-2--fluid / .p-3--fluid / .p-4--fluid / .p-5--fluid / .p-6--fluid` / .p-7--fluid` / .p-8--fluid` / .p-9--fluid` / .p-10--fluid` | magic calc |

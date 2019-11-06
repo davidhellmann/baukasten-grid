@@ -45,7 +45,7 @@
 // Loop that shit!
 $pxLoopCountSizing: 32;
 $pxLoopCountMarginPadding: 17;
-$pxBaseValue: 8;
+$pxBaseValue: $bk-gutter;
 $fluidLoopCount: 11;
 
 @each $key, $value in $bk-breakpoints {
@@ -140,8 +140,8 @@ $fluidLoopCount: 11;
     @for $i from 1 through $pxLoopCountSizing {
       $value: $pxBaseValue * $i;
 
-      .#{$bpPrefix}w-#{$value}px {
-        width: #{$value}px;
+      .#{$bpPrefix}w-#{$value} {
+        width: #{$value};
       }
     }
 
@@ -166,8 +166,8 @@ $fluidLoopCount: 11;
     @for $i from 1 through $pxLoopCountSizing {
       $value: $pxBaseValue * $i;
 
-      .#{$bpPrefix}h-#{$value}px {
-        height: #{$value}px;
+      .#{$bpPrefix}h-#{$value} {
+        height: #{$value};
       }
     }
 
@@ -875,107 +875,106 @@ $fluidLoopCount: 11;
   // PX Values
   @for $i from 0 through $pxLoopCountMarginPadding {
     $value: $pxBaseValue * $i;
-    $unit: 'px';
 
     @if $i == 0 {
       $unit: '';
     }
 
     .#{$bpPrefix}p-#{$i} {
-      padding: #{$value}#{$unit};
+      padding: #{$value};
     }
 
     .#{$bpPrefix}pl-#{$i} {
-      padding-left: #{$value}#{$unit};
+      padding-left: #{$value};
     }
 
     .#{$bpPrefix}pr-#{$i} {
-      padding-right: #{$value}#{$unit};
+      padding-right: #{$value};
     }
 
     .#{$bpPrefix}pt-#{$i} {
-      padding-top: #{$value}#{$unit};
+      padding-top: #{$value};
     }
 
     .#{$bpPrefix}pb-#{$i} {
-      padding-bottom: #{$value}#{$unit};
+      padding-bottom: #{$value};
     }
 
     .#{$bpPrefix}px-#{$i} {
-      padding-left: #{$value}#{$unit};
-      padding-right: #{$value}#{$unit};
+      padding-left: #{$value};
+      padding-right: #{$value};
     }
 
     .#{$bpPrefix}py-#{$i} {
-      padding-top: #{$value}#{$unit};
-      padding-bottom: #{$value}#{$unit};
+      padding-top: #{$value};
+      padding-bottom: #{$value};
     }
 
     .#{$bpPrefix}m-#{$i} {
-      margin: #{$value}#{$unit};
+      margin: #{$value};
     }
 
     .#{$bpPrefix}ml-#{$i} {
-      margin-left: #{$value}#{$unit};
+      margin-left: #{$value};
     }
 
     .#{$bpPrefix}mr-#{$i} {
-      margin-right: #{$value}#{$unit};
+      margin-right: #{$value};
     }
 
     .#{$bpPrefix}mt-#{$i} {
-      margin-top: #{$value}#{$unit};
+      margin-top: #{$value};
     }
 
     .#{$bpPrefix}mb-#{$i} {
-      margin-bottom: #{$value}#{$unit};
+      margin-bottom: #{$value};
     }
 
     .#{$bpPrefix}mx-#{$i} {
-      margin-left: #{$value}#{$unit};
-      margin-right: #{$value}#{$unit};
+      margin-left: #{$value};
+      margin-right: #{$value};
     }
 
     .#{$bpPrefix}my-#{$i} {
-      margin-top: #{$value}#{$unit};
-      margin-bottom: #{$value}#{$unit};
+      margin-top: #{$value};
+      margin-bottom: #{$value};
     }
 
     .#{$bpPrefix}-m-#{$i} {
-      margin: -#{$value}#{$unit};
+      margin: -#{$value};
     }
 
     .#{$bpPrefix}-ml-#{$i} {
-      margin-left: -#{$value}#{$unit};
+      margin-left: -#{$value};
     }
 
     .#{$bpPrefix}-mr-#{$i} {
-      margin-right: -#{$value}#{$unit};
+      margin-right: -#{$value};
     }
 
     .#{$bpPrefix}-mt-#{$i} {
-      margin-top: -#{$value}#{$unit};
+      margin-top: -#{$value};
     }
 
     .#{$bpPrefix}-mb-#{$i} {
-      margin-bottom: -#{$value}#{$unit};
+      margin-bottom: -#{$value};
     }
 
     .#{$bpPrefix}-mx-#{$i} {
-      margin-left: -#{$value}#{$unit};
-      margin-right: -#{$value}#{$unit};
+      margin-left: -#{$value};
+      margin-right: -#{$value};
     }
 
     .#{$bpPrefix}-my-#{$i} {
-      margin-top: -#{$value}#{$unit};
-      margin-bottom: -#{$value}#{$unit};
+      margin-top: -#{$value};
+      margin-bottom: -#{$value};
     }
   }
 
   // Fluid Stuff
   @if $key == 'min' {
     @for $i from 0 through $fluidLoopCount {
-      $min: 8px * $i;
+      $min: $bk-gutter * $i;
       $max: $min * 2;
 
       .p-#{$i}--fluid {

@@ -4,6 +4,7 @@
 ### Center
 ```
 @mixin center {
+  float: none;
   margin-left: auto;
   margin-right: auto;
 }

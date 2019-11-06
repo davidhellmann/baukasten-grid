@@ -877,7 +877,7 @@ $fluidLoopCount: 11;
     $value: $pxBaseValue * $i;
 
     @if $i == 0 {
-      $unit: '';
+      $value: strip-unit($value);
     }
 
     .#{$bpPrefix}p-#{$i} {
@@ -976,6 +976,11 @@ $fluidLoopCount: 11;
     @for $i from 0 through $fluidLoopCount {
       $min: $bk-gutter * $i;
       $max: $min * 2;
+
+      @if $i == 0 {
+        $min: strip-unit($min);
+        $max: strip-unit($max);
+      }
 
       .p-#{$i}--fluid {
         @include f($min, $max, padding)

@@ -305,6 +305,7 @@ Here is a small example how it looks like:
 | `.stack` | `@include spaceY(margin-top, 1);` |
 | `.stack-1` | `@include spaceY(margin-top, 1);` |
 | `.stack-2` | `@include spaceY(margin-top, 2);` |
+| `.stack-3` | `@include spaceY(margin-top, 3);` |
 
 
 ## Padding

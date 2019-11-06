@@ -65,7 +65,7 @@
 
 // Mixin
 @mixin col($cols: 1, $context: 1) {
-  width: calc($cols / $context * 100%);
+  width: calc(#{$cols} / #{$context} * 100%);
 }
 
 /*
@@ -188,7 +188,6 @@
   }
 }
 
-
 @mixin spaceX($properties: null, $factor: 1) {
   @include space($properties, $factor, 'x');
 }
@@ -216,7 +215,7 @@
   @if $cols == auto {
     margin-left: auto;
   } @else {
-    margin-left: calc($cols  / $context * 100%);
+    margin-left: calc(#{$cols}  / #{$context} * 100%);
   }
 }
 
@@ -233,7 +232,7 @@
     $cols: ceil($cols);
   }
 
-  left: calc($cols  / $context * 100%);
+  left: calc(#{$cols}  / #{$context} * 100%);
 }
 
 /*
@@ -248,5 +247,5 @@
     $cols: ceil($cols);
   }
 
-  right: calc($cols  / $context * 100%);
+  right: calc(#{$cols}  / #{$context} * 100%);
 }

@@ -49,19 +49,8 @@
 
 ### Make Col Mixin
 ```
-@mixin col($cols: 1, $context: 1, $sassMode: true) {
-  // Calculate the Context
-  $width: $cols / $context * 100%;
-
-  // Check if SassMode active
-  @if $sassMode == false {
-    flex: 0 1 $width;
-    max-width: $width;
-  } @else {
-    min-height: 1px;
-    flex: 0 1 $width;
-    max-width: $width;
-  }
+@mixin col($cols: 1, $context: 1) {
+  width: calc($cols / $context * 100%);
 }
 ```
 
@@ -78,16 +67,13 @@
 
 ### Make Row
 ```
-@mixin row($cols: 1, $margin: true, $sassMode: true) {
+@mixin row($cols: 1, $margin: true) {
   width: auto;
   @if $margin == true {
     @include row-margin();
   }
-  @if $sassMode == true {
-    flex-flow: row wrap;
-    flex: 1 1 0;
-  }
 
+  flex-flow: row wrap;
   display: flex;
 }
 ```
@@ -170,51 +156,43 @@
 
 ### Col Offset
 ```
-@mixin col-offset($cols: 1, $context: 1, $sassMode: true) {
+@mixin col-offset($cols: 1, $context: 1) {
   $offset: 0;
 
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
-
-    // Calculate the Context
-    $offset: $cols  / $context * 100%;
   }
 
   // If Cols auto set it to 0
   @if $cols == auto {
-    $offset: auto;
-    $cols: 0;
+    margin-left: auto;
+  } @else {
+    margin-left: calc($cols  / $context * 100%);
   }
-
-  margin-left: $offset;
 }
 ```
 
 ### Col Push
 ```
-@mixin col-push($cols: 1, $context: 1, $sassMode: true) {
+@mixin col-push($cols: 1, $context: 1) {
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
   }
 
-  // Calculate the Context
-  $offset: $cols  / $context * 100%;
-  left: $offset;
+  left: calc($cols  / $context * 100%);
 }
 ```
 
 ### Col Pull
 ```
-@mixin col-pull($cols: 1, $context: 1, $sassMode: true) {
+@mixin col-pull($cols: 1, $context: 1) {
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
   }
 
-  // Calculate the Context
-  $offset: $cols  / $context * 100%;
-  right: $offset;
+  right: calc($cols  / $context * 100%);
 }
 ```

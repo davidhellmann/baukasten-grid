@@ -7,19 +7,12 @@
 // Create Shorthand Class
 $bk-gs: $bk-grid-settings;
 
-// Get Grid Settings
-$bk-testing: map-deep-get($bk-gs, testing);
-
 // Get Breakpoints
 $bk-breakpoints: map-deep-get($bk-gs, breakpoints);
 
-// Get Min and Max Cols
-$bk-colsMin: map-deep-get($bk-gs, breakpoints, min, cols);
-$bk-colsMax: map-deep-get($bk-gs, breakpoints, max, cols);
-
 // Get Min and Max Width
-$bk-minWidth: map-deep-get($bk-gs, breakpoints, min, from);
-$bk-maxWidth: map-deep-get($bk-gs, breakpoints, max, from);
+$bk-minWidth: map-deep-get($bk-gs, breakpoints, min);
+$bk-maxWidth: map-deep-get($bk-gs, breakpoints, max);
 
 // Get Gutters
 $bk-gutter: map-deep-get($bk-gs, units, gutter);
@@ -27,6 +20,3 @@ $bk-gutterMin: $bk-gutter * map-deep-get($bk-gs, units, gutter-min-factor);
 $bk-gutterMax: $bk-gutter * map-deep-get($bk-gs, units, gutter-max-factor);
 $bk-gutterMinVertical: $bk-gutter * map-deep-get($bk-gs, units, gutter-min-vertical-factor);
 $bk-gutterMaxVertical: $bk-gutter * map-deep-get($bk-gs, units, gutter-max-vertical-factor);
-
-// Class Errors
-$bk-error-shadow: inset 0 0 0 2px red;

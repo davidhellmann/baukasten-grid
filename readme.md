@@ -60,11 +60,6 @@ Add this to your main CSS file before you import `baukasten-grid`
 ```
 // First: you have to add the Map
 $bk-grid-settings-custom: (
-  // This add some CSS Styleing to the "section", "row" and "col" classes.
-  // @Boolean
-  // default: false
-  testing: false,
-
   // Units are for Paddings and Margins. All Paddings an Margins are Fluid.
   // That means that on the smallest breakpoint the Padding on each col side
   // is: gutter * gutter-min-factor (8px * 1) and on the biggest breakpoint it

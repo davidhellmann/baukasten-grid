@@ -48,7 +48,9 @@
     "last 2 versions",
     "IE 11"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "include-media": "^1.4.9"
+  },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.5.2",

@@ -296,6 +296,17 @@ Here is a small example how it looks like:
 | `.max-h-screen` | `max-height: 100vh;` |
 
 
+## Stacks
+| Class  | Properties |
+| :--- | :--- |
+| `.stack-0` | `margin-top: 0;` |
+| `.stack-quarter` | `@include spaceY(margin-top, 0.25);` |
+| `.stack-half` | `@include spaceY(margin-top, 0.5);` |
+| `.stack` | `@include spaceY(margin-top, 1);` |
+| `.stack-1` | `@include spaceY(margin-top, 1);` |
+| `.stack-2` | `@include spaceY(margin-top, 2);` |
+
+
 ## Padding
 | Class | Properties |
 | :--- | :--- |
@@ -836,6 +847,35 @@ Here is a small example how it looks like:
 | :--- | :--- |
 | `.table-auto` | `table-layout: auto;` |
 | `.table-fixed` | `table-layout: fixed;` |
+
+
+## Text Align
+| Class | Properties |
+| :--- | :--- |
+| `.text-left` | `text-align: left;` |
+| `.text-center` | `text-align: center;` |
+| `.text-right` | `text-align: right;` |
+| `.text-justify` | `text-align: justify;` |
+
+
+## Whitespace
+| Class | Properties |
+| :--- | :--- |
+| `.whitespace-normal` | `white-space: normal;` |
+| `.whitespace-nowrap` | `white-space: nowrap;` |
+| `.whitespace-pre` | `white-space: pre;` |
+| `.whitespace-pre-line` | `white-space: pre-line;` |
+| `.whitespace-pre-wrap` | `white-space: pre-wrap;` |
+
+
+## Word Break
+| Class | Properties |
+| :--- | :--- |
+| `.break-normal` | `word-break: normal; overflow-wrap: normal;` |
+| `.break-words` | `overflow-wrap: break-word;` |
+| `.break-all` | `word-break: break-all;` |
+| `.truncate` | `overflow: hidden; text-overflow: ellipsis; white-space: nowrap` |
+
 
 ## Fluid Stuff
 ## This classes are not available with Breakpoint Variants

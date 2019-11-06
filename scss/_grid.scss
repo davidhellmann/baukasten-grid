@@ -6,7 +6,6 @@
 
 $bk-grid-settings-custom: null !default;
 $bk-grid-settings: (
-  testing: true,
   units: (
     gutter: 8px,
     gutter-min-factor: 1,
@@ -15,11 +14,11 @@ $bk-grid-settings: (
     gutter-max-vertical-factor: 2
   ),
   breakpoints: (
-    min: (from: 320px, cols: 6, create-classes: true),
-    s: (from: 600px, cols: 12, create-classes: true),
-    m: (from: 800px, cols: 12, create-classes: true),
-    l: (from: 1200px, cols: 24, create-classes: true),
-    max: (from: 1600px, cols: 24, create-classes: true)
+    min: 320px,
+    s: 600px,
+    m: 800px,
+    l: 1200px,
+    max: 1600px
   )
 );
 
@@ -49,9 +48,9 @@ $bk-grid-settings: (
     $bk-breakpoints: () !default;
 
     // Loop over all Breakpoints
-    @each $key, $values in $bk-breakpoints-map {
+    @each $key, $value in $bk-breakpoints-map {
       // Get the From Value from the Breakpoint
-      $_breakpoint: map-get($values, from);
+      $_breakpoint: $value;
 
       // Merge Key / Value into Map
       $bk-breakpoints: map_merge($bk-breakpoints, ($key: $_breakpoint));

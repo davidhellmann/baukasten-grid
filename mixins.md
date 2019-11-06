@@ -1,22 +1,16 @@
-/*
- |--------------------------------------------------------------------------
- |  Center Mixin
- |--------------------------------------------------------------------------
- */
+![Logo of the project](./baukasten.png)
 
+## Available Mixins
+### Center
+```
 @mixin center {
   margin-left: auto;
   margin-right: auto;
 }
+```
 
-
-/*
- |--------------------------------------------------------------------------
- |  Fluid Mixin
- |--------------------------------------------------------------------------
- */
-
-// Mixin
+### Fluid Mixin
+```
 @mixin fluid($min-value, $max-value, $properties: null, $min-vw: $bk-minWidth, $max-vw: $bk-maxWidth) {
   @if ($properties != null) {
     @each $property in $properties {
@@ -41,42 +35,38 @@
 @mixin f($args...) {
   @include fluid($args...);
 }
+```
 
-
-/*
- |--------------------------------------------------------------------------
- |  Make Col Padding Mixin
- |--------------------------------------------------------------------------
- */
-
-// Mixin
+### Make Col Padding
+```
 @mixin col-padding($factor: 1) {
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
 
   @include f($gutterMin, $gutterMax, padding-left padding-right);
 }
+```
 
-/*
- |--------------------------------------------------------------------------
- |  Make Col Mixin
- |--------------------------------------------------------------------------
- */
-
-// Mixin
-@mixin col($cols: 1, $context: 1) {
+### Make Col Mixin
+```
+@mixin col($cols: 1, $context: 1, $sassMode: true) {
   // Calculate the Context
   $width: $cols / $context * 100%;
-  width: $width;
+
+  // Check if SassMode active
+  @if $sassMode == false {
+    flex: 0 1 $width;
+    max-width: $width;
+  } @else {
+    min-height: 1px;
+    flex: 0 1 $width;
+    max-width: $width;
+  }
 }
+```
 
-/*
- |--------------------------------------------------------------------------
- |  Make Row Margin Mixin
- |--------------------------------------------------------------------------
- */
-
-// Mixin
+### Make Row Margin
+```
 @mixin row-margin($factor: 1) {
   $factor: $factor * -1;
   $gutterMin: $factor * $bk-gutterMin;
@@ -84,15 +74,10 @@
 
   @include f($gutterMin, $gutterMax, margin-left margin-right);
 }
+```
 
-
-/*
- |--------------------------------------------------------------------------
- |  Make Row Mixin
- |--------------------------------------------------------------------------
- */
-
-// Mixin
+### Make Row
+```
 @mixin row($cols: 1, $margin: true, $sassMode: true) {
   width: auto;
   @if $margin == true {
@@ -105,15 +90,10 @@
 
   display: flex;
 }
+```
 
-
-/*
- |--------------------------------------------------------------------------
- |  Make Section Padding Mixin
- |--------------------------------------------------------------------------
- */
-
-// Mixin
+### Make Section Padding
+```
 @mixin section-padding($factor: 1) {
   @if $factor <= 1 {
     $factor: $factor * 2;
@@ -132,16 +112,10 @@
     @include f($gutterMin * ($factor), $gutterMax * ($factor), padding-bottom);
   }
 }
+```
 
-
-
-/*
- |--------------------------------------------------------------------------
- |  Make Section Mixin
- |--------------------------------------------------------------------------
- */
-
-// Mixin
+### Make Section
+```
 @mixin section($behaviour: 'fixed', $padding: true, $factor: 1) {
   width: 100%;
   max-width: if($behaviour == 'fixed', $bk-maxWidth, none);
@@ -153,14 +127,10 @@
     @include f($gutterMin, $gutterMax, padding-left padding-right);
   }
 }
+```
 
-
-/*
- |--------------------------------------------------------------------------
- |  Vertical Rhythm Mixin
- |--------------------------------------------------------------------------
- */
-
+### Make VR
+```
 @mixin vr($factor: 1) {
   $factor: $factor * 2;
   $gutterMinVertical: $factor * $bk-gutterMinVertical;
@@ -168,14 +138,10 @@
 
   @include f($gutterMinVertical, $gutterMaxVertical, margin-top);
 }
+```
 
-
-/*
- |--------------------------------------------------------------------------
- |  Vertical Rhythm Mixin
- |--------------------------------------------------------------------------
- */
-
+### Space Mixins
+```
 @mixin space($properties: null, $factor: 1, $direction: 'x') {
   $factor: $factor * 2;
   $gutterMin: $factor * $bk-gutterMin;
@@ -193,7 +159,6 @@
   }
 }
 
-
 @mixin spaceX($properties: null, $factor: 1) {
   @include space($properties, $factor, 'x');
 }
@@ -201,14 +166,10 @@
 @mixin spaceY($properties: null, $factor: 1) {
   @include space($properties, $factor, 'y');
 }
+```
 
-
-/*
- |--------------------------------------------------------------------------
- |  Col Offset Mixin
- |--------------------------------------------------------------------------
- */
-
+### Col Offset
+```
 @mixin col-offset($cols: 1, $context: 1, $sassMode: true) {
   $offset: 0;
 
@@ -228,14 +189,10 @@
 
   margin-left: $offset;
 }
+```
 
-
-/*
- |--------------------------------------------------------------------------
- |  Col Push Mixin
- |--------------------------------------------------------------------------
- */
-
+### Col Push
+```
 @mixin col-push($cols: 1, $context: 1, $sassMode: true) {
   // Rounds to integer Numbers
   @if $cols != auto {
@@ -246,13 +203,10 @@
   $offset: $cols  / $context * 100%;
   left: $offset;
 }
+```
 
-/*
- |--------------------------------------------------------------------------
- |  Col Pull Mixin
- |--------------------------------------------------------------------------
- */
-
+### Col Pull
+```
 @mixin col-pull($cols: 1, $context: 1, $sassMode: true) {
   // Rounds to integer Numbers
   @if $cols != auto {
@@ -263,3 +217,4 @@
   $offset: $cols  / $context * 100%;
   right: $offset;
 }
+```

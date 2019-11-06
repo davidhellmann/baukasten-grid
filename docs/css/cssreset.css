@@ -1,92 +1,44 @@
-/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */html {
-  font-family: sans-serif;
-  line-height: 1.15;
-      -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-body {
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
-article,
-aside,
 details,
-figcaption,
-figure,
-footer,
-header,
 main,
-menu,
-nav,
-section,
 summary {
   display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
 }
 
 progress {
   vertical-align: baseline;
 }
 
-template,
-[hidden] {
-  display: none;
-}
-
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
 abbr[title] {
-  border-bottom: none;
   text-decoration: underline;
   text-decoration: underline dotted;
-}
-
-b,
-strong {
-  font-weight: inherit;
-}
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-dfn {
-  font-style: italic;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
-small {
-  font-size: 80%;
 }
 
 sub,
@@ -105,10 +57,6 @@ sup {
   top: -0.5em;
 }
 
-img {
-  border-style: none;
-}
-
 svg:not(:root) {
   overflow: hidden;
 }
@@ -121,14 +69,38 @@ samp {
   font-size: 1em;
 }
 
-figure {
-  margin: 1em 40px;
+html {
+  font-family: sans-serif;
+  line-height: 1.5;
+      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 button,
@@ -140,25 +112,9 @@ textarea {
   margin: 0;
 }
 
-optgroup {
-  font-weight: bold;
-}
-
-button,
-input {
-  overflow: visible;
-}
-
 button,
 select {
   text-transform: none;
-}
-
-button,
-html [type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -174,31 +130,6 @@ button:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
-}
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-
-textarea {
-  overflow: auto;
-}
-
-[type='checkbox'],
-[type='radio'] {
-  box-sizing: border-box;
-  padding: 0;
 }
 
 [type='number']::-webkit-inner-spin-button,
@@ -226,12 +157,11 @@ textarea {
   font: inherit;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

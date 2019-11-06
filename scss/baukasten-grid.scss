@@ -1,17 +1,33 @@
 /*
  |--------------------------------------------------------------------------
- |  Grid.scss
+ |  flexboxgrid.scss
  |--------------------------------------------------------------------------
  */
+@import '../node_modules/include-media/dist/include-media';
 
+$bk-grid-settings-custom: (
+  units: (
+    gutter: 8px,
+    gutter-min-factor: 1,
+    gutter-max-factor: 2,
+    gutter-min-vertical-factor: 1,
+    gutter-max-vertical-factor: 2
+  ),
+  breakpoints: (
+    min: 320px,
+    s: 600px,
+    m: 800px,
+    l: 1200px,
+    max: 1600px
+  )
+);
+
+// Imports
 @import 'functions';
 @import 'grid';
 @import 'variables';
 @import 'mixins';
-@import 'utils/util.section';
-@import 'utils/util.row';
-@import 'utils/util.col';
-@import 'utils/util.vSpace';
-@import 'utils/util.testing';
-
-// TODO: Create Breakpoint Variables for Include Media
+@import 'utils/util.reset';
+@import 'utils/util.custom';
+@import 'utils/util.gridOverlay';
+@import 'utils/util.classes';

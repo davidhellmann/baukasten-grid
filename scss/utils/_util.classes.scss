@@ -43,7 +43,6 @@
 }
 
 // Loop that shit!
-$colLoopCount: 24;
 $pxLoopCountSizing: 32;
 $pxLoopCountMarginPadding: 16;
 $pxBaseValue: 8;
@@ -60,29 +59,81 @@ $fluidLoopCount: 10;
 
   @media (min-width: #{$from}) {
     // Widths
-    @for $i from 1 through $colLoopCount {
-      .#{$bpPrefix}w-#{$i}\/#{$colLoopCount} {
-        width: calc(#{$i} / #{$colLoopCount} * 100%);
+    @for $i from 1 through 6 {
+      .#{$bpPrefix}w-#{$i}\/#{6} {
+        width: calc(#{$i} / #{6} * 100%);
       }
 
-      .#{$bpPrefix}offset-#{$i}\/#{$colLoopCount} {
-        margin-left: calc(#{$i} / #{$colLoopCount} * 100%);
+      .#{$bpPrefix}offset-#{$i}\/#{6} {
+        margin-left: calc(#{$i} / #{6} * 100%);
       }
 
-      .#{$bpPrefix}push-left-#{$i}\/#{$colLoopCount} {
-        left: calc(#{$i} / #{$colLoopCount} * 100%);
+      .#{$bpPrefix}push-left-#{$i}\/#{6} {
+        left: calc(#{$i} / #{6} * 100%);
       }
 
-      .#{$bpPrefix}pull-left-#{$i}\/#{$colLoopCount} {
-        left: calc(#{$i} / #{$colLoopCount} * -100%);
+      .#{$bpPrefix}pull-left-#{$i}\/#{6} {
+        left: calc(#{$i} / #{6} * -100%);
       }
 
-      .#{$bpPrefix}push-right-#{$i}\/#{$colLoopCount} {
-        right: calc(#{$i} / #{$colLoopCount} * 100%);
+      .#{$bpPrefix}push-right-#{$i}\/#{6} {
+        right: calc(#{$i} / #{6} * 100%);
       }
 
-      .#{$bpPrefix}pull-right-#{$i}\/#{$colLoopCount} {
-        right: calc(#{$i} / #{$colLoopCount} * -100%);
+      .#{$bpPrefix}pull-right-#{$i}\/#{6} {
+        right: calc(#{$i} / #{6} * -100%);
+      }
+    }
+
+    @for $i from 1 through 12 {
+      .#{$bpPrefix}w-#{$i}\/#{12} {
+        width: calc(#{$i} / #{12} * 100%);
+      }
+
+      .#{$bpPrefix}offset-#{$i}\/#{12} {
+        margin-left: calc(#{$i} / #{12} * 100%);
+      }
+
+      .#{$bpPrefix}push-left-#{$i}\/#{12} {
+        left: calc(#{$i} / #{12} * 100%);
+      }
+
+      .#{$bpPrefix}pull-left-#{$i}\/#{12} {
+        left: calc(#{$i} / #{12} * -100%);
+      }
+
+      .#{$bpPrefix}push-right-#{$i}\/#{12} {
+        right: calc(#{$i} / #{12} * 100%);
+      }
+
+      .#{$bpPrefix}pull-right-#{$i}\/#{12} {
+        right: calc(#{$i} / #{12} * -100%);
+      }
+    }
+
+    @for $i from 1 through 24 {
+      .#{$bpPrefix}w-#{$i}\/#{24} {
+        width: calc(#{$i} / #{24} * 100%);
+      }
+
+      .#{$bpPrefix}offset-#{$i}\/#{24} {
+        margin-left: calc(#{$i} / #{24} * 100%);
+      }
+
+      .#{$bpPrefix}push-left-#{$i}\/#{24} {
+        left: calc(#{$i} / #{24} * 100%);
+      }
+
+      .#{$bpPrefix}pull-left-#{$i}\/#{24} {
+        left: calc(#{$i} / #{24} * -100%);
+      }
+
+      .#{$bpPrefix}push-right-#{$i}\/#{24} {
+        right: calc(#{$i} / #{24} * 100%);
+      }
+
+      .#{$bpPrefix}pull-right-#{$i}\/#{24} {
+        right: calc(#{$i} / #{24} * -100%);
       }
     }
 

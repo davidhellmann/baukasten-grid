@@ -204,11 +204,11 @@ $fluidLoopCount: 11;
       margin-top: 0;
     }
 
-    .#{$bpPrefix}stack-quarter > * + * {
+    .#{$bpPrefix}stack-0\.25 > * + * {
       @include spaceY(margin-top, 0.25)
     }
 
-    .#{$bpPrefix}stack-half > * + * {
+    .#{$bpPrefix}stack-0\.5 > * + * {
       @include spaceY(margin-top, 0.5)
     }
 
@@ -225,7 +225,7 @@ $fluidLoopCount: 11;
       @include spaceY(margin-top, 3)
     }
 
-    .#{$bpPrefix}stack-quarter > .a-headline {
+    .#{$bpPrefix}stack-0\.25 > .a-headline {
       @include spaceY(margin-top, 0.5);
 
       &:first-child {
@@ -233,7 +233,7 @@ $fluidLoopCount: 11;
       }
     }
 
-    .#{$bpPrefix}stack-half > .a-headline {
+    .#{$bpPrefix}stack-0\.5 > .a-headline {
       @include spaceY(margin-top, 1);
 
       &:first-child {

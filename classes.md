@@ -300,8 +300,8 @@ Here is a small example how it looks like:
 | Class  | Properties |
 | :--- | :--- |
 | `.stack-0` | `margin-top: 0;` |
-| `.stack-quarter` | `@include spaceY(margin-top, 0.25);` |
-| `.stack-half` | `@include spaceY(margin-top, 0.5);` |
+| `.stack-0.25` | `@include spaceY(margin-top, 0.25);` |
+| `.stack-0.5` | `@include spaceY(margin-top, 0.5);` |
 | `.stack` | `@include spaceY(margin-top, 1);` |
 | `.stack-1` | `@include spaceY(margin-top, 1);` |
 | `.stack-2` | `@include spaceY(margin-top, 2);` |

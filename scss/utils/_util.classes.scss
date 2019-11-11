@@ -228,7 +228,7 @@ $fluidLoopCount: 11;
     .#{$bpPrefix}stack-quarter > .a-headline {
       @include spaceY(margin-top, 0.5);
 
-      &:first-of-type {
+      &:first-child {
         margin-top: 0;
       }
     }
@@ -236,7 +236,7 @@ $fluidLoopCount: 11;
     .#{$bpPrefix}stack-half > .a-headline {
       @include spaceY(margin-top, 1);
 
-      &:first-of-type {
+      &:first-child {
         margin-top: 0;
       }
     }
@@ -245,7 +245,7 @@ $fluidLoopCount: 11;
     .#{$bpPrefix}stack-1 > .a-headline {
       @include spaceY(margin-top, 2);
 
-      &:first-of-type {
+      &:first-child {
         margin-top: 0;
       }
     }
@@ -254,7 +254,7 @@ $fluidLoopCount: 11;
     .#{$bpPrefix}stack-1 > .a-headline {
       @include spaceY(margin-top, 2);
 
-      &:first-of-type {
+      &:first-child {
         margin-top: 0;
       }
     }
@@ -262,7 +262,7 @@ $fluidLoopCount: 11;
     .#{$bpPrefix}stack-2 > .a-headline {
       @include spaceY(margin-top, 4);
 
-      &:first-of-type {
+      &:first-child {
         margin-top: 0;
       }
     }

@@ -302,9 +302,12 @@ Here is a small example how it looks like:
 | `.stack-0` | `margin-top: 0;` |
 | `.stack-0.25` | `@include spaceY(margin-top, 0.25);` |
 | `.stack-0.5` | `@include spaceY(margin-top, 0.5);` |
+| `.stack-0.75` | `@include spaceY(margin-top, 0.75);` |
 | `.stack` | `@include spaceY(margin-top, 1);` |
 | `.stack-1` | `@include spaceY(margin-top, 1);` |
+| `.stack-1.5` | `@include spaceY(margin-top, 1.5);` |
 | `.stack-2` | `@include spaceY(margin-top, 2);` |
+| `.stack-2.5` | `@include spaceY(margin-top, 2.5);` |
 | `.stack-3` | `@include spaceY(margin-top, 3);` |
 
 

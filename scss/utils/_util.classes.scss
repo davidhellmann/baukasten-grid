@@ -1008,6 +1008,10 @@ $fluidLoopCount: 11;
 
 
   // Fluid Stuff
+  @if $key == 'min' {
+    $from: $value;
+  }
+
   @for $i from 0 through $fluidLoopCount {
     .#{$bpPrefix}p-#{$i}--fluid {
       @include space(padding, $i, 'x', $from);

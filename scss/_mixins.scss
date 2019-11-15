@@ -130,7 +130,6 @@
 }
 
 
-
 /*
  |--------------------------------------------------------------------------
  |  Make Section Mixin
@@ -172,7 +171,7 @@
  |--------------------------------------------------------------------------
  */
 
-@mixin space($properties: null, $factor: 1, $direction: 'x') {
+@mixin space($properties: null, $factor: 1, $direction: 'x', $min: $bk-minWidth, $max: $bk-maxWidth) {
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
 
@@ -183,17 +182,17 @@
 
   @if ($properties != null) {
     @each $property in $properties {
-      @include f($gutterMin, $gutterMax, $property);
+      @include f($gutterMin, $gutterMax, $property, $min, $max);
     }
   }
 }
 
-@mixin spaceX($properties: null, $factor: 1) {
-  @include space($properties, $factor, 'x');
+@mixin spaceX($properties: null, $factor: 1, $direction: 'x', $min: $bk-minWidth, $max: $bk-maxWidth) {
+  @include space($properties, $factor, $direction, $min, $max);
 }
 
-@mixin spaceY($properties: null, $factor: 1) {
-  @include space($properties, $factor, 'y');
+@mixin spaceY($properties: null, $factor: 1, $direction: 'y', $min: $bk-minWidth, $max: $bk-maxWidth) {
+  @include space($properties, $factor, $direction, $min, $max);
 }
 
 
@@ -215,7 +214,7 @@
   @if $cols == auto {
     margin-left: auto;
   } @else {
-    margin-left: calc(#{$cols}  / #{$context} * 100%);
+    margin-left: calc(#{$cols} / #{$context} * 100%);
   }
 }
 
@@ -232,7 +231,7 @@
     $cols: ceil($cols);
   }
 
-  left: calc(#{$cols}  / #{$context} * 100%);
+  left: calc(#{$cols} / #{$context} * 100%);
 }
 
 /*
@@ -247,5 +246,5 @@
     $cols: ceil($cols);
   }
 
-  right: calc(#{$cols}  / #{$context} * 100%);
+  right: calc(#{$cols} / #{$context} * 100%);
 }

@@ -902,108 +902,110 @@ $fluidLoopCount: 11;
       text-overflow: ellipsis;
       white-space: nowrap
     }
+
+
+    // Paddings & Margins
+    // PX Values
+    @for $i from 0 through $pxLoopCountMarginPadding {
+      $value: $pxBaseValue * $i;
+
+      @if $i == 0 {
+        $value: strip-unit($value);
+      }
+
+      .#{$bpPrefix}p-#{$i} {
+        padding: #{$value};
+      }
+
+      .#{$bpPrefix}pl-#{$i} {
+        padding-left: #{$value};
+      }
+
+      .#{$bpPrefix}pr-#{$i} {
+        padding-right: #{$value};
+      }
+
+      .#{$bpPrefix}pt-#{$i} {
+        padding-top: #{$value};
+      }
+
+      .#{$bpPrefix}pb-#{$i} {
+        padding-bottom: #{$value};
+      }
+
+      .#{$bpPrefix}px-#{$i} {
+        padding-left: #{$value};
+        padding-right: #{$value};
+      }
+
+      .#{$bpPrefix}py-#{$i} {
+        padding-top: #{$value};
+        padding-bottom: #{$value};
+      }
+
+      .#{$bpPrefix}m-#{$i} {
+        margin: #{$value};
+      }
+
+      .#{$bpPrefix}ml-#{$i} {
+        margin-left: #{$value};
+      }
+
+      .#{$bpPrefix}mr-#{$i} {
+        margin-right: #{$value};
+      }
+
+      .#{$bpPrefix}mt-#{$i} {
+        margin-top: #{$value};
+      }
+
+      .#{$bpPrefix}mb-#{$i} {
+        margin-bottom: #{$value};
+      }
+
+      .#{$bpPrefix}mx-#{$i} {
+        margin-left: #{$value};
+        margin-right: #{$value};
+      }
+
+      .#{$bpPrefix}my-#{$i} {
+        margin-top: #{$value};
+        margin-bottom: #{$value};
+      }
+
+      .#{$bpPrefix}-m-#{$i} {
+        margin: -#{$value};
+      }
+
+      .#{$bpPrefix}-ml-#{$i} {
+        margin-left: -#{$value};
+      }
+
+      .#{$bpPrefix}-mr-#{$i} {
+        margin-right: -#{$value};
+      }
+
+      .#{$bpPrefix}-mt-#{$i} {
+        margin-top: -#{$value};
+      }
+
+      .#{$bpPrefix}-mb-#{$i} {
+        margin-bottom: -#{$value};
+      }
+
+      .#{$bpPrefix}-mx-#{$i} {
+        margin-left: -#{$value};
+        margin-right: -#{$value};
+      }
+
+      .#{$bpPrefix}-my-#{$i} {
+        margin-top: -#{$value};
+        margin-bottom: -#{$value};
+      }
+    }
   }
 
 
-  // Paddings & Margins
-  // PX Values
-  @for $i from 0 through $pxLoopCountMarginPadding {
-    $value: $pxBaseValue * $i;
-
-    @if $i == 0 {
-      $value: strip-unit($value);
-    }
-
-    .#{$bpPrefix}p-#{$i} {
-      padding: #{$value};
-    }
-
-    .#{$bpPrefix}pl-#{$i} {
-      padding-left: #{$value};
-    }
-
-    .#{$bpPrefix}pr-#{$i} {
-      padding-right: #{$value};
-    }
-
-    .#{$bpPrefix}pt-#{$i} {
-      padding-top: #{$value};
-    }
-
-    .#{$bpPrefix}pb-#{$i} {
-      padding-bottom: #{$value};
-    }
-
-    .#{$bpPrefix}px-#{$i} {
-      padding-left: #{$value};
-      padding-right: #{$value};
-    }
-
-    .#{$bpPrefix}py-#{$i} {
-      padding-top: #{$value};
-      padding-bottom: #{$value};
-    }
-
-    .#{$bpPrefix}m-#{$i} {
-      margin: #{$value};
-    }
-
-    .#{$bpPrefix}ml-#{$i} {
-      margin-left: #{$value};
-    }
-
-    .#{$bpPrefix}mr-#{$i} {
-      margin-right: #{$value};
-    }
-
-    .#{$bpPrefix}mt-#{$i} {
-      margin-top: #{$value};
-    }
-
-    .#{$bpPrefix}mb-#{$i} {
-      margin-bottom: #{$value};
-    }
-
-    .#{$bpPrefix}mx-#{$i} {
-      margin-left: #{$value};
-      margin-right: #{$value};
-    }
-
-    .#{$bpPrefix}my-#{$i} {
-      margin-top: #{$value};
-      margin-bottom: #{$value};
-    }
-
-    .#{$bpPrefix}-m-#{$i} {
-      margin: -#{$value};
-    }
-
-    .#{$bpPrefix}-ml-#{$i} {
-      margin-left: -#{$value};
-    }
-
-    .#{$bpPrefix}-mr-#{$i} {
-      margin-right: -#{$value};
-    }
-
-    .#{$bpPrefix}-mt-#{$i} {
-      margin-top: -#{$value};
-    }
-
-    .#{$bpPrefix}-mb-#{$i} {
-      margin-bottom: -#{$value};
-    }
-
-    .#{$bpPrefix}-mx-#{$i} {
-      margin-left: -#{$value};
-      margin-right: -#{$value};
-    }
-
-    .#{$bpPrefix}-my-#{$i} {
-      margin-top: -#{$value};
-      margin-bottom: -#{$value};
-    }
-  }
 
   // Fluid Stuff
   @for $i from 0 through $fluidLoopCount {
@@ -1011,171 +1013,171 @@ $fluidLoopCount: 11;
     $halfNumbers: str-replace(inspect($foo), '.', '\\\.');
 
     .#{$bpPrefix}p-#{$i}--fluid {
-      @include space(padding, $i);
+      @include space(padding, $i, 'x', $from);
     }
 
     .#{$bpPrefix}p-#{$halfNumbers}--fluid {
-      @include space(padding, $i - 0.5);
+      @include space(padding, $i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}pl-#{$i}--fluid {
-      @include space(padding-left, $i);
+      @include space(padding-left, $i, 'x', $from);
     }
 
     .#{$bpPrefix}pl-#{$halfNumbers}--fluid {
-      @include space(padding-left, $i - 0.5);
+      @include space(padding-left, $i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}pr-#{$i}--fluid {
-      @include space(padding-right, $i);
+      @include space(padding-right, $i, 'x', $from);
     }
 
     .#{$bpPrefix}pt-#{$i}--fluid {
-      @include space(padding-top, $i);
+      @include space(padding-top, $i, 'y', $from);
     }
 
     .#{$bpPrefix}pt-#{$halfNumbers}--fluid {
-      @include space(padding-top, $i - 0.5);
+      @include space(padding-top, $i - 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}pb-#{$i}--fluid {
-      @include space(padding-bottom, $i);
+      @include space(padding-bottom, $i, 'y', $from);
     }
 
     .#{$bpPrefix}pb-#{$halfNumbers}--fluid {
-      @include space(padding-bottom, $i - 0.5);
+      @include space(padding-bottom, $i - 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}px-#{$i}--fluid {
-      @include space(padding-left padding-right, $i);
+      @include space(padding-left padding-right, $i, 'x', $from);
     }
 
     .#{$bpPrefix}px-#{$halfNumbers}--fluid {
-      @include space(padding-left padding-right, $i - 0.5);
+      @include space(padding-left padding-right, $i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}py-#{$i}--fluid {
-      @include space(padding-top padding-bottom, $i);
+      @include space(padding-top padding-bottom, $i, 'y', $from);
     }
 
     .#{$bpPrefix}py-#{$halfNumbers}--fluid {
-      @include space(padding-top padding-bottom, $i - 0.5);
+      @include space(padding-top padding-bottom, $i - 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}m-#{$i}--fluid {
-      @include space(margin, $i);
+      @include space(margin, $i, 'x', $from);
     }
 
     .#{$bpPrefix}m-#{$halfNumbers}--fluid {
-      @include space(margin, $i - 0.5);
+      @include space(margin, $i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}ml-#{$i}--fluid {
-      @include space(margin-left, $i);
+      @include space(margin-left, $i, 'x', $from);
     }
 
     .#{$bpPrefix}ml-#{$halfNumbers}--fluid {
-      @include space(margin-left, $i - 0.5);
+      @include space(margin-left, $i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}mr-#{$i}--fluid {
-      @include space(margin-right, $i);
+      @include space(margin-right, $i, 'x', $from);
     }
 
     .#{$bpPrefix}mr-#{$halfNumbers}--fluid {
-      @include space(margin-right, $i - 0.5);
+      @include space(margin-right, $i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}mt-#{$i}--fluid {
-      @include space(margin-top, $i);
+      @include space(margin-top, $i, 'y', $from);
     }
 
     .#{$bpPrefix}mt-#{$halfNumbers}--fluid {
-      @include space(margin-top, $i - 0.5);
+      @include space(margin-top, $i - 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}mb-#{$i}--fluid {
-      @include space(margin-bottom, $i);
+      @include space(margin-bottom, $i, 'y', $from);
     }
 
     .#{$bpPrefix}mb-#{$halfNumbers}--fluid {
-      @include space(margin-bottom, $i - 0.5);
+      @include space(margin-bottom, $i - 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}mx-#{$i}--fluid {
-      @include space(margin-left margin-right, $i);
+      @include space(margin-left margin-right, $i, 'x', $from);
     }
 
     .#{$bpPrefix}mx-#{$halfNumbers}--fluid {
-      @include space(margin-left margin-right, $i - 0.5);
+      @include space(margin-left margin-right, $i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}my-#{$i}--fluid {
-      @include space(margin-top margin-bottom, $i);
+      @include space(margin-top margin-bottom, $i, 'y', $from);
     }
 
     .#{$bpPrefix}my-#{$halfNumbers}--fluid {
-      @include space(margin-top margin-bottom, $i - 0.5);
+      @include space(margin-top margin-bottom, $i - 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}-m-#{$i}--fluid {
-      @include space(margin, -$i);
+      @include space(margin, -$i, 'x', $from);
     }
 
     .#{$bpPrefix}-m-#{$halfNumbers}--fluid {
-      @include space(margin, -$i - 0.5);
+      @include space(margin, -$i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}-ml-#{$i}--fluid {
-      @include space(margin-left, -$i);
+      @include space(margin-left, -$i, 'x', $from);
     }
 
     .#{$bpPrefix}-ml-#{$halfNumbers}--fluid {
-      @include space(margin-left, -$i - 0.5);
+      @include space(margin-left, -$i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}-mr-#{$i}--fluid {
-      @include space(margin-right, -$i);
+      @include space(margin-right, -$i, 'x', $from);
     }
 
     .#{$bpPrefix}-mr-#{$halfNumbers}--fluid {
-      @include space(margin-right, -$i - 0.5);
+      @include space(margin-right, -$i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}-mt-#{$i}--fluid {
-      @include space(margin-top, -$i);
+      @include space(margin-top, -$i, 'y', $from);
     }
 
     .#{$bpPrefix}-mt-#{$halfNumbers}--fluid {
-      @include space(margin-top, -$i - 0.5);
+      @include space(margin-top, -$i - 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}-mb-#{$i}--fluid {
-      @include space(margin-bottom, -$i);
+      @include space(margin-bottom, -$i, 'y', $from);
     }
 
     .#{$bpPrefix}-mb-#{$halfNumbers}--fluid {
-      @include space(margin-bottom, -$i - 0.5);
+      @include space(margin-bottom, -$i - 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}-mx-#{$halfNumbers}--fluid {
-      @include space(margin-left margin-right, -$i - 0.5);
+      @include space(margin-left margin-right, -$i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}-mx-#{$i}--fluid {
-      @include space(margin-left margin-right, -$i);
+      @include space(margin-left margin-right, -$i, 'y', $from);
     }
 
     .#{$bpPrefix}-mx-#{$halfNumbers}--fluid {
-      @include space(margin-left margin-right, -$i - 0.5);
+      @include space(margin-left margin-right, -$i - 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}-my-#{$i}--fluid {
-      @include space(margin-top margin-bottom, -$i);
+      @include space(margin-top margin-bottom, -$i, 'y', $from);
     }
 
     .#{$bpPrefix}-my-#{$halfNumbers}--fluid {
-      @include space(margin-top margin-bottom, -$i - 0.5);
+      @include space(margin-top margin-bottom, -$i - 0.5, 'y', $from);
     }
   }
 }

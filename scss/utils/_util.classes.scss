@@ -1009,23 +1009,20 @@ $fluidLoopCount: 11;
 
   // Fluid Stuff
   @for $i from 0 through $fluidLoopCount {
-    $foo: $i - 0.5;
-    $halfNumbers: str-replace(inspect($foo), '.', '\\\.');
-
     .#{$bpPrefix}p-#{$i}--fluid {
       @include space(padding, $i, 'x', $from);
     }
 
-    .#{$bpPrefix}p-#{$halfNumbers}--fluid {
-      @include space(padding, $i - 0.5, 'x', $from);
+    .#{$bpPrefix}p-#{$i}\.5--fluid {
+      @include space(padding, $i + 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}pl-#{$i}--fluid {
       @include space(padding-left, $i, 'x', $from);
     }
 
-    .#{$bpPrefix}pl-#{$halfNumbers}--fluid {
-      @include space(padding-left, $i - 0.5, 'x', $from);
+    .#{$bpPrefix}pl-#{$i}\.5--fluid {
+      @include space(padding-left, $i + 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}pr-#{$i}--fluid {
@@ -1036,95 +1033,95 @@ $fluidLoopCount: 11;
       @include space(padding-top, $i, 'y', $from);
     }
 
-    .#{$bpPrefix}pt-#{$halfNumbers}--fluid {
-      @include space(padding-top, $i - 0.5, 'y', $from);
+    .#{$bpPrefix}pt-#{$i}\.5--fluid {
+      @include space(padding-top, $i + 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}pb-#{$i}--fluid {
       @include space(padding-bottom, $i, 'y', $from);
     }
 
-    .#{$bpPrefix}pb-#{$halfNumbers}--fluid {
-      @include space(padding-bottom, $i - 0.5, 'y', $from);
+    .#{$bpPrefix}pb-#{$i}\.5--fluid {
+      @include space(padding-bottom, $i + 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}px-#{$i}--fluid {
       @include space(padding-left padding-right, $i, 'x', $from);
     }
 
-    .#{$bpPrefix}px-#{$halfNumbers}--fluid {
-      @include space(padding-left padding-right, $i - 0.5, 'x', $from);
+    .#{$bpPrefix}px-#{$i}\.5--fluid {
+      @include space(padding-left padding-right, $i + 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}py-#{$i}--fluid {
       @include space(padding-top padding-bottom, $i, 'y', $from);
     }
 
-    .#{$bpPrefix}py-#{$halfNumbers}--fluid {
-      @include space(padding-top padding-bottom, $i - 0.5, 'y', $from);
+    .#{$bpPrefix}py-#{$i}\.5--fluid {
+      @include space(padding-top padding-bottom, $i + 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}m-#{$i}--fluid {
       @include space(margin, $i, 'x', $from);
     }
 
-    .#{$bpPrefix}m-#{$halfNumbers}--fluid {
-      @include space(margin, $i - 0.5, 'x', $from);
+    .#{$bpPrefix}m-#{$i}\.5--fluid {
+      @include space(margin, $i + 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}ml-#{$i}--fluid {
       @include space(margin-left, $i, 'x', $from);
     }
 
-    .#{$bpPrefix}ml-#{$halfNumbers}--fluid {
-      @include space(margin-left, $i - 0.5, 'x', $from);
+    .#{$bpPrefix}ml-#{$i}\.5--fluid {
+      @include space(margin-left, $i + 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}mr-#{$i}--fluid {
       @include space(margin-right, $i, 'x', $from);
     }
 
-    .#{$bpPrefix}mr-#{$halfNumbers}--fluid {
-      @include space(margin-right, $i - 0.5, 'x', $from);
+    .#{$bpPrefix}mr-#{$i}\.5--fluid {
+      @include space(margin-right, $i + 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}mt-#{$i}--fluid {
       @include space(margin-top, $i, 'y', $from);
     }
 
-    .#{$bpPrefix}mt-#{$halfNumbers}--fluid {
-      @include space(margin-top, $i - 0.5, 'y', $from);
+    .#{$bpPrefix}mt-#{$i}\.5--fluid {
+      @include space(margin-top, $i + 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}mb-#{$i}--fluid {
       @include space(margin-bottom, $i, 'y', $from);
     }
 
-    .#{$bpPrefix}mb-#{$halfNumbers}--fluid {
-      @include space(margin-bottom, $i - 0.5, 'y', $from);
+    .#{$bpPrefix}mb-#{$i}\.5--fluid {
+      @include space(margin-bottom, $i + 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}mx-#{$i}--fluid {
       @include space(margin-left margin-right, $i, 'x', $from);
     }
 
-    .#{$bpPrefix}mx-#{$halfNumbers}--fluid {
-      @include space(margin-left margin-right, $i - 0.5, 'x', $from);
+    .#{$bpPrefix}mx-#{$i}\.5--fluid {
+      @include space(margin-left margin-right, $i + 0.5, 'x', $from);
     }
 
     .#{$bpPrefix}my-#{$i}--fluid {
       @include space(margin-top margin-bottom, $i, 'y', $from);
     }
 
-    .#{$bpPrefix}my-#{$halfNumbers}--fluid {
-      @include space(margin-top margin-bottom, $i - 0.5, 'y', $from);
+    .#{$bpPrefix}my-#{$i}\.5--fluid {
+      @include space(margin-top margin-bottom, $i + 0.5, 'y', $from);
     }
 
     .#{$bpPrefix}-m-#{$i}--fluid {
       @include space(margin, -$i, 'x', $from);
     }
 
-    .#{$bpPrefix}-m-#{$halfNumbers}--fluid {
+    .#{$bpPrefix}-m-#{$i}\.5--fluid {
       @include space(margin, -$i - 0.5, 'x', $from);
     }
 
@@ -1132,7 +1129,7 @@ $fluidLoopCount: 11;
       @include space(margin-left, -$i, 'x', $from);
     }
 
-    .#{$bpPrefix}-ml-#{$halfNumbers}--fluid {
+    .#{$bpPrefix}-ml-#{$i}\.5--fluid {
       @include space(margin-left, -$i - 0.5, 'x', $from);
     }
 
@@ -1140,7 +1137,7 @@ $fluidLoopCount: 11;
       @include space(margin-right, -$i, 'x', $from);
     }
 
-    .#{$bpPrefix}-mr-#{$halfNumbers}--fluid {
+    .#{$bpPrefix}-mr-#{$i}\.5--fluid {
       @include space(margin-right, -$i - 0.5, 'x', $from);
     }
 
@@ -1148,7 +1145,7 @@ $fluidLoopCount: 11;
       @include space(margin-top, -$i, 'y', $from);
     }
 
-    .#{$bpPrefix}-mt-#{$halfNumbers}--fluid {
+    .#{$bpPrefix}-mt-#{$i}\.5--fluid {
       @include space(margin-top, -$i - 0.5, 'y', $from);
     }
 
@@ -1156,11 +1153,11 @@ $fluidLoopCount: 11;
       @include space(margin-bottom, -$i, 'y', $from);
     }
 
-    .#{$bpPrefix}-mb-#{$halfNumbers}--fluid {
+    .#{$bpPrefix}-mb-#{$i}\.5--fluid {
       @include space(margin-bottom, -$i - 0.5, 'y', $from);
     }
 
-    .#{$bpPrefix}-mx-#{$halfNumbers}--fluid {
+    .#{$bpPrefix}-mx-#{$i}\.5--fluid {
       @include space(margin-left margin-right, -$i - 0.5, 'x', $from);
     }
 
@@ -1168,7 +1165,7 @@ $fluidLoopCount: 11;
       @include space(margin-left margin-right, -$i, 'y', $from);
     }
 
-    .#{$bpPrefix}-mx-#{$halfNumbers}--fluid {
+    .#{$bpPrefix}-mx-#{$i}\.5--fluid {
       @include space(margin-left margin-right, -$i - 0.5, 'x', $from);
     }
 
@@ -1176,7 +1173,7 @@ $fluidLoopCount: 11;
       @include space(margin-top margin-bottom, -$i, 'y', $from);
     }
 
-    .#{$bpPrefix}-my-#{$halfNumbers}--fluid {
+    .#{$bpPrefix}-my-#{$i}\.5--fluid {
       @include space(margin-top margin-bottom, -$i - 0.5, 'y', $from);
     }
   }

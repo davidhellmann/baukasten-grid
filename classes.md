@@ -883,6 +883,7 @@ Here is a small example how it looks like:
 
 ## Fluid Stuff
 ## This classes are not available with Breakpoint Variants
+Half numbers are also possible like `.p-0.5--fluid`
 | Class | Properties |
 | :--- | :--- |
 | `.p-0--fluid … .p-10--fluid` | magic calc |

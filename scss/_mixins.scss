@@ -173,7 +173,6 @@
  */
 
 @mixin space($properties: null, $factor: 1, $direction: 'x') {
-  $factor: $factor * 2;
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
 

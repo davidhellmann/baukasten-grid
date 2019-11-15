@@ -138,10 +138,10 @@ $fluidLoopCount: 11;
     }
 
     @for $i from 1 through $pxLoopCountSizing {
-      $value: $pxBaseValue * $i;
+      $pxValue: $pxBaseValue * $i;
 
       .#{$bpPrefix}w-#{$value} {
-        width: #{$value};
+        width: #{$pxValue};
       }
     }
 
@@ -164,10 +164,10 @@ $fluidLoopCount: 11;
 
     // Heights
     @for $i from 1 through $pxLoopCountSizing {
-      $value: $pxBaseValue * $i;
+      $pxValue: $pxBaseValue * $i;
 
       .#{$bpPrefix}h-#{$value} {
-        height: #{$value};
+        height: #{$pxValue};
       }
     }
 
@@ -907,278 +907,272 @@ $fluidLoopCount: 11;
     // Paddings & Margins
     // PX Values
     @for $i from 0 through $pxLoopCountMarginPadding {
-      $value: $pxBaseValue * $i;
+      $pxValue: $pxBaseValue * $i;
 
       @if $i == 0 {
-        $value: strip-unit($value);
+        $pxValue: strip-unit($pxValue);
       }
 
       .#{$bpPrefix}p-#{$i} {
-        padding: #{$value};
+        padding: #{$pxValue};
       }
 
       .#{$bpPrefix}pl-#{$i} {
-        padding-left: #{$value};
+        padding-left: #{$pxValue};
       }
 
       .#{$bpPrefix}pr-#{$i} {
-        padding-right: #{$value};
+        padding-right: #{$pxValue};
       }
 
       .#{$bpPrefix}pt-#{$i} {
-        padding-top: #{$value};
+        padding-top: #{$pxValue};
       }
 
       .#{$bpPrefix}pb-#{$i} {
-        padding-bottom: #{$value};
+        padding-bottom: #{$pxValue};
       }
 
       .#{$bpPrefix}px-#{$i} {
-        padding-left: #{$value};
-        padding-right: #{$value};
+        padding-left: #{$pxValue};
+        padding-right: #{$pxValue};
       }
 
       .#{$bpPrefix}py-#{$i} {
-        padding-top: #{$value};
-        padding-bottom: #{$value};
+        padding-top: #{$pxValue};
+        padding-bottom: #{$pxValue};
       }
 
       .#{$bpPrefix}m-#{$i} {
-        margin: #{$value};
+        margin: #{$pxValue};
       }
 
       .#{$bpPrefix}ml-#{$i} {
-        margin-left: #{$value};
+        margin-left: #{$pxValue};
       }
 
       .#{$bpPrefix}mr-#{$i} {
-        margin-right: #{$value};
+        margin-right: #{$pxValue};
       }
 
       .#{$bpPrefix}mt-#{$i} {
-        margin-top: #{$value};
+        margin-top: #{$pxValue};
       }
 
       .#{$bpPrefix}mb-#{$i} {
-        margin-bottom: #{$value};
+        margin-bottom: #{$pxValue};
       }
 
       .#{$bpPrefix}mx-#{$i} {
-        margin-left: #{$value};
-        margin-right: #{$value};
+        margin-left: #{$pxValue};
+        margin-right: #{$pxValue};
       }
 
       .#{$bpPrefix}my-#{$i} {
-        margin-top: #{$value};
-        margin-bottom: #{$value};
+        margin-top: #{$pxValue};
+        margin-bottom: #{$pxValue};
       }
 
       .#{$bpPrefix}-m-#{$i} {
-        margin: -#{$value};
+        margin: -#{$pxValue};
       }
 
       .#{$bpPrefix}-ml-#{$i} {
-        margin-left: -#{$value};
+        margin-left: -#{$pxValue};
       }
 
       .#{$bpPrefix}-mr-#{$i} {
-        margin-right: -#{$value};
+        margin-right: -#{$pxValue};
       }
 
       .#{$bpPrefix}-mt-#{$i} {
-        margin-top: -#{$value};
+        margin-top: -#{$pxValue};
       }
 
       .#{$bpPrefix}-mb-#{$i} {
-        margin-bottom: -#{$value};
+        margin-bottom: -#{$pxValue};
       }
 
       .#{$bpPrefix}-mx-#{$i} {
-        margin-left: -#{$value};
-        margin-right: -#{$value};
+        margin-left: -#{$pxValue};
+        margin-right: -#{$pxValue};
       }
 
       .#{$bpPrefix}-my-#{$i} {
-        margin-top: -#{$value};
-        margin-bottom: -#{$value};
+        margin-top: -#{$pxValue};
+        margin-bottom: -#{$pxValue};
       }
     }
-  }
 
-
-
-  // Fluid Stuff
-  @if $key == 'min' {
-    $from: $value;
   }
 
   @for $i from 0 through $fluidLoopCount {
-    .#{$bpPrefix}p-#{$i}--fluid {
-      @include space(padding, $i, 'x', $from);
+    .p-#{$i}--fluid {
+      @include space(padding, $i);
     }
 
-    .#{$bpPrefix}p-#{$i}\.5--fluid {
-      @include space(padding, $i + 0.5, 'x', $from);
+    .p-#{$i}\.5--fluid {
+      @include space(padding, $i + 0.5);
     }
 
-    .#{$bpPrefix}pl-#{$i}--fluid {
-      @include space(padding-left, $i, 'x', $from);
+    .pl-#{$i}--fluid {
+      @include space(padding-left, $i);
     }
 
-    .#{$bpPrefix}pl-#{$i}\.5--fluid {
-      @include space(padding-left, $i + 0.5, 'x', $from);
+    .pl-#{$i}\.5--fluid {
+      @include space(padding-left, $i + 0.5);
     }
 
-    .#{$bpPrefix}pr-#{$i}--fluid {
-      @include space(padding-right, $i, 'x', $from);
+    .pr-#{$i}--fluid {
+      @include space(padding-right, $i);
     }
 
-    .#{$bpPrefix}pt-#{$i}--fluid {
-      @include space(padding-top, $i, 'y', $from);
+    .pt-#{$i}--fluid {
+      @include spaceY(padding-top, $i);
     }
 
-    .#{$bpPrefix}pt-#{$i}\.5--fluid {
-      @include space(padding-top, $i + 0.5, 'y', $from);
+    .pt-#{$i}\.5--fluid {
+      @include spaceY(padding-top, $i + 0.5);
     }
 
-    .#{$bpPrefix}pb-#{$i}--fluid {
-      @include space(padding-bottom, $i, 'y', $from);
+    .pb-#{$i}--fluid {
+      @include spaceY(padding-bottom, $i);
     }
 
-    .#{$bpPrefix}pb-#{$i}\.5--fluid {
-      @include space(padding-bottom, $i + 0.5, 'y', $from);
+    .pb-#{$i}\.5--fluid {
+      @include spaceY(padding-bottom, $i + 0.5);
     }
 
-    .#{$bpPrefix}px-#{$i}--fluid {
-      @include space(padding-left padding-right, $i, 'x', $from);
+    .px-#{$i}--fluid {
+      @include space(padding-left padding-right, $i);
     }
 
-    .#{$bpPrefix}px-#{$i}\.5--fluid {
-      @include space(padding-left padding-right, $i + 0.5, 'x', $from);
+    .px-#{$i}\.5--fluid {
+      @include space(padding-left padding-right, $i + 0.5);
     }
 
-    .#{$bpPrefix}py-#{$i}--fluid {
-      @include space(padding-top padding-bottom, $i, 'y', $from);
+    .py-#{$i}--fluid {
+      @include spaceY(padding-top padding-bottom, $i);
     }
 
-    .#{$bpPrefix}py-#{$i}\.5--fluid {
-      @include space(padding-top padding-bottom, $i + 0.5, 'y', $from);
+    .py-#{$i}\.5--fluid {
+      @include spaceY(padding-top padding-bottom, $i + 0.5);
     }
 
-    .#{$bpPrefix}m-#{$i}--fluid {
-      @include space(margin, $i, 'x', $from);
+    .m-#{$i}--fluid {
+      @include space(margin, $i);
     }
 
-    .#{$bpPrefix}m-#{$i}\.5--fluid {
-      @include space(margin, $i + 0.5, 'x', $from);
+    .m-#{$i}\.5--fluid {
+      @include space(margin, $i + 0.5);
     }
 
-    .#{$bpPrefix}ml-#{$i}--fluid {
-      @include space(margin-left, $i, 'x', $from);
+    .ml-#{$i}--fluid {
+      @include space(margin-left, $i);
     }
 
-    .#{$bpPrefix}ml-#{$i}\.5--fluid {
-      @include space(margin-left, $i + 0.5, 'x', $from);
+    .ml-#{$i}\.5--fluid {
+      @include space(margin-left, $i + 0.5);
     }
 
-    .#{$bpPrefix}mr-#{$i}--fluid {
-      @include space(margin-right, $i, 'x', $from);
+    .mr-#{$i}--fluid {
+      @include space(margin-right, $i);
     }
 
-    .#{$bpPrefix}mr-#{$i}\.5--fluid {
-      @include space(margin-right, $i + 0.5, 'x', $from);
+    .mr-#{$i}\.5--fluid {
+      @include space(margin-right, $i + 0.5);
     }
 
-    .#{$bpPrefix}mt-#{$i}--fluid {
-      @include space(margin-top, $i, 'y', $from);
+    .mt-#{$i}--fluid {
+      @include spaceY(margin-top, $i);
     }
 
-    .#{$bpPrefix}mt-#{$i}\.5--fluid {
-      @include space(margin-top, $i + 0.5, 'y', $from);
+    .mt-#{$i}\.5--fluid {
+      @include spaceY(margin-top, $i + 0.5);
     }
 
-    .#{$bpPrefix}mb-#{$i}--fluid {
-      @include space(margin-bottom, $i, 'y', $from);
+    .mb-#{$i}--fluid {
+      @include spaceY(margin-bottom, $i);
     }
 
-    .#{$bpPrefix}mb-#{$i}\.5--fluid {
-      @include space(margin-bottom, $i + 0.5, 'y', $from);
+    .mb-#{$i}\.5--fluid {
+      @include spaceY(margin-bottom, $i + 0.5);
     }
 
-    .#{$bpPrefix}mx-#{$i}--fluid {
-      @include space(margin-left margin-right, $i, 'x', $from);
+    .mx-#{$i}--fluid {
+      @include space(margin-left margin-right, $i);
     }
 
-    .#{$bpPrefix}mx-#{$i}\.5--fluid {
-      @include space(margin-left margin-right, $i + 0.5, 'x', $from);
+    .mx-#{$i}\.5--fluid {
+      @include space(margin-left margin-right, $i + 0.5);
     }
 
-    .#{$bpPrefix}my-#{$i}--fluid {
-      @include space(margin-top margin-bottom, $i, 'y', $from);
+    .my-#{$i}--fluid {
+      @include spaceY(margin-top margin-bottom, $i);
     }
 
-    .#{$bpPrefix}my-#{$i}\.5--fluid {
-      @include space(margin-top margin-bottom, $i + 0.5, 'y', $from);
+    .my-#{$i}\.5--fluid {
+      @include spaceY(margin-top margin-bottom, $i + 0.5);
     }
 
-    .#{$bpPrefix}-m-#{$i}--fluid {
-      @include space(margin, -$i, 'x', $from);
+    .-m-#{$i}--fluid {
+      @include space(margin, -$i);
     }
 
-    .#{$bpPrefix}-m-#{$i}\.5--fluid {
-      @include space(margin, -$i - 0.5, 'x', $from);
+    .-m-#{$i}\.5--fluid {
+      @include space(margin, -$i - 0.5);
     }
 
-    .#{$bpPrefix}-ml-#{$i}--fluid {
-      @include space(margin-left, -$i, 'x', $from);
+    .-ml-#{$i}--fluid {
+      @include space(margin-left, -$i);
     }
 
-    .#{$bpPrefix}-ml-#{$i}\.5--fluid {
-      @include space(margin-left, -$i - 0.5, 'x', $from);
+    .-ml-#{$i}\.5--fluid {
+      @include space(margin-left, -$i - 0.5);
     }
 
-    .#{$bpPrefix}-mr-#{$i}--fluid {
-      @include space(margin-right, -$i, 'x', $from);
+    .-mr-#{$i}--fluid {
+      @include space(margin-right, -$i);
     }
 
-    .#{$bpPrefix}-mr-#{$i}\.5--fluid {
-      @include space(margin-right, -$i - 0.5, 'x', $from);
+    .-mr-#{$i}\.5--fluid {
+      @include space(margin-right, -$i - 0.5);
     }
 
-    .#{$bpPrefix}-mt-#{$i}--fluid {
-      @include space(margin-top, -$i, 'y', $from);
+    .-mt-#{$i}--fluid {
+      @include spaceY(margin-top, -$i);
     }
 
-    .#{$bpPrefix}-mt-#{$i}\.5--fluid {
-      @include space(margin-top, -$i - 0.5, 'y', $from);
+    .-mt-#{$i}\.5--fluid {
+      @include spaceY(margin-top, -$i - 0.5);
     }
 
-    .#{$bpPrefix}-mb-#{$i}--fluid {
-      @include space(margin-bottom, -$i, 'y', $from);
+    .-mb-#{$i}--fluid {
+      @include spaceY(margin-bottom, -$i);
     }
 
-    .#{$bpPrefix}-mb-#{$i}\.5--fluid {
-      @include space(margin-bottom, -$i - 0.5, 'y', $from);
+    .-mb-#{$i}\.5--fluid {
+      @include spaceY(margin-bottom, -$i - 0.5);
     }
 
-    .#{$bpPrefix}-mx-#{$i}\.5--fluid {
-      @include space(margin-left margin-right, -$i - 0.5, 'x', $from);
+    .-mx-#{$i}\.5--fluid {
+      @include space(margin-left margin-right, -$i - 0.5);
     }
 
-    .#{$bpPrefix}-mx-#{$i}--fluid {
-      @include space(margin-left margin-right, -$i, 'y', $from);
+    .-mx-#{$i}--fluid {
+      @include space(margin-left margin-right, -$i);
     }
 
-    .#{$bpPrefix}-mx-#{$i}\.5--fluid {
-      @include space(margin-left margin-right, -$i - 0.5, 'x', $from);
+    .-mx-#{$i}\.5--fluid {
+      @include space(margin-left margin-right, -$i - 0.5);
     }
 
-    .#{$bpPrefix}-my-#{$i}--fluid {
-      @include space(margin-top margin-bottom, -$i, 'y', $from);
+    .-my-#{$i}--fluid {
+      @include spaceY(margin-top margin-bottom, -$i);
     }
 
-    .#{$bpPrefix}-my-#{$i}\.5--fluid {
-      @include space(margin-top margin-bottom, -$i - 0.5, 'y', $from);
+    .-my-#{$i}\.5--fluid {
+      @include spaceY(margin-top margin-bottom, -$i - 0.5);
     }
   }
 }

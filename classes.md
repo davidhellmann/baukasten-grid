@@ -300,11 +300,14 @@ Here is a small example how it looks like:
 | Class  | Properties |
 | :--- | :--- |
 | `.stack-0` | `margin-top: 0;` |
-| `.stack-quarter` | `@include spaceY(margin-top, 0.25);` |
-| `.stack-half` | `@include spaceY(margin-top, 0.5);` |
+| `.stack-0.25` | `@include spaceY(margin-top, 0.25);` |
+| `.stack-0.5` | `@include spaceY(margin-top, 0.5);` |
+| `.stack-0.75` | `@include spaceY(margin-top, 0.75);` |
 | `.stack` | `@include spaceY(margin-top, 1);` |
 | `.stack-1` | `@include spaceY(margin-top, 1);` |
+| `.stack-1.5` | `@include spaceY(margin-top, 1.5);` |
 | `.stack-2` | `@include spaceY(margin-top, 2);` |
+| `.stack-2.5` | `@include spaceY(margin-top, 2.5);` |
 | `.stack-3` | `@include spaceY(margin-top, 3);` |
 
 
@@ -880,26 +883,27 @@ Here is a small example how it looks like:
 
 ## Fluid Stuff
 ## This classes are not available with Breakpoint Variants
+Half numbers are also possible like `.p-0.5--fluid`
 | Class | Properties |
 | :--- | :--- |
-| `.p-1--fluid / .p-2--fluid / .p-3--fluid / .p-4--fluid / .p-5--fluid / .p-6--fluid` / .p-7--fluid` / .p-8--fluid` / .p-9--fluid` / .p-10--fluid` | magic calc |
-| `.pl-1--fluid / .pl-2--fluid / .pl-3--fluid / .pl-4--fluid / .pl-5--fluid / .pl-6--fluid` / .pl-7--fluid` / .pl-8--fluid` / .pl-9--fluid` / .pl-10--fluid` | magic calc |
-| `.pr-1--fluid / .pr-2--fluid / .pr-3--fluid / .pr-4--fluid / .pr-5--fluid / .pr-6--fluid` / .pr-7--fluid` / .pr-8--fluid` / .pr-9--fluid` / .pr-10--fluid` | magic calc |
-| `.pt-1--fluid / .pt-2--fluid / .pt-3--fluid / .pt-4--fluid / .pt-5--fluid / .pt-6--fluid` / .pt-7--fluid` / .pt-8--fluid` / .pt-9--fluid` / .pt-10--fluid` | magic calc |
-| `.pb-1--fluid / .pb-2--fluid / .pb-3--fluid / .pb-4--fluid / .pb-5--fluid / .pb-6--fluid` / .pb-7--fluid` / .pb-8--fluid` / .pb-9--fluid` / .pb-10--fluid` | magic calc |
-| `.px-1--fluid / .px-2--fluid / .px-3--fluid / .px-4--fluid / .px-5--fluid / .px-6--fluid` / .px-7--fluid` / .px-8--fluid` / .px-9--fluid` / .px-10--fluid` | magic calc |
-| `.py-1--fluid / .py-2--fluid / .py-3--fluid / .py-4--fluid / .py-5--fluid / .py-6--fluid` / .py-7--fluid` / .py-8--fluid` / .py-9--fluid` / .py-10--fluid` | magic calc |
-| `.m-1--fluid / .m-2--fluid / .m-3--fluid / .m-4--fluid / .m-5--fluid / .m-6--fluid` / .m-7--fluid` / .m-8--fluid` / .m-9--fluid` / .m-10--fluid` | magic calc |
-| `.ml-1--fluid / .ml-2--fluid / .ml-3--fluid / .ml-4--fluid / .ml-5--fluid / .ml-6--fluid` / .ml-7--fluid` / .ml-8--fluid` / .ml-9--fluid` / .ml-10--fluid` | magic calc |
-| `.mr-1--fluid / .mr-2--fluid / .mr-3--fluid / .mr-4--fluid / .mr-5--fluid / .mr-6--fluid` / .mr-7--fluid` / .mr-8--fluid` / .mr-9--fluid` / .mr-10--fluid` | magic calc |
-| `.mt-1--fluid / .mt-2--fluid / .mt-3--fluid / .mt-4--fluid / .mt-5--fluid / .mt-6--fluid` / .mt-7--fluid` / .mt-8--fluid` / .mt-9--fluid` / .mt-10--fluid` | magic calc |
-| `.mb-1--fluid / .mb-2--fluid / .mb-3--fluid / .mb-4--fluid / .mb-5--fluid / .mb-6--fluid` / .mb-7--fluid` / .mb-8--fluid` / .mb-9--fluid` / .mb-10--fluid` | magic calc |
-| `.mx-1--fluid / .mx-2--fluid / .mx-3--fluid / .mx-4--fluid / .mx-5--fluid / .mx-6--fluid` / .mx-7--fluid` / .mx-8--fluid` / .mx-9--fluid` / .mx-10--fluid` | magic calc |
-| `.my-1--fluid / .my-2--fluid / .my-3--fluid / .my-4--fluid / .my-5--fluid / .my-6--fluid` / .my-7--fluid` / .my-8--fluid` / .my-9--fluid` / .my-10--fluid` | magic calc |
-| `.-m-1--fluid / .-m-2--fluid / .-m-3--fluid / .-m-4--fluid / .-m-5--fluid / .-m-6--fluid` / .-m-7--fluid` / .-m-8--fluid` / .-m-9--fluid` / .-m-10--fluid` | magic calc |
-| `.-ml-1--fluid / .-ml-2--fluid / .-ml-3--fluid / .-ml-4--fluid / .-ml-5--fluid / .-ml-6--fluid` / .-ml-7--fluid` / .-ml-8--fluid` / .-ml-9--fluid` / .-ml-10--fluid` | magic calc |
-| `.-mr-1--fluid / .-mr-2--fluid / .-mr-3--fluid / .-mr-4--fluid / .-mr-5--fluid / .-mr-6--fluid` / .-mr-7--fluid` / .-mr-8--fluid` / .-mr-9--fluid` / .-mr-10--fluid` | magic calc |
-| `.-mt-1--fluid / .-mt-2--fluid / .-mt-3--fluid / .-mt-4--fluid / .-mt-5--fluid / .-mt-6--fluid` / .-mt-7--fluid` / .-mt-8--fluid` / .-mt-9--fluid` / .-mt-10--fluid` | magic calc |
-| `.-mb-1--fluid / .-mb-2--fluid / .-mb-3--fluid / .-mb-4--fluid / .-mb-5--fluid / .-mb-6--fluid` / .-mb-7--fluid` / .-mb-8--fluid` / .-mb-9--fluid` / .-mb-10--fluid` | magic calc |
-| `.-mx-1--fluid / .-mx-2--fluid / .-mx-3--fluid / .-mx-4--fluid / .-mx-5--fluid / .-mx-6--fluid` / .-mx-7--fluid` / .-mx-8--fluid` / .-mx-9--fluid` / .-mx-10--fluid` | magic calc |
-| `.-my-1--fluid / .-my-2--fluid / .-my-3--fluid / .-my-4--fluid / .-my-5--fluid / .-my-6--fluid` / .-my-7--fluid` / .-my-8--fluid` / .-my-9--fluid` / .-my-10--fluid` | magic calc |
+| `.p-0--fluid … .p-10--fluid` | magic calc |
+| `.pl-0--fluid … .pl-10--fluid` | magic calc |
+| `.pr-0--fluid … .pr-10--fluid` | magic calc |
+| `.pt-0--fluid … .pt-10--fluid` | magic calc |
+| `.pb-0--fluid … .pb-10--fluid` | magic calc |
+| `.px-0--fluid … .px-10--fluid` | magic calc |
+| `.py-0--fluid … .py-10--fluid` | magic calc |
+| `.m-0--fluid … .m-10--fluid` | magic calc |
+| `.ml-0--fluid … .ml-10--fluid` | magic calc |
+| `.mr-0--fluid … .mr-10--fluid` | magic calc |
+| `.mt-0--fluid … .mt-10--fluid` | magic calc |
+| `.mb-0--fluid … .mb-10--fluid` | magic calc |
+| `.mx-0--fluid … .mx-10--fluid` | magic calc |
+| `.my-0--fluid … .my-10--fluid` | magic calc |
+| `.-m-0--fluid … .-m-10--fluid` | magic calc |
+| `.-ml-0--fluid … .-ml-10--fluid` | magic calc |
+| `.-mr-0--fluid … .-mr-10--fluid` | magic calc |
+| `.-mt-0--fluid … .-mt-10--fluid` | magic calc |
+| `.-mb-0--fluid … .-mb-10--fluid` | magic calc |
+| `.-mx-0--fluid … .-mx-10--fluid` | magic calc |
+| `.-my-0--fluid … .-my-10--fluid` | magic calc |

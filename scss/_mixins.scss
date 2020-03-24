@@ -5,6 +5,7 @@
  */
 
 @mixin center {
+  float: none;
   margin-left: auto;
   margin-right: auto;
 }
@@ -65,9 +66,7 @@
 
 // Mixin
 @mixin col($cols: 1, $context: 1) {
-  // Calculate the Context
-  $width: $cols / $context * 100%;
-  width: $width;
+  width: calc(#{$cols} / #{$context} * 100%);
 }
 
 /*
@@ -93,16 +92,13 @@
  */
 
 // Mixin
-@mixin row($cols: 1, $margin: true, $sassMode: true) {
+@mixin row($cols: 1, $margin: true) {
   width: auto;
   @if $margin == true {
     @include row-margin();
   }
-  @if $sassMode == true {
-    flex-flow: row wrap;
-    flex: 1 1 0;
-  }
 
+  flex-flow: row wrap;
   display: flex;
 }
 
@@ -177,7 +173,6 @@
  */
 
 @mixin space($properties: null, $factor: 1, $direction: 'x') {
-  $factor: $factor * 2;
   $gutterMin: $factor * $bk-gutterMin;
   $gutterMax: $factor * $bk-gutterMax;
 
@@ -192,7 +187,6 @@
     }
   }
 }
-
 
 @mixin spaceX($properties: null, $factor: 1) {
   @include space($properties, $factor, 'x');
@@ -209,24 +203,20 @@
  |--------------------------------------------------------------------------
  */
 
-@mixin col-offset($cols: 1, $context: 1, $sassMode: true) {
+@mixin col-offset($cols: 1, $context: 1) {
   $offset: 0;
 
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
-
-    // Calculate the Context
-    $offset: $cols  / $context * 100%;
   }
 
   // If Cols auto set it to 0
   @if $cols == auto {
-    $offset: auto;
-    $cols: 0;
+    margin-left: auto;
+  } @else {
+    margin-left: calc(#{$cols} / #{$context} * 100%);
   }
-
-  margin-left: $offset;
 }
 
 
@@ -236,15 +226,13 @@
  |--------------------------------------------------------------------------
  */
 
-@mixin col-push($cols: 1, $context: 1, $sassMode: true) {
+@mixin col-push($cols: 1, $context: 1) {
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
   }
 
-  // Calculate the Context
-  $offset: $cols  / $context * 100%;
-  left: $offset;
+  left: calc(#{$cols} / #{$context} * 100%);
 }
 
 /*
@@ -253,13 +241,11 @@
  |--------------------------------------------------------------------------
  */
 
-@mixin col-pull($cols: 1, $context: 1, $sassMode: true) {
+@mixin col-pull($cols: 1, $context: 1) {
   // Rounds to integer Numbers
   @if $cols != auto {
     $cols: ceil($cols);
   }
 
-  // Calculate the Context
-  $offset: $cols  / $context * 100%;
-  right: $offset;
+  right: calc(#{$cols} / #{$context} * 100%);
 }

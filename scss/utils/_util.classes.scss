@@ -45,7 +45,7 @@
 // Loop that shit!
 $pxLoopCountSizing: 32;
 $pxLoopCountMarginPadding: 17;
-$pxBaseValue: 8;
+$pxBaseValue: $bk-gutter;
 $fluidLoopCount: 11;
 
 @each $key, $value in $bk-breakpoints {
@@ -138,10 +138,10 @@ $fluidLoopCount: 11;
     }
 
     @for $i from 1 through $pxLoopCountSizing {
-      $value: $pxBaseValue * $i;
+      $pxValue: $pxBaseValue * $i;
 
-      .#{$bpPrefix}w-#{$value}px {
-        width: #{$value}px;
+      .#{$bpPrefix}w-#{$value} {
+        width: #{$pxValue};
       }
     }
 
@@ -164,10 +164,10 @@ $fluidLoopCount: 11;
 
     // Heights
     @for $i from 1 through $pxLoopCountSizing {
-      $value: $pxBaseValue * $i;
+      $pxValue: $pxBaseValue * $i;
 
-      .#{$bpPrefix}h-#{$value}px {
-        height: #{$value}px;
+      .#{$bpPrefix}h-#{$value} {
+        height: #{$pxValue};
       }
     }
 
@@ -204,12 +204,16 @@ $fluidLoopCount: 11;
       margin-top: 0;
     }
 
-    .#{$bpPrefix}stack-quarter > * + * {
+    .#{$bpPrefix}stack-0\.25 > * + * {
       @include spaceY(margin-top, 0.25)
     }
 
-    .#{$bpPrefix}stack-half > * + * {
+    .#{$bpPrefix}stack-0\.5 > * + * {
       @include spaceY(margin-top, 0.5)
+    }
+
+    .#{$bpPrefix}stack-0\.75 > * + * {
+      @include spaceY(margin-top, 0.75)
     }
 
     .#{$bpPrefix}stack > * + *,
@@ -217,26 +221,42 @@ $fluidLoopCount: 11;
       @include spaceY(margin-top, 1)
     }
 
+    .#{$bpPrefix}stack-1\.5 > * + * {
+      @include spaceY(margin-top, 1.5)
+    }
+
     .#{$bpPrefix}stack-2 > * + * {
       @include spaceY(margin-top, 2)
+    }
+
+    .#{$bpPrefix}stack-2\.5 > * + * {
+      @include spaceY(margin-top, 2.5)
     }
 
     .#{$bpPrefix}stack-3 > * + * {
       @include spaceY(margin-top, 3)
     }
 
-    .#{$bpPrefix}stack-quarter > .a-headline {
+    .#{$bpPrefix}stack-0\.25 > .a-headline {
       @include spaceY(margin-top, 0.5);
 
-      &:first-of-type {
+      &:first-child {
         margin-top: 0;
       }
     }
 
-    .#{$bpPrefix}stack-half > .a-headline {
+    .#{$bpPrefix}stack-0\.5 > .a-headline {
       @include spaceY(margin-top, 1);
 
-      &:first-of-type {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .#{$bpPrefix}stack-0\.75 > .a-headline {
+      @include spaceY(margin-top, 1.5);
+
+      &:first-child {
         margin-top: 0;
       }
     }
@@ -245,16 +265,15 @@ $fluidLoopCount: 11;
     .#{$bpPrefix}stack-1 > .a-headline {
       @include spaceY(margin-top, 2);
 
-      &:first-of-type {
+      &:first-child {
         margin-top: 0;
       }
     }
 
-    .#{$bpPrefix}stack > .a-headline,
-    .#{$bpPrefix}stack-1 > .a-headline {
-      @include spaceY(margin-top, 2);
+    .#{$bpPrefix}stack-1\.5 > .a-headline {
+      @include spaceY(margin-top, 3);
 
-      &:first-of-type {
+      &:first-child {
         margin-top: 0;
       }
     }
@@ -262,7 +281,23 @@ $fluidLoopCount: 11;
     .#{$bpPrefix}stack-2 > .a-headline {
       @include spaceY(margin-top, 4);
 
-      &:first-of-type {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .#{$bpPrefix}stack-2\.5 > .a-headline {
+      @include spaceY(margin-top, 5);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .#{$bpPrefix}stack-3 > .a-headline {
+      @include spaceY(margin-top, 6);
+
+      &:first-child {
         margin-top: 0;
       }
     }
@@ -808,7 +843,6 @@ $fluidLoopCount: 11;
     }
 
 
-
     // Text Align
     .#{$bpPrefix}text-left {
       text-align: left;
@@ -868,199 +902,277 @@ $fluidLoopCount: 11;
       text-overflow: ellipsis;
       white-space: nowrap
     }
+
+
+    // Paddings & Margins
+    // PX Values
+    @for $i from 0 through $pxLoopCountMarginPadding {
+      $pxValue: $pxBaseValue * $i;
+
+      @if $i == 0 {
+        $pxValue: strip-unit($pxValue);
+      }
+
+      .#{$bpPrefix}p-#{$i} {
+        padding: #{$pxValue};
+      }
+
+      .#{$bpPrefix}pl-#{$i} {
+        padding-left: #{$pxValue};
+      }
+
+      .#{$bpPrefix}pr-#{$i} {
+        padding-right: #{$pxValue};
+      }
+
+      .#{$bpPrefix}pt-#{$i} {
+        padding-top: #{$pxValue};
+      }
+
+      .#{$bpPrefix}pb-#{$i} {
+        padding-bottom: #{$pxValue};
+      }
+
+      .#{$bpPrefix}px-#{$i} {
+        padding-left: #{$pxValue};
+        padding-right: #{$pxValue};
+      }
+
+      .#{$bpPrefix}py-#{$i} {
+        padding-top: #{$pxValue};
+        padding-bottom: #{$pxValue};
+      }
+
+      .#{$bpPrefix}m-#{$i} {
+        margin: #{$pxValue};
+      }
+
+      .#{$bpPrefix}ml-#{$i} {
+        margin-left: #{$pxValue};
+      }
+
+      .#{$bpPrefix}mr-#{$i} {
+        margin-right: #{$pxValue};
+      }
+
+      .#{$bpPrefix}mt-#{$i} {
+        margin-top: #{$pxValue};
+      }
+
+      .#{$bpPrefix}mb-#{$i} {
+        margin-bottom: #{$pxValue};
+      }
+
+      .#{$bpPrefix}mx-#{$i} {
+        margin-left: #{$pxValue};
+        margin-right: #{$pxValue};
+      }
+
+      .#{$bpPrefix}my-#{$i} {
+        margin-top: #{$pxValue};
+        margin-bottom: #{$pxValue};
+      }
+
+      .#{$bpPrefix}-m-#{$i} {
+        margin: -#{$pxValue};
+      }
+
+      .#{$bpPrefix}-ml-#{$i} {
+        margin-left: -#{$pxValue};
+      }
+
+      .#{$bpPrefix}-mr-#{$i} {
+        margin-right: -#{$pxValue};
+      }
+
+      .#{$bpPrefix}-mt-#{$i} {
+        margin-top: -#{$pxValue};
+      }
+
+      .#{$bpPrefix}-mb-#{$i} {
+        margin-bottom: -#{$pxValue};
+      }
+
+      .#{$bpPrefix}-mx-#{$i} {
+        margin-left: -#{$pxValue};
+        margin-right: -#{$pxValue};
+      }
+
+      .#{$bpPrefix}-my-#{$i} {
+        margin-top: -#{$pxValue};
+        margin-bottom: -#{$pxValue};
+      }
+    }
+
   }
 
-
-  // Paddings & Margins
-  // PX Values
-  @for $i from 0 through $pxLoopCountMarginPadding {
-    $value: $pxBaseValue * $i;
-    $unit: 'px';
-
-    @if $i == 0 {
-      $unit: '';
+  @for $i from 0 through $fluidLoopCount {
+    .p-#{$i}--fluid {
+      @include space(padding, $i);
     }
 
-    .#{$bpPrefix}p-#{$i} {
-      padding: #{$value}#{$unit};
+    .p-#{$i}\.5--fluid {
+      @include space(padding, $i + 0.5);
     }
 
-    .#{$bpPrefix}pl-#{$i} {
-      padding-left: #{$value}#{$unit};
+    .pl-#{$i}--fluid {
+      @include space(padding-left, $i);
     }
 
-    .#{$bpPrefix}pr-#{$i} {
-      padding-right: #{$value}#{$unit};
+    .pl-#{$i}\.5--fluid {
+      @include space(padding-left, $i + 0.5);
     }
 
-    .#{$bpPrefix}pt-#{$i} {
-      padding-top: #{$value}#{$unit};
+    .pr-#{$i}--fluid {
+      @include space(padding-right, $i);
     }
 
-    .#{$bpPrefix}pb-#{$i} {
-      padding-bottom: #{$value}#{$unit};
+    .pt-#{$i}--fluid {
+      @include spaceY(padding-top, $i);
     }
 
-    .#{$bpPrefix}px-#{$i} {
-      padding-left: #{$value}#{$unit};
-      padding-right: #{$value}#{$unit};
+    .pt-#{$i}\.5--fluid {
+      @include spaceY(padding-top, $i + 0.5);
     }
 
-    .#{$bpPrefix}py-#{$i} {
-      padding-top: #{$value}#{$unit};
-      padding-bottom: #{$value}#{$unit};
+    .pb-#{$i}--fluid {
+      @include spaceY(padding-bottom, $i);
     }
 
-    .#{$bpPrefix}m-#{$i} {
-      margin: #{$value}#{$unit};
+    .pb-#{$i}\.5--fluid {
+      @include spaceY(padding-bottom, $i + 0.5);
     }
 
-    .#{$bpPrefix}ml-#{$i} {
-      margin-left: #{$value}#{$unit};
+    .px-#{$i}--fluid {
+      @include space(padding-left padding-right, $i);
     }
 
-    .#{$bpPrefix}mr-#{$i} {
-      margin-right: #{$value}#{$unit};
+    .px-#{$i}\.5--fluid {
+      @include space(padding-left padding-right, $i + 0.5);
     }
 
-    .#{$bpPrefix}mt-#{$i} {
-      margin-top: #{$value}#{$unit};
+    .py-#{$i}--fluid {
+      @include spaceY(padding-top padding-bottom, $i);
     }
 
-    .#{$bpPrefix}mb-#{$i} {
-      margin-bottom: #{$value}#{$unit};
+    .py-#{$i}\.5--fluid {
+      @include spaceY(padding-top padding-bottom, $i + 0.5);
     }
 
-    .#{$bpPrefix}mx-#{$i} {
-      margin-left: #{$value}#{$unit};
-      margin-right: #{$value}#{$unit};
+    .m-#{$i}--fluid {
+      @include space(margin, $i);
     }
 
-    .#{$bpPrefix}my-#{$i} {
-      margin-top: #{$value}#{$unit};
-      margin-bottom: #{$value}#{$unit};
+    .m-#{$i}\.5--fluid {
+      @include space(margin, $i + 0.5);
     }
 
-    .#{$bpPrefix}-m-#{$i} {
-      margin: -#{$value}#{$unit};
+    .ml-#{$i}--fluid {
+      @include space(margin-left, $i);
     }
 
-    .#{$bpPrefix}-ml-#{$i} {
-      margin-left: -#{$value}#{$unit};
+    .ml-#{$i}\.5--fluid {
+      @include space(margin-left, $i + 0.5);
     }
 
-    .#{$bpPrefix}-mr-#{$i} {
-      margin-right: -#{$value}#{$unit};
+    .mr-#{$i}--fluid {
+      @include space(margin-right, $i);
     }
 
-    .#{$bpPrefix}-mt-#{$i} {
-      margin-top: -#{$value}#{$unit};
+    .mr-#{$i}\.5--fluid {
+      @include space(margin-right, $i + 0.5);
     }
 
-    .#{$bpPrefix}-mb-#{$i} {
-      margin-bottom: -#{$value}#{$unit};
+    .mt-#{$i}--fluid {
+      @include spaceY(margin-top, $i);
     }
 
-    .#{$bpPrefix}-mx-#{$i} {
-      margin-left: -#{$value}#{$unit};
-      margin-right: -#{$value}#{$unit};
+    .mt-#{$i}\.5--fluid {
+      @include spaceY(margin-top, $i + 0.5);
     }
 
-    .#{$bpPrefix}-my-#{$i} {
-      margin-top: -#{$value}#{$unit};
-      margin-bottom: -#{$value}#{$unit};
+    .mb-#{$i}--fluid {
+      @include spaceY(margin-bottom, $i);
     }
-  }
 
-  // Fluid Stuff
-  @if $key == 'min' {
-    @for $i from 0 through $fluidLoopCount {
-      $min: 8px * $i;
-      $max: $min * 2;
+    .mb-#{$i}\.5--fluid {
+      @include spaceY(margin-bottom, $i + 0.5);
+    }
 
-      .p-#{$i}--fluid {
-        @include f($min, $max, padding)
-      }
+    .mx-#{$i}--fluid {
+      @include space(margin-left margin-right, $i);
+    }
 
-      .pl-#{$i}--fluid {
-        @include f($min, $max, padding-left)
-      }
+    .mx-#{$i}\.5--fluid {
+      @include space(margin-left margin-right, $i + 0.5);
+    }
 
-      .pr-#{$i}--fluid {
-        @include f($min, $max, padding-right)
-      }
+    .my-#{$i}--fluid {
+      @include spaceY(margin-top margin-bottom, $i);
+    }
 
-      .pt-#{$i}--fluid {
-        @include f($min, $max, padding-top)
-      }
+    .my-#{$i}\.5--fluid {
+      @include spaceY(margin-top margin-bottom, $i + 0.5);
+    }
 
-      .pb-#{$i}--fluid {
-        @include f($min, $max, padding-bottom)
-      }
+    .-m-#{$i}--fluid {
+      @include space(margin, -$i);
+    }
 
-      .px-#{$i}--fluid {
-        @include f($min, $max, padding-left padding-right)
-      }
+    .-m-#{$i}\.5--fluid {
+      @include space(margin, -$i - 0.5);
+    }
 
-      .py-#{$i}--fluid {
-        @include f($min, $max, padding-top padding-bottom)
-      }
+    .-ml-#{$i}--fluid {
+      @include space(margin-left, -$i);
+    }
 
-      .m-#{$i}--fluid {
-        @include f($min, $max, margin)
-      }
+    .-ml-#{$i}\.5--fluid {
+      @include space(margin-left, -$i - 0.5);
+    }
 
-      .ml-#{$i}--fluid {
-        @include f($min, $max, margin-left)
-      }
+    .-mr-#{$i}--fluid {
+      @include space(margin-right, -$i);
+    }
 
-      .mr-#{$i}--fluid {
-        @include f($min, $max, margin-right)
-      }
+    .-mr-#{$i}\.5--fluid {
+      @include space(margin-right, -$i - 0.5);
+    }
 
-      .mt-#{$i}--fluid {
-        @include f($min, $max, margin-top)
-      }
+    .-mt-#{$i}--fluid {
+      @include spaceY(margin-top, -$i);
+    }
 
-      .mb-#{$i}--fluid {
-        @include f($min, $max, margin-bottom)
-      }
+    .-mt-#{$i}\.5--fluid {
+      @include spaceY(margin-top, -$i - 0.5);
+    }
 
-      .mx-#{$i}--fluid {
-        @include f($min, $max, margin-left margin-right)
-      }
+    .-mb-#{$i}--fluid {
+      @include spaceY(margin-bottom, -$i);
+    }
 
-      .my-#{$i}--fluid {
-        @include f($min, $max, margin-top margin-bottom)
-      }
+    .-mb-#{$i}\.5--fluid {
+      @include spaceY(margin-bottom, -$i - 0.5);
+    }
 
-      .-m-#{$i}--fluid {
-        @include f(-$min, -$max, margin)
-      }
+    .-mx-#{$i}\.5--fluid {
+      @include space(margin-left margin-right, -$i - 0.5);
+    }
 
-      .-ml-#{$i}--fluid {
-        @include f(-$min, -$max, margin-left)
-      }
+    .-mx-#{$i}--fluid {
+      @include space(margin-left margin-right, -$i);
+    }
 
-      .-mr-#{$i}--fluid {
-        @include f(-$min, -$max, margin-right)
-      }
+    .-mx-#{$i}\.5--fluid {
+      @include space(margin-left margin-right, -$i - 0.5);
+    }
 
-      .-mt-#{$i}--fluid {
-        @include f(-$min, -$max, margin-top)
-      }
+    .-my-#{$i}--fluid {
+      @include spaceY(margin-top margin-bottom, -$i);
+    }
 
-      .-mb-#{$i}--fluid {
-        @include f(-$min, -$max, margin-bottom)
-      }
-
-      .-mx-#{$i}--fluid {
-        @include f(-$min, -$max, margin-left margin-right)
-      }
-
-      .-my-#{$i}--fluid {
-        @include f(-$min, -$max, margin-top margin-bottom)
-      }
+    .-my-#{$i}\.5--fluid {
+      @include spaceY(margin-top margin-bottom, -$i - 0.5);
     }
   }
 }

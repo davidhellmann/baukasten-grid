@@ -16,7 +16,3 @@ $bk-maxWidth: map-deep-get($bk-gs, breakpoints, max);
 
 // Get Gutters
 $bk-gutter: map-deep-get($bk-gs, units, gutter);
-$bk-gutterMin: $bk-gutter * map-deep-get($bk-gs, units, gutter-min-factor);
-$bk-gutterMax: $bk-gutter * map-deep-get($bk-gs, units, gutter-max-factor);
-$bk-gutterMinVertical: $bk-gutter * map-deep-get($bk-gs, units, gutter-min-vertical-factor);
-$bk-gutterMaxVertical: $bk-gutter * map-deep-get($bk-gs, units, gutter-max-vertical-factor);

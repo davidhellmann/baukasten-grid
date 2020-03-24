@@ -7,11 +7,7 @@
 $bk-grid-settings-custom: null !default;
 $bk-grid-settings: (
   units: (
-    gutter: 8px,
-    gutter-min-factor: 1,
-    gutter-max-factor: 2,
-    gutter-min-vertical-factor: 1,
-    gutter-max-vertical-factor: 2
+    gutter: 1rem,
   ),
   breakpoints: (
     min: 320px,

@@ -56,15 +56,16 @@
  */
 
 // Mixin
-@mixin row($cols: 1, $margin: true) {
+@mixin row($factor: 1, $margin: true) {
   width: auto;
   @if $margin == true {
-    @include row-margin();
+    @include row-margin($factor);
   }
 
   flex-flow: row wrap;
   display: flex;
 }
+
 
 
 /*

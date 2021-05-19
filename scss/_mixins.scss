@@ -20,8 +20,13 @@
 // Mixin
 @mixin col-padding($factor: 1) {
   $spacing: $factor * $bk-gutter;
-  padding-left: $spacing;
-  padding-right: $spacing;
+  padding-left: $spacing / 2;
+  padding-right: $spacing / 2;
+
+  @include media('>=s') {
+    padding-left: $spacing;
+    padding-right: $spacing;
+  }
 }
 
 /*
@@ -44,8 +49,13 @@
 // Mixin
 @mixin row-margin($factor: 1) {
   $spacing: ($factor * $bk-gutter) * -1;
-  margin-left: $spacing;
-  margin-right: $spacing;
+  margin-left: $spacing / 2;
+  margin-right: $spacing / 2;
+
+  @include media('>=s') {
+    margin-left: $spacing;
+    margin-right: $spacing;
+  }
 }
 
 
@@ -98,8 +108,13 @@
 
   @if $padding == true {
     $spacing: ($factor * 2) * $bk-gutter;
-    padding-left: $spacing;
-    padding-right: $spacing;
+    padding-left: $spacing / 2;
+    padding-right: $spacing / 2;
+
+    @include media('>=s') {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
   }
 }
 
